@@ -6,7 +6,7 @@ VELA provides a Private Vault for Web3 Apps and is a chain-agnostic confidential
 
 VELA is still in development but open to be used and tested by developers.
 
-You will find the following starter kit for a full understanding of its current state as well as its working components, and instructions 
+You will find the following starter kit for a full understokaanding of its current state as well as its working components, and instructions 
 on how to start a fully working local environment: <br/>
 https://github.com/HorizenOfficial/vela-starterkit 
 
