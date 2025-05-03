@@ -1,3 +1,0 @@
----
-title: Configuring Compliance Policies
----
