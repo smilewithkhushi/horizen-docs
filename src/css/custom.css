@@ -40,13 +40,18 @@ html[data-theme='dark'] {
 }
 
 
-[data-theme='dark'] .footer {
-  background-color: var(--deep-blue);
-  border-top: 1px solid var(--ifm-toc-border-color);
+.footer {
+  background-color: #0d1a2e;
+  border-top: 1px solid rgba(252, 209, 26, 0.15);
 }
 
-.footer {
-  background-color: #272729;
+[data-theme='dark'] .footer {
+  background-color: #0d1a2e;
+  border-top: 1px solid rgba(252, 209, 26, 0.15);
+}
+
+.footer__link-item:hover {
+  color: #FCD11A;
 }
 
 /* Always show code block copy button */
