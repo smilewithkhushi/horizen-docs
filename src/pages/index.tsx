@@ -7,6 +7,15 @@ import styles from './index.module.css';
 function Hero() {
   return (
     <section className={styles.hero}>
+      <video
+        className={styles.heroVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+        src="/img/ascii-liquid.webm"
+      />
+      <div className={styles.heroOverlay} />
       <div className={styles.heroInner}>
         <h1 className={styles.heroTitle}>
           Build Private. Build Compliant.<br />Build on Horizen.
@@ -158,24 +167,13 @@ function StartBuilding() {
     <section className={styles.buildSection}>
       <div className="container">
         <h2 className={styles.buildHeading}>Start Building</h2>
-        <p className={styles.buildSubheading}>Everything you need to go from idea to deployed in one afternoon.</p>
         <div className={styles.buildGrid}>
           {buildingCards.map((card) => (
             <Link key={card.title} to={card.link} className={styles.buildCard}>
-              <span className={styles.buildAccent} style={{ background: card.accent }} />
-              <span className={styles.buildTag}>{card.tag}</span>
+              <span className={styles.buildTag}>$ {card.tag}</span>
               <h3 className={styles.buildTitle}>{card.title}</h3>
               <p className={styles.buildDesc}>{card.description}</p>
-              {card.subLinks.length > 0 && (
-                <div className={styles.buildSubLinks}>
-                  {card.subLinks.map((sub) => (
-                    <span key={sub.label} className={styles.buildSubLink}>
-                      {sub.label}
-                    </span>
-                  ))}
-                </div>
-              )}
-              <span className={styles.buildCta}>Read the guide →</span>
+              <span className={styles.buildCta}>Get started →</span>
             </Link>
           ))}
         </div>
@@ -224,7 +222,7 @@ export default function Home() {
         <PersonaCards />
         <QuickSetup />
         <StartBuilding />
-        <BottomCta />
+        {/* <BottomCta /> */}
       </main>
     </Layout>
   );

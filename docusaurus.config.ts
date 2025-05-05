@@ -23,7 +23,14 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/HorizenOfficial/horizen-docs/tree/main",
           routeBasePath: "/",
-          showLastUpdateTime: true,
+          exclude: [
+            "1-overview/**",
+            "2-vela/**",
+            "3-migration/**",
+            "4-mainnet-migration-instructions/**",
+            "5-zenrise/**",
+          ],
+          // showLastUpdateTime: true,
         },
         blog: false,
         theme: {
@@ -78,7 +85,13 @@ const config: Config = {
           label: "Ecosystem",
         },
         {
-          href: "https://github.com/HorizenOfficial",
+          type: "docSidebar",
+          sidebarId: "governanceSidebar",
+          position: "left",
+          label: "Governance",
+        },
+        {
+          href: "https://github.com/HorizenOfficial/horizen-docs",
           label: "GitHub",
           position: "right",
         },
