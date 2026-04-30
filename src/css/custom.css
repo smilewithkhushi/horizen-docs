@@ -54,3 +54,43 @@ img.bordered {
 .menu__list-item.hidden {
   display: none;
 }
+
+/* ── Sidebar: more vertical spacing between top-level categories ────────── */
+nav.menu .menu__list > .menu__list-item {
+  margin-bottom: 0.4rem;
+}
+
+nav.menu .menu__list > .menu__list-item > .menu__list-item-collapsible {
+  margin-bottom: 0.1rem;
+}
+
+/* ── Sidebar: category label sizing ─────────────────────────────────────── */
+.menu__list-item-collapsible .menu__link,
+.menu__list > .menu__list-item > .menu__link {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* ── Sidebar: active/selected link color ────────────────────────────────── */
+.menu__link--active,
+.menu__link--active:hover {
+  color: #a07800 !important;
+  font-weight: 700;
+}
+
+[data-theme='dark'] .menu__link--active,
+[data-theme='dark'] .menu__link--active:hover {
+  color: #FCD11A !important;
+  font-weight: 700;
+}
+
+/* ── Layout: push footer to bottom on short pages ───────────────────────── */
+.main-wrapper {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-wrapper > * {
+  flex: 1;
+}

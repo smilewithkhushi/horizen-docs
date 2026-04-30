@@ -104,13 +104,18 @@ function QuickSetup() {
     <section className={styles.quickSetupSection}>
       <div className="container">
         <h2>Quick Setup</h2>
-        <div className={styles.quickSetupList}>
+        <div className={styles.quickSetupGrid}>
           {quickSetupItems.map((item, i) => (
-            <Link key={i} to={item.link} className={styles.quickSetupItem}>
-              <span className={styles.quickSetupNumber}>{String(i + 1).padStart(2, '0')}</span>
-              <span>{item.label}</span>
-              <span className={styles.quickSetupArrow}>→</span>
-            </Link>
+            <React.Fragment key={i}>
+              <Link to={item.link} className={styles.quickSetupCard}>
+                <span className={styles.quickSetupIndex}>0{i + 1}</span>
+                <span className={styles.quickSetupLabel}>{item.label}</span>
+                <span className={styles.quickSetupAction}>Get started →</span>
+              </Link>
+              {i < quickSetupItems.length - 1 && (
+                <span className={styles.quickSetupConnector} aria-hidden="true">╌╌</span>
+              )}
+            </React.Fragment>
           ))}
         </div>
       </div>
@@ -120,24 +125,30 @@ function QuickSetup() {
 
 const buildingCards = [
   {
+    tag: 'EVM',
     title: 'Deploy Your First Contract',
-    description: 'Standard EVM deployment on Horizen. Done in minutes.',
+    description: 'Standard EVM deployment on Horizen. Done in minutes with the tools you already know.',
     link: '/horizen-chain/deploy-contracts/using-foundry',
+    accent: 'linear-gradient(90deg, #FCD11A, #f0a500)',
     subLinks: [
       { label: 'Foundry', link: '/horizen-chain/deploy-contracts/using-foundry' },
       { label: 'Hardhat', link: '/horizen-chain/deploy-contracts/using-hardhat' },
     ],
   },
   {
-    title: 'Your First Confidential App with VELA',
-    description: 'Run attested computation inside a TEE.',
+    tag: 'VELA',
+    title: 'Your First Confidential App',
+    description: 'Run attested computation inside a TEE. Private by default, auditable by design.',
     link: '/vela/getting-started/hello-world',
+    accent: 'linear-gradient(90deg, #7c3aed, #4f46e5)',
     subLinks: [],
   },
   {
-    title: 'Migrate from Base',
-    description: 'Already on Base? Bring your dApp to Horizen.',
+    tag: 'MIGRATE',
+    title: 'Bring Your dApp from Base',
+    description: 'Already on Base? Horizen is EVM-identical. Your contracts deploy as-is.',
     link: '/tutorials/horizen-chain/bridge-from-base',
+    accent: 'linear-gradient(90deg, #0ea5e9, #06b6d4)',
     subLinks: [],
   },
 ];
@@ -146,24 +157,26 @@ function StartBuilding() {
   return (
     <section className={styles.buildSection}>
       <div className="container">
-        <h2>Start Building</h2>
+        <h2 className={styles.buildHeading}>Start Building</h2>
+        <p className={styles.buildSubheading}>Everything you need to go from idea to deployed in one afternoon.</p>
         <div className={styles.buildGrid}>
           {buildingCards.map((card) => (
-            <div key={card.title} className={styles.buildCard}>
-              <h3>
-                <Link to={card.link}>{card.title}</Link>
-              </h3>
-              <p>{card.description}</p>
+            <Link key={card.title} to={card.link} className={styles.buildCard}>
+              <span className={styles.buildAccent} style={{ background: card.accent }} />
+              <span className={styles.buildTag}>{card.tag}</span>
+              <h3 className={styles.buildTitle}>{card.title}</h3>
+              <p className={styles.buildDesc}>{card.description}</p>
               {card.subLinks.length > 0 && (
                 <div className={styles.buildSubLinks}>
                   {card.subLinks.map((sub) => (
-                    <Link key={sub.label} to={sub.link} className={styles.buildSubLink}>
-                      {sub.label} →
-                    </Link>
+                    <span key={sub.label} className={styles.buildSubLink}>
+                      {sub.label}
+                    </span>
                   ))}
                 </div>
               )}
-            </div>
+              <span className={styles.buildCta}>Read the guide →</span>
+            </Link>
           ))}
         </div>
       </div>

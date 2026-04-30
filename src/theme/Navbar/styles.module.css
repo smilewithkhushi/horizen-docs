@@ -197,12 +197,17 @@
   padding: 0.35rem 0.8rem;
   border-radius: 6px;
   font-size: 0.9rem;
-  font-weight: 500;
-  color: inherit !important;
+  font-weight: 700;
+  color: #111 !important;
   text-decoration: none !important;
-  opacity: 0.65;
+  opacity: 0.85;
   transition: opacity 0.15s ease, background 0.15s ease;
   white-space: nowrap;
+}
+
+[data-theme='dark'] .navItemWrap :global(.navbar__link),
+[data-theme='dark'] .navItemWrap :global(.navbar__item) {
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .navItemWrap :global(.navbar__link:hover),

@@ -21,6 +21,7 @@ yarn.lock
 .cache-loader
 
 # Self
+/self/
 /self
 
 # Misc
