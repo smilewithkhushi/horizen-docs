@@ -2,6 +2,7 @@
 .env
 
 
+
 # Dependencies
 /node_modules
 .yarn
@@ -18,6 +19,9 @@ yarn.lock
 # Generated files
 .docusaurus
 .cache-loader
+
+# Self
+/self
 
 # Misc
 .idea

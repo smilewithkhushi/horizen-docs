@@ -1,5 +1,5 @@
 ---
-slug: /
+title: Horizen Overview (Legacy)
 ---
 # Horizen Overview
 

@@ -4,18 +4,12 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Horizen Documentation",
-  tagline: "An Advanced and Efficient EVM for Zero-Knowledge Applications",
+  tagline: "Build Private. Build Compliant. Build on Horizen.",
   favicon: "img/favicon-32x32.png",
 
-  // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: "https://docs.horizen.io",
   baseUrl: "/",
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -27,9 +21,11 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          editUrl: 'https://github.com/HorizenLabs/horizen-2-docs/tree/main',
-          routeBasePath: '/'
+          editUrl: "https://github.com/HorizenOfficial/horizen-docs/tree/main",
+          routeBasePath: "/",
+          showLastUpdateTime: true,
         },
+        blog: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -37,79 +33,98 @@ const config: Config = {
         /* gtag: {
           trackingID: "TBD",
           anonymizeIP: true,
-         }, */
+        }, */
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/horizenbase.png",
     navbar: {
       logo: {
         alt: "Horizen",
         src: "img/horizenlogo.png",
-        srcDark: "img/horizenlogo_darkmode.png"
+        srcDark: "img/horizenlogo_darkmode.png",
+        href: "/",
       },
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "overviewSidebar",
+          href: "/",
+          label: "Home",
           position: "left",
-          label: "Overview",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "horizenChainSidebar",
+          position: "left",
+          label: "Horizen Chain",
         },
         {
           type: "docSidebar",
           sidebarId: "velaSidebar",
           position: "left",
-          label: "Vela",
+          label: "VELA",
         },
         {
           type: "docSidebar",
-          sidebarId: "migrationSidebar",
+          sidebarId: "tutorialsSidebar",
           position: "left",
-          label: "Migration",
-        },   
-        {
-          type: "docSidebar",
-          sidebarId: "mainnetMigrationSidebar",
-          position: "left",
-          label: "Mainnet Claim Instructions",
+          label: "Tutorials",
         },
         {
           type: "docSidebar",
-          sidebarId: "zenriseSidebar",
+          sidebarId: "ecosystemSidebar",
           position: "left",
-          label: "Zenrise",
+          label: "Ecosystem",
         },
         {
-          type: "docSidebar",
-          sidebarId: "governanceSidebar",
-          position: "left",
-          label: "Governance",
-        },
-        {
-          href: "https://github.com/HorizenLabs/horizen-2-docs",
+          href: "https://github.com/HorizenOfficial",
           label: "GitHub",
           position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
+      links: [
+        {
+          title: "Docs",
+          items: [
+            { label: "Horizen Chain", to: "/horizen-chain/overview/what-is-horizen" },
+            { label: "VELA", to: "/vela/overview/what-is-vela" },
+            { label: "Tutorials", to: "/tutorials/horizen-chain/deploy-erc20" },
+            { label: "Ecosystem", to: "/ecosystem/overview" },
+          ],
+        },
+        {
+          title: "Community",
+          items: [
+            { label: "Discord", href: "https://discord.gg/horizen" },
+            { label: "GitHub", href: "https://github.com/HorizenOfficial" },
+          ],
+        },
+        {
+          title: "More",
+          items: [
+            { label: "Horizen.io", href: "https://horizen.io" },
+            { label: "Whitepaper", href: "https://horizen.io/whitepaper" },
+            { label: "Block Explorer", href: "https://explorer.horizen.io" },
+          ],
+        },
+      ],
       copyright: `Copyright © ${new Date().getFullYear()} Horizen`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ["solidity"],
+      additionalLanguages: ["solidity", "bash", "json"],
     },
-    // TODO: Define Algolia credentials
-    /*algolia: {
+    // TODO: Configure Algolia DocSearch
+    /* algolia: {
       appId: process.env.ALGOLIA_APP_ID,
       apiKey: process.env.ALGOLIA_API_KEY,
       indexName: process.env.ALGOLIA_INDEX_NAME,
-    },*/
+    }, */
   } satisfies Preset.ThemeConfig,
 };
 
