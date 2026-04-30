@@ -8,6 +8,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-navbar-height: 120px;
   --ifm-font-family-base: 'Space Grotesk', sans-serif;
   --ifm-color-primary: #ac946b;
   --ifm-color-primary-dark: #a48c61;
@@ -38,6 +39,7 @@ html[data-theme='dark'] {
   --ifm-background-color: var(--deep-blue);
 }
 
+
 [data-theme='dark'] .footer {
   background-color: var(--deep-blue);
   border-top: 1px solid var(--ifm-toc-border-color);
@@ -45,6 +47,11 @@ html[data-theme='dark'] {
 
 .footer {
   background-color: #272729;
+}
+
+/* Always show code block copy button */
+.theme-code-block [class*='buttonGroup'] button {
+  opacity: 0.4 !important;
 }
 
 img.bordered {
@@ -86,7 +93,7 @@ nav.menu .menu__list > .menu__list-item > .menu__list-item-collapsible {
 
 /* ── Layout: push footer to bottom on short pages ───────────────────────── */
 .main-wrapper {
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - var(--ifm-navbar-height));
   display: flex;
   flex-direction: column;
 }

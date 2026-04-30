@@ -69,7 +69,7 @@ const personas = [
   {
     title: 'Node Operator',
     description: 'Running infrastructure or integrating at the protocol level.',
-    link: '/horizen-chain/architecture/system-overview',
+    link: '/horizen-chain/overview/what-is-horizen',
     cta: 'View architecture →',
   },
 ];

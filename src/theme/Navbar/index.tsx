@@ -101,7 +101,7 @@ export default function Navbar(): JSX.Element {
   );
 
   return (
-    <header className={styles.header} role="banner">
+    <header className={`navbar ${styles.header}`} role="banner">
       {/* ── Row 1: Logo + icons ── */}
       <div className={styles.topRow}>
         <Link to="/" className={styles.brand} aria-label="Horizen home">
