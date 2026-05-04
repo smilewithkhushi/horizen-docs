@@ -1,8 +1,6 @@
 # Env files
 .env
 
-
-
 # Dependencies
 /node_modules
 .yarn
@@ -21,7 +19,6 @@ yarn.lock
 .cache-loader
 
 # Self
-/self/
 /self
 
 # Misc
