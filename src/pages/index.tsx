@@ -75,12 +75,6 @@ const personas = [
     link: '/vela/building/compliance-policies',
     cta: 'Explore compliance →',
   },
-  {
-    title: 'Node Operator',
-    description: 'Running infrastructure or integrating at the protocol level.',
-    link: '/horizen-chain/overview/what-is-horizen',
-    cta: 'View architecture →',
-  },
 ];
 
 function PersonaCards() {
@@ -186,7 +180,6 @@ const bottomLinks = [
   { label: 'Join the Discord', link: 'https://discord.gg/horizen', external: true, note: null },
   { label: 'Open a GitHub Issue', link: 'https://github.com/HorizenOfficial', external: true, note: null },
   { label: 'Read the Whitepaper', link: 'https://horizen.io/whitepaper', external: true, note: null },
-  { label: 'Thrive Builder Program', link: '/ecosystem/builder-program/thrive-overview', external: false, note: 'coming late summer 2026' },
 ];
 
 function BottomCta() {

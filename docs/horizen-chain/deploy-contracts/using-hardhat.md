@@ -7,6 +7,8 @@ sidebar_position: 2
 
 ### Initialize a new project
 
+Hardhat requires **Node.js (v18+)** and **npm**. It works on **macOS**, **Linux**, and **Windows**. On Windows, we recommend using [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install) for a smoother experience, though native CMD/PowerShell is also supported.
+
 ```bash
 mkdir hardhat-tutorial
 cd hardhat-tutorial

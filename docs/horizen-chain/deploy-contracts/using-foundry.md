@@ -7,6 +7,8 @@ sidebar_position: 1
 
 ### Install Foundry
 
+Foundry runs natively on **macOS** and **Linux**. On **Windows**, you must use [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install) — Foundry does not support PowerShell or CMD. Make sure `curl` and `git` are installed before proceeding.
+
 ```bash
 curl -L https://foundry.paradigm.xyz | bash
 foundryup
