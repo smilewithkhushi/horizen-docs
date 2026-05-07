@@ -27,6 +27,7 @@ const config: Config = {
             "1-overview/**",
             "2-vela/**",
             "3-migration/**",
+            "ecosystem/**",
             "4-mainnet-migration-instructions/**",
             "5-zenrise/**",
           ],
@@ -80,9 +81,9 @@ const config: Config = {
         },
         {
           type: "docSidebar",
-          sidebarId: "ecosystemSidebar",
+          sidebarId: "migrationSidebar",
           position: "left",
-          label: "Ecosystem",
+          label: "Migration",
         },
         {
           type: "docSidebar",
@@ -106,7 +107,7 @@ const config: Config = {
             { label: "Horizen Chain", to: "/horizen-chain/overview/what-is-horizen" },
             { label: "VELA", to: "/vela/overview/what-is-vela" },
             { label: "Tutorials", to: "/tutorials/horizen-chain/deploy-erc20" },
-            { label: "Ecosystem", to: "/ecosystem/overview" },
+            { label: "Migration", to: "/migration/01-overview" },
           ],
         },
         {

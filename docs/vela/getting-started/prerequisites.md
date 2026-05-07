@@ -1,6 +1,6 @@
 ---
 title: Prerequisites & Installation
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Prerequisites & Installation
@@ -25,6 +25,3 @@ cd vela-starterkit
 
 Follow the instructions in the repository README to bring up the local environment. The starter kit handles container orchestration, environment configuration, and sample application deployment.
 
-## Next Steps
-
-Once your environment is running, proceed to [Local Environment Setup](./local-environment-setup) for a walkthrough of the Docker configuration and component architecture.

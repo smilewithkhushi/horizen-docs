@@ -4,12 +4,12 @@
   position: sticky;
   top: 0;
   z-index: var(--ifm-z-index-fixed);
-  background: #fff4d6;
+  background: #FBB813;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
 }
 
 [data-theme='dark'] .header {
-  background: #030E24;
+  background: #FBB813;
   border-bottom-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
@@ -53,18 +53,12 @@
 }
 
 [data-theme='dark'] .brandLabel {
-  color: rgba(255, 255, 255, 0.85);
+  color: #000;
 }
 
-/* Toggle logos on theme change */
+/* Both modes use the same yellow navbar, so always show the dark-text logo */
 .logoDark {
   display: none;
-}
-[data-theme='dark'] .logoLight {
-  display: none;
-}
-[data-theme='dark'] .logoDark {
-  display: block;
 }
 
 .topRight {
@@ -80,9 +74,12 @@
   justify-content: center;
   width: 38px;
   height: 38px;
+  border: none;
   border-radius: 8px;
   color: inherit !important;
   text-decoration: none !important;
+  background: transparent;
+  cursor: pointer;
   opacity: 0.65;
   transition: opacity 0.15s ease, background 0.15s ease;
 }
@@ -93,7 +90,7 @@
 }
 
 [data-theme='dark'] .iconLink:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.06);
 }
 
 /* Search button */
@@ -122,11 +119,11 @@
 }
 
 [data-theme='dark'] .searchBtn {
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(93, 78, 51, 0.35);
 }
 
 [data-theme='dark'] .searchBtn:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(0, 0, 0, 0.04);
 }
 
 /* Icon group: Discord + GitHub flush right */
@@ -161,7 +158,7 @@
 }
 
 [data-theme='dark'] .mobileToggle:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.06);
 }
 
 /* ── Row 2: Nav links ──────────────────────────────────────────────────── */
@@ -171,7 +168,7 @@
 }
 
 [data-theme='dark'] .navRow {
-  border-top-color: rgba(255, 255, 255, 0.07);
+  border-top-color: rgba(93, 78, 51, 0.15);
 }
 
 .navItems {
@@ -207,7 +204,7 @@
 
 [data-theme='dark'] .navItemWrap :global(.navbar__link),
 [data-theme='dark'] .navItemWrap :global(.navbar__item) {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: #111 !important;
 }
 
 .navItemWrap :global(.navbar__link:hover),
@@ -218,7 +215,7 @@
 
 [data-theme='dark'] .navItemWrap :global(.navbar__link:hover),
 [data-theme='dark'] .navItemWrap :global(.navbar__item:hover) {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.06);
 }
 
 .navItemWrap :global(.navbar__link--active) {
@@ -230,8 +227,8 @@
 }
 
 [data-theme='dark'] .navItemWrap :global(.navbar__link--active) {
-  color: var(--ifm-color-primary) !important;
-  background: rgba(252, 209, 26, 0.1);
+  color: var(--ifm-color-primary-darkest) !important;
+  background: rgba(93, 78, 51, 0.12);
   border-radius: 6px;
 }
 
