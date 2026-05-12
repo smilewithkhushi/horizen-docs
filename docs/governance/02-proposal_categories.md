@@ -1,3 +1,8 @@
+---
+title: Proposal Categories
+description: "Types and categories of governance proposals in the Horizen DAO."
+---
+
 # Proposal Categories
 
 The improvement proposal process is the key tool for Horizen DAO’s community-led governance. Currently, $ZEN is the governance token for Horizen. Improvement proposals for each are called ZenIPs. Any $ZEN tokenholder can vote on improvement proposals, and those who hold the requisite amount of $ZEN may put forth proposals to the community.

@@ -1,5 +1,6 @@
 ---
 title: Using Hardhat
+description: "Step-by-step guide to deploying smart contracts on Horizen using Hardhat."
 sidebar_position: 2
 ---
 

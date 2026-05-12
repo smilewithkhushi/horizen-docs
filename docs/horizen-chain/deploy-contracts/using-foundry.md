@@ -1,5 +1,6 @@
 ---
 title: Using Foundry
+description: "Step-by-step guide to deploying smart contracts on Horizen using Foundry."
 sidebar_position: 1
 ---
 

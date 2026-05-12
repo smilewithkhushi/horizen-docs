@@ -1,3 +1,8 @@
+---
+title: Migration overview
+description: "Summary of Horizen's chain migration from legacy networks to Base L3."
+---
+
 # Migration overview
 
 Horizen migrated all the $ZEN balances from both the old Horizen mainchain and the EON EVM chain to an [ERC-20 smart contract](https://basescan.org/address/0xf43eB8De897Fbc7F2502483B2Bef7Bb9EA179229) on Base (Ethereum L2 Rollup). <br/>

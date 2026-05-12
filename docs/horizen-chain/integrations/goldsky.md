@@ -1,5 +1,6 @@
 ---
 title: Subgraph Indexing (Goldsky)
+description: "How to index Horizen onchain data using Goldsky subgraphs."
 sidebar_position: 2
 ---
 
@@ -12,7 +13,7 @@ Goldsky offers two core products:
 
 **Horizen Testnet** is available on Goldsky with the chain slug: **`horizen-testnet`**
 
----
+
 
 ### Getting Started
 
@@ -28,7 +29,7 @@ curl https://goldsky.com | sh
 goldsky login
 ```
 
----
+
 
 ### Deploy via CLI (Subgraph Config Files)
 
@@ -75,7 +76,7 @@ goldsky subgraph deploy my-subgraph/1.0.0 --path .
 
 Full step-by-step guide: [docs.goldsky.com/subgraphs/deploying-subgraphs](https://docs.goldsky.com/subgraphs/deploying-subgraphs)
 
----
+
 
 ### Deploy via Instant Subgraphs (No Config Required)
 
@@ -91,7 +92,7 @@ goldsky subgraph deploy my-subgraph/1.0.0 \
 
 Goldsky will generate the `subgraph.yaml`, `schema.graphql`, and mapping files automatically and deploy in one step.
 
----
+
 
 ### Mirror — Real-Time Data Pipelines
 
@@ -117,7 +118,7 @@ goldsky pipeline create my-horizen-pipeline \
 
 Definition files are useful for complex pipelines with multiple sources or sinks.
 
----
+
 
 ### Reference Links
 

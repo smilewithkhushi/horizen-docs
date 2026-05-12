@@ -1,5 +1,6 @@
 ---
 title: The L3 Architecture
+description: "Technical overview of Horizen's OP Stack L3 architecture settling on Base and Ethereum."
 sidebar_position: 2
 ---
 

@@ -1,3 +1,8 @@
+---
+title: Migration check
+description: "How to verify the migration completed successfully."
+---
+
 # Migration check
 
 The data loading process has been successfully completed by Horizen, but anyone can check that the migrated data correctly reflects the old chains state by following the steps described in this section.

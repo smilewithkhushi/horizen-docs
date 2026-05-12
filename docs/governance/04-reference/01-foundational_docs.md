@@ -1,3 +1,8 @@
+---
+title: Foundational Documents
+description: "Links to key governance documents including bylaws and memorandum."
+---
+
 # Foundational Documents
 
 [**Transparency Report**](/transparency)

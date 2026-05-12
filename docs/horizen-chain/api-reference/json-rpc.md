@@ -1,5 +1,6 @@
 ---
 title: JSON-RPC Endpoints
+description: "Standard Ethereum and OP Stack JSON-RPC endpoints for Horizen."
 sidebar_position: 1
 ---
 
@@ -27,7 +28,7 @@ Horizen is fully EVM-compatible and supports the standard Ethereum JSON-RPC API.
 | **Block Explorer** | `https://horizen-testnet.explorer.caldera.xyz/` |
 | **Faucet** | `https://hub-testnet.horizen.io/` |
 
----
+
 
 ### Supported JSON-RPC Methods
 
@@ -78,7 +79,7 @@ Horizen supports the full standard Ethereum JSON-RPC specification. The most com
 | `eth_getFilterLogs` | Returns logs for an existing filter |
 | `eth_uninstallFilter` | Removes a filter |
 
----
+
 
 **Example for Querying Chain ID:**
 

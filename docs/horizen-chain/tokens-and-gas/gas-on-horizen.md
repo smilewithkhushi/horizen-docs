@@ -1,5 +1,6 @@
 ---
 title: Gas on Horizen (ETH)
+description: "How gas fees work on Horizen including L2 execution and L1 data fee components."
 sidebar_position: 1
 ---
 

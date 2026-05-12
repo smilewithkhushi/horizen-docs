@@ -3,7 +3,7 @@
   position: relative;
   padding: 6rem 2rem;
   text-align: center;
-  background: #030E24;
+  background: linear-gradient(135deg, #030E24 0%, #0c2a54 100%);
   color: white;
   overflow: hidden;
 }
@@ -272,19 +272,19 @@
 /* ─── Start Building ───────────────────────────────────────────────────── */
 .buildSection {
   padding: 6rem 2rem;
-  background: linear-gradient(160deg, #030E24 0%, #0d1f3c 100%);
+  background: #FECB18;
 }
 
 .buildHeading {
   text-align: center;
   font-size: 2.25rem;
-  color: #fff;
+  color: #1a1a1a;
   margin-bottom: 0.75rem;
 }
 
 .buildSubheading {
   text-align: center;
-  color: rgba(255,255,255,0.5);
+  color: rgba(0,0,0,0.55);
   font-size: 1rem;
   margin-bottom: 3rem;
 }
@@ -303,21 +303,21 @@
   flex-direction: column;
   padding: 2rem 2rem 2rem 2.25rem;
   border-radius: 14px;
-  background: #030E24;
-  border: 1px solid rgba(252, 209, 26, 0.15);
-  border-left: 3px solid #FCD11A;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 3px solid #030E24;
   text-decoration: none !important;
-  color: white !important;
+  color: #1a1a1a !important;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .buildCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 16px 40px rgba(3, 14, 36, 0.4);
-  border-color: rgba(252, 209, 26, 0.4);
-  border-left-color: #FCD11A;
-  color: white !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  border-color: rgba(0, 0, 0, 0.15);
+  border-left-color: #030E24;
+  color: #1a1a1a !important;
 }
 
 .buildTag {
@@ -325,21 +325,21 @@
   font-weight: 600;
   font-family: 'SF Mono', 'Fira Code', monospace;
   letter-spacing: 0.04em;
-  color: #FCD11A;
+  color: #030E24;
   margin-bottom: 0.85rem;
 }
 
 .buildTitle {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #fff;
+  color: #1a1a1a;
   margin-bottom: 0.75rem;
   line-height: 1.35;
 }
 
 .buildDesc {
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.55);
+  color: rgba(0,0,0,0.6);
   line-height: 1.6;
   flex: 1;
   margin-bottom: 1.5rem;
@@ -348,13 +348,13 @@
 .buildCta {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #FCD11A;
+  color: #030E24;
   margin-top: auto;
   transition: color 0.2s;
 }
 
 .buildCard:hover .buildCta {
-  color: #ffe066;
+  color: #0a2040;
 }
 
 /* ─── Bottom CTA ───────────────────────────────────────────────────────── */

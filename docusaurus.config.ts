@@ -15,6 +15,19 @@ const config: Config = {
     locales: ["en"],
   },
 
+  plugins: [
+    [
+      'docusaurus-plugin-llms',
+      {
+        generateLLMsTxt: true,
+        generateLLMsFullTxt: true,
+        docsDir: 'docs',
+        title: 'Horizen Documentation',
+        description: 'Developer documentation for Horizen — an EVM-native L3 on Base with privacy via VELA.',
+      },
+    ],
+  ],
+
   presets: [
     [
       "classic",

@@ -1,3 +1,8 @@
+---
+title: Smart contracts
+description: "Technical details of smart contracts used in the migration process."
+---
+
 # Smart contracts
 
 Here a more technical deep dive of the smart contracts used for the migration.<br/>

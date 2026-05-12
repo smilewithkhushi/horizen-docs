@@ -1,3 +1,8 @@
+---
+title: Constitution
+description: "Rules, procedures, and binding agreements for Horizen DAO governance."
+---
+
 # Constitution
 
 ## 1. Introduction​

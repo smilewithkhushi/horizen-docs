@@ -1,3 +1,8 @@
+---
+title: Communication Channels
+description: "Primary communication platforms for the Horizen community."
+---
+
 # Communication Channels
 
 - Discord: [Discord](https://discord.com/invite/z8eebsj7Sv) is a social media and messaging application that serves as the main communications platform for Horizen. Anyone is free to join the official Horizen server and engage in discussion with other community members across any of the channels.

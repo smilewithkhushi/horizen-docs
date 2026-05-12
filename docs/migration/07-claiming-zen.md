@@ -1,3 +1,8 @@
+---
+title: Claiming mainchain ZEN
+description: "Instructions for claiming migrated ZEN tokens on Horizen."
+---
+
 # Claiming mainchain ZEN
 
 This section covers the steps to follow to claim old mainchain ZEN balances after the migration.<br/>

@@ -1,5 +1,6 @@
 ---
 title: What is Horizen Chain?
+description: "Overview of Horizen as an EVM-identical L3 built on Base with privacy via VELA."
 sidebar_position: 1
 ---
 

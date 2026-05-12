@@ -1,3 +1,8 @@
+---
+title: Voting Process
+description: "How voting works, quorum requirements, and ZenIP approval process."
+---
+
 # Voting Process
 
 Once an ZenIP has been approved for voting, it will proceed to a live Snapshot vote. As a $ZEN tokenholder, you can participate in this Snapshot voting.

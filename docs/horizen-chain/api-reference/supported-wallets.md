@@ -1,5 +1,6 @@
 ---
 title: Supported Wallets & Tools
+description: "List of wallets, developer tools, and SDKs compatible with Horizen."
 sidebar_position: 3
 ---
 
@@ -35,7 +36,7 @@ Currency Symbol: ETH
 Block Explorer:  https://horizen-testnet.explorer.caldera.xyz/
 ```
 
----
+
 
 ### Developer Tools
 
@@ -101,7 +102,6 @@ const blockNumber = await client.getBlockNumber();
 console.log("Current block:", blockNumber);
 ```
 
----
 
 ### Block Explorers
 
@@ -114,7 +114,7 @@ Both explorers are powered by Blockscout and support the full Blockscout REST AP
 
 Blockscout API docs: [docs.blockscout.com/for-users/api](https://docs.blockscout.com/for-users/api)
 
----
+
 
 ### Bridge & Faucet
 
@@ -125,7 +125,7 @@ Blockscout API docs: [docs.blockscout.com/for-users/api](https://docs.blockscout
 | **ZEN Bridge (Stargate V2)** | Base → Horizen | `https://stargate.finance/?srcChain=base&srcToken=0xf43eB8De897Fbc7F2502483B2Bef7Bb9EA179229&dstChain=horizen&dstToken=0x57da2D504bf8b83Ef304759d9f2648522D7a9280` |
 | **Faucet** | Testnet | `https://hub-testnet.horizen.io/` |
 
----
+
 
 ### Quick Reference — All URLs
 

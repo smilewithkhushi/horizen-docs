@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# AI/LLM access
+# See /llms.txt for structured documentation index
+# See /llms-full.txt for complete documentation in markdown
+Sitemap: https://docs.horizen.io/sitemap.xml

@@ -1,5 +1,6 @@
 ---
 title: ZEN Token
+description: "The ZEN governance token — history, role, and usage on Horizen."
 sidebar_position: 1
 ---
 

@@ -1,3 +1,8 @@
+---
+title: Migration starting points
+description: "Hard-fork activation details and migration start point configuration."
+---
+
 # Migration starting points
 
 The activation of the EON 1.5 hard-fork marked the start of the migration process.<br/>

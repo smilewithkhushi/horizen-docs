@@ -1,5 +1,6 @@
 ---
 title: Prerequisites & Installation
+description: "System requirements and tooling needed for VELA development."
 sidebar_position: 1
 ---
 

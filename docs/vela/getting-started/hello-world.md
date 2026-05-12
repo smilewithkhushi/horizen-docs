@@ -1,5 +1,6 @@
 ---
-title: "Hello World: Your First Confidential App"
+title: "Your First Confidential App"
+description: "Build your first confidential application on VELA step by step."
 sidebar_position: 3
 ---
 
@@ -11,8 +12,6 @@ the TEE and verified your private balance.
 > **Prerequisites:** Complete [Local Environment Setup](./local-environment-setup.md) 
 > and have `docker compose up` running before proceeding.
 
----
-
 ## What You're Deploying
 
 The example application (`vela-nova`) is a private account-based ledger 
@@ -23,7 +22,6 @@ roots on-chain, not the underlying data.
 It supports four operations: `deposit`, `privatetransfer`, `withdraw`, 
 and `deanonymize` (for authorized auditors).
 
----
 
 ## Step 1: Download the Artifacts
 
@@ -39,7 +37,6 @@ Make `nova-linux` executable:
 chmod +x nova-linux
 ```
 
----
 
 ## Step 2: Configure the Wallet
 
@@ -64,7 +61,6 @@ These are the deterministic contract addresses deployed by the
 local `deployer` service. They will be the same on every fresh 
 environment.
 
----
 
 ## Step 3: Set Your Keys
 
@@ -95,7 +91,7 @@ The P-521 key is used for ECDH-encrypted communication between your
 client and the TEE. The TEE uses your registered public key to encrypt 
 all events it sends back to you — only your private key can decrypt them.
 
----
+
 
 ## Step 4: Deploy the WASM Application
 
@@ -117,7 +113,7 @@ What happens under the hood:
 > `DEPLOYER_ROLE` on `ProcessorEndpoint`. The Anvil default accounts 
 > have this pre-granted in the local dev environment.
 
----
+
 
 ## Step 5: Register Your User
 
@@ -129,7 +125,7 @@ back to you:
 ./nova-linux registeruser
 ```
 
----
+
 
 ## Step 6: Run Your First Private Transaction
 
@@ -159,7 +155,7 @@ Verify your private balance:
 If you see `1 ETH` reflected in your private balance, 
 the full stack is working correctly.
 
----
+
 
 ## Full Command Reference
 
@@ -174,15 +170,3 @@ the full stack is working correctly.
 ./nova-linux help                  # Full command reference
 ```
 
----
-
-## What to Build Next
-
-The `vela-nova` source at [`v0.1.0`](https://github.com/HorizenOfficial/vela-nova) 
-is a reference implementation. It shows you the complete structure 
-of a VELA WASM application: state design, the four required exports 
-(`deploy`, `load_module`, `deposit`, `process_request`), event 
-emission, and error handling.
-
-To build your own application, start there and replace the business 
-logic with your own.

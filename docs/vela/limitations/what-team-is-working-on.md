@@ -1,5 +1,6 @@
 ---
 title: What the Team is Working On
+description: "Upcoming VELA features and roadmap items the team is building."
 sidebar_position: 2
 ---
 

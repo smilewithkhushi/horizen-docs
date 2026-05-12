@@ -1,5 +1,6 @@
 ---
 title: How VELA Works (Architecture)
+description: "Architecture and execution model of VELA's TEE-based confidential computation."
 ---
 
 # How VELA Works

@@ -1,5 +1,6 @@
 ---
 title: "Horizen's Architecture"
+description: "Deep dive into Horizen's full system architecture and component interactions."
 ---
 
 Horizen is an EVM L3 powered by op-stack built on top of Base L2, which is one of the most high performant L2 in Ethereum ecosystem. OP Stack is an open-source, modular framework developed by the Optimism Collective, enabling the creation of scalable, Ethereum-aligned rollups. By leveraging Base as its settlement layer, Horizen L3 inherits the security and decentralization of Ethereum while benefiting from Base's low fees and high throughput.

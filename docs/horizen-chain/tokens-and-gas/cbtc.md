@@ -1,5 +1,6 @@
 ---
-title: USDC.e on Horizen
+title: cBTC on Horizen
+description: "Coinbase-wrapped BTC (cbBTC) token details and usage on Horizen."
 sidebar_position: 3
 ---
 

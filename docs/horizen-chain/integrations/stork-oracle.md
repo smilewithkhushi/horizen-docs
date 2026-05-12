@@ -1,5 +1,6 @@
 ---
 title: Oracles (Stork)
+description: "Integrate Stork price oracle feeds into your Horizen smart contracts."
 sidebar_position: 1
 ---
 
@@ -34,7 +35,6 @@ Your Smart Contract
   └── Reads price via getTemporalNumericValueV1()
 ```
 
----
 
 ### Step 1 — Fetch Data via the Stork REST API
 
@@ -49,7 +49,7 @@ Full REST API reference: [docs.stork.network/api-reference/rest-api](https://doc
 
 Available asset IDs (e.g. `BTCUSD`, `ETHUSD`) are listed in the [Stork Asset ID Registry](https://docs.stork.network/resources/asset-id-registry).
 
----
+
 
 ### Step 2 — Push Data On-Chain
 
@@ -79,7 +79,7 @@ stork.updateTemporalNumericValuesV1{value: fee}(updateData);
 
 > **Tip:** If your protocol uses multiple price feeds, batch them in a single `updateTemporalNumericValuesV1` call. This saves gas and ensures all prices are updated atomically in the same block.
 
----
+
 
 ### Step 3 — Read Data On-Chain
 
@@ -137,7 +137,7 @@ contract PriceConsumer {
 
 For view functions where you want to implement custom staleness logic, use `getTemporalNumericValueUnsafeV1` instead — it returns the stored value without reverting on staleness, allowing you to implement your own freshness checks.
 
----
+
 
 ### Reference Links
 

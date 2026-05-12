@@ -1,3 +1,8 @@
+---
+title: About
+description: "Overview of Horizen DAO and its decentralized governance framework."
+---
+
 # About
 
 Decentralized governance is a cornerstone of the Horizen ecosystem. For a project like Horizen it is necessary to have a framework enabling community members to govern the project. For Horizen, Horizen DAO is that framework: a means through which network participants can effectuate changes to influence the future of Horizen.

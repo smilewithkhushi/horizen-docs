@@ -1,5 +1,6 @@
 ---
 title: Network & Contract Addresses
+description: "Key contract addresses and network parameters for Horizen mainnet and testnet."
 sidebar_position: 2
 ---
 
@@ -38,7 +39,7 @@ All addresses below are sourced directly from official Horizen and integration p
 | Testnet Base | OFT Adapter (LayerZero) | [`0x5dE29d14E72feb79967596F3Ae57A9BfBA192769`](https://sepolia.basescan.org/address/0x5dE29d14E72feb79967596F3Ae57A9BfBA192769) |
 | Testnet Horizen | OFT (LayerZero) | [`0x06DA6bDD2aB23447af5162ab0975edDA7E8d3747`](https://explorer-testnet.horizen.io/address/0x06DA6bDD2aB23447af5162ab0975edDA7E8d3747) |
 
----
+<br/>
 
 ### Migration Contracts (Base Mainnet)
 
@@ -52,7 +53,7 @@ These contracts handle the ZEN token migration from the legacy Horizen mainchain
 
 Source code: [github.com/HorizenOfficial/horizen-migration](https://github.com/HorizenOfficial/horizen-migration/blob/main/erc20-migration/contracts)
 
----
+
 
 ### Oracle Contracts: Stork
 
@@ -65,7 +66,6 @@ Verified directly from [docs.stork.network/resources/contract-addresses/evm](htt
 
 > Both mainnet and testnet share the same Stork contract address on Horizen.
 
----
 
 ### Multisig: Den / Safe
 

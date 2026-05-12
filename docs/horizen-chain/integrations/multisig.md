@@ -1,5 +1,6 @@
 ---
 title: Multisig Wallets (Den)
+description: "Set up and manage multisig wallets on Horizen using Den and Safe contracts."
 sidebar_position: 3
 ---
 
@@ -15,7 +16,7 @@ With Den on Horizen you can:
 - Batch multiple transactions into a single execution
 - Manage signers and approval thresholds
 
----
+
 
 ### Creating a New Multisig Wallet
 
@@ -28,7 +29,7 @@ With Den on Horizen you can:
 
 Full guide: [docs.onchainden.com/set-up-den/creating-and-managing-safes](https://docs.onchainden.com/set-up-den/creating-and-managing-safes)
 
----
+
 
 ### Using an Existing Safe
 
@@ -36,7 +37,7 @@ If you already have a Safe deployed on another EVM network, you can import it in
 
 Guide: [docs.onchainden.com/set-up-den/using-existing-safes](https://docs.onchainden.com/set-up-den/using-existing-safes)
 
----
+
 
 ### Creating Transactions
 
@@ -49,7 +50,7 @@ Guide: [docs.onchainden.com/set-up-den/using-existing-safes](https://docs.onchai
 
 Guide: [docs.onchainden.com/creating-transactions/getting-started](https://docs.onchainden.com/creating-transactions/getting-started)
 
----
+
 
 ### Simulating Transactions
 
@@ -57,7 +58,7 @@ Before executing a multisig transaction on-chain, Den lets you simulate it to pr
 
 Guide: [docs.onchainden.com/creating-transactions/simulations](https://docs.onchainden.com/creating-transactions/simulations)
 
----
+
 
 ### Batching Transactions
 
@@ -65,7 +66,7 @@ Den supports batching multiple transactions into a single on-chain execution. Th
 
 Guide: [docs.onchainden.com/creating-transactions/batching](https://docs.onchainden.com/creating-transactions/batching)
 
----
+
 
 ### Reference Links
 

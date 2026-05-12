@@ -1,3 +1,8 @@
+---
+title: Guiding Values
+description: "Core values and principles guiding the Horizen DAO."
+---
+
 # Guiding Values
 
 A strong social layer that builds trust and maintains integrity across the Horizen ecosystem is crucial. Community building is essential in growing blockchain adoption, and communities are built on shared values. The Horizen DAO’s guiding values are as follows:

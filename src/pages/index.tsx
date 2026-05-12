@@ -164,7 +164,7 @@ function StartBuilding() {
         <div className={styles.buildGrid}>
           {buildingCards.map((card) => (
             <Link key={card.title} to={card.link} className={styles.buildCard}>
-              <span className={styles.buildTag}>$ {card.tag}</span>
+              <span className={styles.buildTag}># {card.tag}</span>
               <h3 className={styles.buildTitle}>{card.title}</h3>
               <p className={styles.buildDesc}>{card.description}</p>
               <span className={styles.buildCta}>Get started →</span>

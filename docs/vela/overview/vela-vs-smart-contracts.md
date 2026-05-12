@@ -1,5 +1,6 @@
 ---
 title: VELA vs. Regular Smart Contracts
+description: "Key differences between VELA confidential apps and standard EVM smart contracts."
 ---
 
 # VELA vs. Smart Contracts
@@ -42,7 +43,7 @@ preserved. Privacy is added.**
 | Performance overhead | Near-native EVM | Near-native (TEE adds minimal overhead vs. ZK/FHE) |
 
 
-
+<!-- 
 ### The Trust Trade-off
 
 
@@ -99,5 +100,4 @@ managing encrypted state). The VELA component commits attested results
 to the smart contract, which settles them publicly.
 
 This lets you preserve EVM composability for the parts of your 
-application that should be transparent, while protecting the parts 
-that shouldn't.
+application that should be transparent, while protecting the parts that shouldn't. -->

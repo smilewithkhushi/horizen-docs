@@ -1,5 +1,6 @@
 ---
 title: Mainnet Configuration
+description: "RPC endpoints, chain ID, explorer URL, and wallet setup for Horizen mainnet."
 sidebar_position: 1
 ---
 

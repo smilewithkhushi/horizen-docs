@@ -1,3 +1,8 @@
+---
+title: Dump execution
+description: "Technical details of the UTXO data dump process during migration."
+---
+
 # Dump execution
 
 In the previous step, the network has reached  the  migration heights, and the final block hashes/heights of both chains are now revealed.<br/>

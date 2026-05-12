@@ -1,5 +1,6 @@
 ---
 title: What's Not Supported Yet
+description: "Current limitations and unsupported features in VELA."
 sidebar_position: 1
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: What is VELA?
+description: "Introduction to VELA — Horizen's confidential execution layer using trusted execution environments."
 sidebar_position: 1
 ---
 
@@ -8,12 +9,6 @@ sidebar_position: 1
 VELA is a confidential coprocessor for Web3 applications. It allows developers to run application logic inside Trusted Execution Environments (TEEs), where data is encrypted in memory and computations are cryptographically attested.
 
 No operator, cloud provider, or third party can access the data being processed. At the same time, regulators and auditors can verify compliance through cryptographic proof without requiring access to raw application state.
-
-## Why VELA Exists
-
-Public blockchains are transparent by design. Every transaction, every state change, and every piece of contract logic is visible to anyone. This is a feature for trustlessness, but a problem for applications that handle sensitive data: financial transactions, identity verification, health records, proprietary trading logic, or compliance workflows.
-
-VELA solves this by moving sensitive computation off-chain into attested hardware enclaves, while keeping the verifiability and settlement guarantees of the blockchain.
 
 ## Key Properties
 

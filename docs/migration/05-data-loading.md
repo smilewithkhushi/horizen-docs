@@ -1,3 +1,8 @@
+---
+title: Data loading
+description: "How migrated balances are loaded into smart contracts on the new chain."
+---
+
 # Data loading
 
 In this step all the balances obtained in the previous dump step have been loaded into the vault smart contracts.<br/>

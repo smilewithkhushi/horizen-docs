@@ -1,5 +1,6 @@
 ---
 title: Verify a Contract
+description: "How to verify deployed smart contracts on the Horizen block explorer."
 sidebar_position: 3
 ---
 

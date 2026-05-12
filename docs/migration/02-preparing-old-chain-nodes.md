@@ -1,3 +1,8 @@
+---
+title: Preparing old chain nodes
+description: "Steps for preparing old chain nodes before the migration hard fork."
+---
+
 # Preparing old chain nodes
 
 A proper version of ZEND and EON has been released to support the migration.<br/>

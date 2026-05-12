@@ -1,5 +1,6 @@
 ---
 title: Faucet
+description: "How to get testnet ETH from the Horizen faucet."
 sidebar_position: 4
 ---
 

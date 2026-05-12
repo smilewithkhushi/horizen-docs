@@ -1,5 +1,6 @@
 --- 
 title: Local Environment Setup (Docker)
+description: "Set up a local VELA development environment using Docker."
 sidebar_position: 2
 ---
 
@@ -86,7 +87,7 @@ To interact with the local chain from a browser wallet:
 Anvil pre-funds a set of default accounts with 1000 ETH each. 
 Their private keys are printed in the `chain` service logs on startup.
 
----
+
 
 ## Data Persistence and Volume Management
 

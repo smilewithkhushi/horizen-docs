@@ -1,5 +1,6 @@
 ---
 title: Testnet Configuration
+description: "RPC endpoints, chain ID, faucet, explorer URL, and wallet setup for Horizen testnet."
 sidebar_position: 2
 ---
 

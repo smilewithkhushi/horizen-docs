@@ -1,5 +1,7 @@
 ---
 sidebar_class_name: 'hidden'
+title: Tools for Claiming Process
+description: "Tools and utilities available for the ZEN token claim process."
 ---
 # Tools for Claiming Process
 

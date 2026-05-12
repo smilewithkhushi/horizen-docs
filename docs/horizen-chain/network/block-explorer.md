@@ -1,5 +1,6 @@
 ---
 title: Block Explorer
+description: "Guide to using the Horizen block explorer to view transactions and contracts."
 sidebar_position: 3
 ---
 
