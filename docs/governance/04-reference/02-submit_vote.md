@@ -5,6 +5,5 @@ description: "Instructions for submitting proposals and voting on Horizen govern
 
 # Submit or Vote on a Proposal
 
-[Discourse](https://horizen.discourse.group/)
-
-[Snapshot](https://snapshot.org/#/horizenfoundation.eth)
+- **Submit a proposal** — [Discourse](https://horizen.discourse.group/)
+- **Vote on a proposal** — [Snapshot](https://snapshot.org/#/horizenfoundation.eth)

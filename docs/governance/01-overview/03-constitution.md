@@ -5,7 +5,7 @@ description: "Rules, procedures, and binding agreements for Horizen DAO governan
 
 # Constitution
 
-## 1. Introduction​
+## 1. Introduction
 
 This Horizen DAO Constitution (the “Constitution”) sets forth the set of binding rules, procedures, processes, direction, and ethos for the Horizen DAO and The Horizen Foundation (the "Foundation"). Unless otherwise defined in this Constitution, defined terms in this Constitution shall have the meaning ascribed to those terms in Bylaws.
 
@@ -20,7 +20,7 @@ Similarly, when you put forward an idea or comment, be mindful of its impact and
 
 The Foundation will always undertake these responsibilities in a manner consistent with Horizen DAO’s guiding principles and values, this Constitution and the Foundation Governing Documents.
 
-## 2. Guiding Values​
+## 2. Guiding Values
 
 A strong social layer that builds trust and maintains integrity across the Horizen ecosystem is crucial. Community building is essential in growing blockchain adoption, and communities are built on shared values. The Horizen DAO’s guiding values are as follows:
 
@@ -31,7 +31,7 @@ A strong social layer that builds trust and maintains integrity across the Horiz
 - Continuous Improvement: The Horizen DAO should never rest on its laurels. There are always things the community can do better, and community members should take an active role in proposing and implementing such improvements.
 - Social Responsibility: You, as a community member and Tokenholder, are here because you want to help build the future of the internet – and of the world. As such, each of us must be responsible stewards of that mission and act with integrity in all that we do.
 
-### For Reference:​
+### For Reference
 
 - The "Horizen DAO" or "DAO" means, collectively, the decentralized community of individuals that own the $ZEN token.
 - The "Total Circulating Supply" means all of the $ZEN tokens currently in circulation.
@@ -41,7 +41,7 @@ A strong social layer that builds trust and maintains integrity across the Horiz
 - "Technical ZenIP" means any ZenIP which requires a technical implementation or upgrade to the Horizen blockchain, or which requires the modification of the Foundation Governing Documents or this Constitution.
 - "Non-Technical ZenIP" means any other ZenIP which does not require a technical upgrade to the Horizen blockchain, including but not limited to making grants, proposing arrangements with third parties and conducting Foundation governance.
 
-## 3. Chain Governance​
+## 3. Chain Governance
 
 This Constitution describes the decision-making framework for governance for Horizen
 
@@ -51,7 +51,7 @@ All DAO-approved proposals are reviewed by the Special Council for adherence to 
 
 Following a DAO-approved proposal, the Foundation is responsible for implementing the actions described in each such proposal.
 
-## 4. DAO Voting​
+## 4. DAO Voting
 
 As detailed in this Constitution and further in the Foundation Governing Documents, Tokenholders have the authority to propose and vote on ZenIPs, subject to, and in accordance with, either the ZenIP Process or EONIP Process (as applicable):
 
@@ -62,7 +62,7 @@ As detailed in this Constitution and further in the Foundation Governing Documen
 - Approve the use, implementation, enhancement, improvement, management and licensing of the Horizen DAO-Governed IP;
 - Approve any other action in accordance with successful ZenIPs or the Foundation Governing Documents.
 
-## 5. ZenIP Processes​
+## 5. ZenIP Processes
 
 **a. Before Submitting a Proposal**
 
@@ -88,7 +88,7 @@ Community members have a seven (7) day window to provide their feedback on your 
 
 **d. ZenIP Draft Creation**
 
-         **i. ZenIP Draft**
+**i. ZenIP Draft**
 
 Once your proposal has completed the seven (7) day community review and feedback window your proposal idea will move to the draft stage. Your proposal must follow the below format:
 
@@ -167,7 +167,7 @@ All ZenIPs that satisfy their voting approval thresholds, as described above, in
   - The Foundation and the DAO administrator will assist in implementing approved Non-Technical ZenIPs, including hiring or engaging service providers, coordinating documentation and contract negotiations and all other actions incidental to implementing the approved Non-Technical ZenIPs.
   - The Horizen DAO administrator and/or project management team will assist with the above implementations but are not responsible for this on their own.
 
-## 6. Special Council​
+## 6. Special Council
 
 **a. Overview**
 
@@ -231,6 +231,6 @@ Special Council members may only be removed prior to the end of their terms unde
 
 2. The seat(s) of any Special Council member(s) who has been removed prior to the end of their respective term(s) shall remain unfilled until the next election, unless prior to an upcoming election, a replacement member is appointed by a vote of at least two-thirds (2/3rds) of the then-sitting Special Council members. If a vacant seat is filled by a vote of at least two-thirds (2/3rds) of the then-sitting Special Council members, then such member occupying that seat shall be up for reelection at the next election.
 
-## 7. Committees​
+## 7. Committees
 
 To streamline the decentralized system of governance for the Horizen DAO the operation of the Foundation may be facilitated by committees. The members on these committees will serve to enhance decentralized governance and efficiency through administrative functions within the Foundation but are not fiduciaries. Tokenholders will have the authority to vary and/or create new committees within the Horizen DAO, from time to time, in accordance with this Constitution and/or the Foundation Governing Documents, to further these efforts at the DAO.

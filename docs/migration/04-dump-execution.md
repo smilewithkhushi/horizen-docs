@@ -5,18 +5,15 @@ description: "Technical details of the UTXO data dump process during migration."
 
 # Dump execution
 
-In the previous step, the network has reached  the  migration heights, and the final block hashes/heights of both chains are now revealed.<br/>
-This section describes how the data, which includes all the balances to be migrated, was generated.<br/>
+In the previous step, the network has reached the migration heights, and the final block hashes/heights of both chains are now revealed. This section describes how the data, which includes all the balances to be migrated, was generated.
 
 We will need to interact with a node of each chain:
 
-- Fully synced ZEND Mainchain node 
-
+- Fully synced ZEND Mainchain node
 - Fully synced EON Chain node with dump support enabled:
+    - To enable dump support, the following fragment must be present in the config file (*important*: to generate a valid state dump, the fragment must be added *BEFORE* starting to sync the chain):
 
-    - To enable dump support,  the following fragment must be present in the config file  (*important*: to generate a valid state dump, the fragment must be added *BEFORE* starting to sync the chain):
-
-    ```
+    ```text
     evmStateDump {
         enabled = true
     }
@@ -24,21 +21,21 @@ We will need to interact with a node of each chain:
 
     - If using Docker and the Docker image zencash/evmapp:1.5.0 , you can configure the following env property:
 
-    ```
+    ```bash
      SCNODE_EVM_STATE_DUMP_ENABLED=true
      ```
 
      This will set automatically the previous property in the container.
 
     
-# How to obtain the dump data
+## How to obtain the dump data
 
 <img  src="/img/migration2.png"/>
 
 1. Execute a dump of ZEND balances at that specified height.
    ZEND is shipped with a dumper command line utility to do this:
 
-    ```
+    ```bash
     zen-cli stop
     dumper -H MC_MIGRATION_HEIGHT > utxos.csv
     ```
@@ -46,19 +43,17 @@ We will need to interact with a node of each chain:
     Please note the following:
     - The stop command is needed because ZEND must not be running while performing the dump
     - If executing a dump of the testnet you must add the flag: -t
-    - MC_MIGRATION_HEIGHT must be <b>not too old in the past</b> compared to the latest tip: maximum supported height is <b>tip-100</b>
+    - MC_MIGRATION_HEIGHT must be **not too old in the past** compared to the latest tip: maximum supported height is **tip-100**
 
-2. Execute a dump of EON State:
-  
-   Execute the following call on the EON node:<br/>
+2. Execute a dump of EON State. Execute the following call on the EON node:
 
-   ```
+   ```bash
     curl --request POST 'http://127.0.0.1:9085/ethv1' -H 'Content-Type: application/json' -H 'accept: application/json' -d '{ "jsonrpc":"2.0", "method":"zen_dump", "params":["0xbda76ab769c4e158f8e8add81bdf17c9d919fb54cd5e32f1c83cebdfc3dc363c","/zendata/eon.dump"], "id":1 }'  
     ```
     - First parameter of the method must be replaced by EON_MIGRATION_HASH
     - Second parameter is the local-path of the output dump.
 
-# How to create the restore artifacts
+## How to create the restore artifacts
 
 3. Download and follow the README instructions of  [this folder](https://github.com/HorizenOfficial/horizen-migration/tree/dev/dump-scripts) to    execute the  *create_restore_artifacts.sh* bash script.
 
@@ -88,7 +83,7 @@ The result of the script will be two restore artifacts:
 
 - a *zend.json* file, containing a key-value json data structure like this:
 
-    ```
+    ```json
     {
         "0xabf1FF91cECD9990B3f29363B62B87FD76f55F4A": 10001500000000000000000,
         "0x448ae34180D03AD7da48975d6Fd7B297bb871E26": 2082100000000000000,
@@ -96,12 +91,12 @@ The result of the script will be two restore artifacts:
     }
      ```
 
-     The *keys* represent the ZEND address in a Base58check decoded format, without the first 2 bytes chain prefix (so 20 bytes in total), prepended with 0x.<br/>
+     The *keys* represent the ZEND address in a Base58check decoded format, without the first 2 bytes chain prefix (so 20 bytes in total), prepended with 0x.
      The *values* represent the ZEND balance, in "wei format" (1 ZEN = 1 with 18 zeros).
 
 - an *eon.json* file, containing a key-value json data structure like this:
 
-    ```
+    ```json
     {
         "0xBa2290AEaAE3e1ea336431911C97a67Ebff46528": 1500000000000000000,
         "0xFEB3DE3D4A6F49bbF643c44E64dfd3e46D3E0F04": 821003000000000000,
@@ -109,12 +104,12 @@ The result of the script will be two restore artifacts:
     }
      ```
 
-     The *keys* represent the EON address in the hex form with “0x” prefix.<br/>
-     The *values* represent the EON balance, in "wei format" (1 ZEN = 1 with 18 zeros).
+     The *keys* represent the EON address in the hex form with “0x” prefix.
+     The *values* represent the EON balance, in “wei format” (1 ZEN = 1 with 18 zeros).
 
 These artifacts will be the ones used for the data loading and migration check steps.
 
-# Final restore artifacts
+## Final restore artifacts
 
 For transparency, the restore artifacs are also available on Github at the following url:
 

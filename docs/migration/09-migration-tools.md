@@ -29,13 +29,13 @@ Use either to submit the claim:
 
 Before claiming, you must generate a valid signature using the message format:
 
-```
+```text
 "ZENCLAIM" + destinationAddress
 ```
 
 For example:
 
-```
+```text
 ZENCLAIM0x1B9aCc8d2c9e20aC2e78904e6f123f2D22Dd2A8w
 ```
 
@@ -100,16 +100,16 @@ If your funds are stored on a Ledger hardware wallet, use the [Ledger Signing To
    ![Edit account](/img/migration-tools/ledger-4.png)
 
    ![Find derivation path](/img/migration-tools/ledger-5.png)
----
-      #### About Derivation Paths
+
+   #### About Derivation Paths
 
       Ledger uses the following format for HD wallet derivation:
-      ```
+      ```text
       m / purpose' / coin_type' / account' / change / address_index
       ```
       
       For **Horizen**, the derivation path is:
-      ```
+      ```text
       m / 44' / 121' / account' / change / address_index
       ```
 
@@ -117,7 +117,7 @@ If your funds are stored on a Ledger hardware wallet, use the [Ledger Signing To
          - `0` → receiving address
          - `1` → change address
       - `address_index` is the index of the address under that account
----
+
    #### Understanding `freshAddressPath`
 
    Ledger shows the **next unused address** as the `freshAddressPath`.
@@ -130,7 +130,6 @@ If your funds are stored on a Ledger hardware wallet, use the [Ledger Signing To
    If the `freshAddressPath` is `m/44'/121'/0'/0/5`  
    Then the last used receiving address is `m/44'/121'/0'/0/4`
 
----
    #### Important: Check All Possible Addresses
 
    To ensure **no funds are left behind**:
@@ -140,7 +139,7 @@ If your funds are stored on a Ledger hardware wallet, use the [Ledger Signing To
       - for both `change = 0` and `change = 1`
 
    2. This means you should check all paths like:
-      ```
+      ```text
       m/44'/121'/0'/0/4
       m/44'/121'/0'/1/4
       m/44'/121'/0'/0/3
@@ -168,7 +167,7 @@ If you only have your seed phrase, you'll need to derive your private key using 
 
 > **Note**: For security, we recommend downloading the tool and running it offline. Download and extract the static files [here](https://github.com/HorizenOfficial/horizen-migration-signing-tool-private-key/releases/latest), then open `index.html` locally.
 
-<img src="/img/migration-tools/private-key-1.png" alt="Private Key Signing Tool" style={{ maxWidth: "500px", width: "100%" }} />
+![Private Key Signing Tool](/img/migration-tools/private-key-1.png)
 
 1. Enter your **private key** and confirm the ZEN address is correct.
 
@@ -203,13 +202,13 @@ You can claim ZEN directly through the official web interface:
 
    Click Connect Wallet and choose your provider (e.g., MetaMask). Make sure you're connected to Base Mainnet.
 
-   <img src="/img/migration-tools/metamask.png" alt="Connect MetaMask" style={{ maxWidth: "400px", width: "100%" }} />
+   ![Connect MetaMask](/img/migration-tools/metamask.png)
 
    **Instructions for connecting to Base Sepolia Testnet (if not already set up)**
 
    Click on the "Add Custom Network" from the network dropdown and enter in the following credentials
 
-   ```
+   ```text
    Network Name: Base Mainnet
    RPC URL: https://mainnet.base.org
    Chain ID: 8453
@@ -220,13 +219,13 @@ You can claim ZEN directly through the official web interface:
 2. **Import Token**
    Make sure to import either tZEN (if on testnet) or ZEN (on mainnet) so that the tokens appear in Metamask. Under the tokens tab select the "Import Tokens" button and enter the following for the appropriate environment.
 
-   ```
+   ```text
    Base Mainnet
    Contract: 0xf43eB8De897Fbc7F2502483B2Bef7Bb9EA179229
    Symbol: ZEN
    ```
 
-   <img src="/img/migration-tools/import-token.png" alt="Import ZEN token" style={{ maxWidth: "400px", width: "100%" }} />
+   ![Import ZEN token](/img/migration-tools/import-token.png)
 
 3. **Enter ZEN Address**
 

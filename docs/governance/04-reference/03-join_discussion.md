@@ -5,4 +5,4 @@ description: "How to join governance discussions and participate in the Horizen 
 
 # Join the Discussion
 
-[Discord](https://discord.com/invite/z8eebsj7Sv)
+- **Discord** — [Join the Horizen community](https://discord.com/invite/z8eebsj7Sv)

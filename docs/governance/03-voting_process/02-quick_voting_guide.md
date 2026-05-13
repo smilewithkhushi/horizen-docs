@@ -7,7 +7,7 @@ description: "Quick reference guide for participating in Horizen governance vote
 
 This quick guide is meant to help you go over the simple steps to vote on ZENIPs.
 
-## FAQ​
+## FAQ
 
 How much voting power do I have?
 
