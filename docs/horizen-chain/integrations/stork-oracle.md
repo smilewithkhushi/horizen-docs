@@ -10,30 +10,9 @@ Unlike push oracles (which maintain feeds on-chain at all times), Stork operates
 
 **How Stork works on Horizen:**
 
-```
-Off-chain (Stork Aggregators)
-  │
-  │  Continuously aggregate + sign price data
-  │  from trusted publishers at sub-second intervals
-  │
-  ▼
-Your Application / Keeper Bot
-  │
-  │  1. Fetch signed price data via Stork REST API
-  │  2. Push to Stork on-chain contract via
-  │     updateTemporalNumericValuesV1()
-  │
-  ▼
-Stork On-Chain Contract (Horizen)
-  │
-  │  Verifies aggregator signatures
-  │  Stores verified price data
-  │
-  ▼
-Your Smart Contract
-  │
-  └── Reads price via getTemporalNumericValueV1()
-```
+<div style={{ padding: '12px', borderRadius: '8px', display: 'flex', justifyContent: 'center'}}>
+  <img src="/img/horizen-chain/StorkOnHorizen.png" alt="Adding Horizen Testnet to MetaMask" width="520" />
+</div>
 
 
 ### Step 1 — Fetch Data via the Stork REST API

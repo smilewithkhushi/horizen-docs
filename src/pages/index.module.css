@@ -58,6 +58,16 @@
 /* ─── What is Horizen ──────────────────────────────────────────────────── */
 .whatIsSection {
   padding: 5rem 2rem;
+  background: #ffffff;
+}
+
+:global([data-theme='dark']) .whatIsSection {
+  background: #ffffff;
+}
+
+:global([data-theme='dark']) .whatIsSection h2,
+:global([data-theme='dark']) .whatIsSection p {
+  color: #1a1a1a;
 }
 
 .whatIsInner {
@@ -74,6 +84,7 @@
 .whatIsText h2 {
   font-size: 2rem;
   margin-bottom: 1.25rem;
+  color: #1a1a1a;
 }
 
 .whatIsText p {
@@ -81,6 +92,7 @@
   line-height: 1.75;
   opacity: 0.8;
   margin: 0;
+  color: #1a1a1a;
 }
 
 .architectureImage {
@@ -88,7 +100,6 @@
   width: 380px;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid var(--ifm-color-emphasis-200);
 }
 
 .architectureImage img {
@@ -252,8 +263,9 @@
 .quickSetupConnector {
   flex-shrink: 0;
   padding: 0 0.75rem;
-  font-size: 1.25rem;
-  color: rgba(252, 209, 26, 0.4);
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgba(252, 209, 26, 0.85);
   letter-spacing: -2px;
   user-select: none;
 }

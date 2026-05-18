@@ -1,6 +1,6 @@
 ---
 title: Mainnet Configuration
-description: "RPC endpoints, chain ID, explorer URL, and wallet setup for Horizen mainnet."
+description: "Horizen mainnet network config: Chain ID 26514, RPC https://horizen.calderachain.xyz/http, block explorer https://explorer.horizen.io. Includes MetaMask setup instructions."
 sidebar_position: 1
 ---
 

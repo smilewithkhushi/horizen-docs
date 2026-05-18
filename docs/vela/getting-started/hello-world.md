@@ -1,6 +1,6 @@
 ---
 title: "Your First Confidential App"
-description: "Build your first confidential application on VELA step by step."
+description: "Step-by-step: deploy the VELA private transfer example app using Docker, deposit ETH into an encrypted TEE account, and verify your private balance. Requires local environment setup first."
 sidebar_position: 3
 ---
 

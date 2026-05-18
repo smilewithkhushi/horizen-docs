@@ -1,6 +1,6 @@
 ---
 title: Testnet Configuration
-description: "RPC endpoints, chain ID, faucet, explorer URL, and wallet setup for Horizen testnet."
+description: "Horizen testnet network config (Base Sepolia): Chain ID 2651420, RPC https://horizen-testnet.rpc.caldera.xyz/http, faucet at hub-testnet.horizen.io, explorer at explorer-testnet.horizen.io."
 sidebar_position: 2
 ---
 

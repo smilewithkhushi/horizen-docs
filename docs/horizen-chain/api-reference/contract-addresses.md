@@ -1,6 +1,6 @@
 ---
 title: Network & Contract Addresses
-description: "Key contract addresses and network parameters for Horizen mainnet and testnet."
+description: "Official contract addresses for Horizen and Base: ZEN ERC-20, USDC.e, cBTC, OP Stack bridge contracts, and integration partner contracts (Goldsky, Stork, Den) on mainnet and testnet."
 sidebar_position: 2
 ---
 

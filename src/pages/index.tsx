@@ -72,7 +72,7 @@ const personas = [
   {
     title: 'Enterprise Developer',
     description: 'Need compliance-ready privacy for regulated finance or institutional use.',
-    link: '/vela/building/compliance-policies',
+    link: '/vela/overview/what-is-vela',
     cta: 'Explore compliance →',
   },
 ];

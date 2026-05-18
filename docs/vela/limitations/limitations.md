@@ -1,6 +1,6 @@
 ---
 title: What's Not Supported Yet
-description: "Current limitations and unsupported features in VELA."
+description: "VELA current limitations: local Docker development only (no testnet or mainnet deployment yet), emulated TEE (no hardware attestation in dev), and other unsupported features in the active development phase."
 sidebar_position: 1
 ---
 

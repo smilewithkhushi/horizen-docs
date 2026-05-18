@@ -1,6 +1,6 @@
 ---
 title: What is VELA?
-description: "Introduction to VELA — Horizen's confidential execution layer using trusted execution environments."
+description: "VELA is Horizen's confidential execution coprocessor: run application logic inside TEE hardware enclaves where data is encrypted in memory, outputs are cryptographically attested, and compliance is verifiable without exposing raw data. Chain-agnostic, integrates with EVM contracts."
 sidebar_position: 1
 ---
 
@@ -26,4 +26,4 @@ Horizen Chain is an EVM-native L3 built on Base. VELA extends it by providing th
 
 ## Current Status
 
-VELA is in active development and open for developer testing. The local development environment runs via Docker with an emulated TEE. For details on getting started, see the [Getting Started](/vela/getting-started/getting-started) section.
+VELA is in active development and open for developer testing. The local development environment runs via Docker with an emulated TEE. For details on getting started, see the [Getting Started](/vela/getting-started/prerequisites) section.

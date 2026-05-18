@@ -1,6 +1,6 @@
 ---
 title: Using Hardhat
-description: "Step-by-step guide to deploying smart contracts on Horizen using Hardhat."
+description: "Deploy Solidity smart contracts to Horizen mainnet (chain ID 26514) or testnet (2651420) using Hardhat. Covers project setup with TypeScript, hardhat.config.ts network config, Ignition modules, and deployment scripts."
 sidebar_position: 2
 ---
 

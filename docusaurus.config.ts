@@ -23,7 +23,7 @@ const config: Config = {
         generateLLMsFullTxt: true,
         docsDir: 'docs',
         title: 'Horizen Documentation',
-        description: 'Developer documentation for Horizen — an EVM-native L3 on Base with privacy via VELA.',
+        description: 'Developer documentation for Horizen — an EVM-identical L3 on Base (Ethereum L2) using the OP Stack. Horizen adds compliant, verifiable privacy via VELA, a confidential execution coprocessor powered by Trusted Execution Environments (TEEs). Deploy standard Solidity contracts with Foundry or Hardhat (same tooling as Base/Ethereum), or build privacy-preserving apps with VELA. Mainnet chain ID: 26514. Testnet chain ID: 2651420. ZEN is the native governance token.',
       },
     ],
   ],
@@ -61,6 +61,17 @@ const config: Config = {
 
   themeConfig: {
     image: "img/horizenbase.png",
+    metadata: [
+      {
+        name: 'description',
+        content: 'Developer documentation for Horizen — an EVM-identical L3 on Base (Ethereum L2) using the OP Stack with compliant, verifiable privacy via VELA TEE coprocessor.',
+      },
+      {
+        name: 'keywords',
+        content: 'Horizen, VELA, EVM, L3, Base, OP Stack, TEE, Trusted Execution Environment, confidential execution, privacy blockchain, ZEN token, Foundry, Hardhat, Solidity, smart contracts, DeFi, KYC, compliance, attestation',
+      },
+      { property: 'og:type', content: 'website' },
+    ],
     navbar: {
       logo: {
         alt: "Horizen",
@@ -120,7 +131,7 @@ const config: Config = {
             { label: "Horizen Chain", to: "/horizen-chain/overview/what-is-horizen" },
             { label: "VELA", to: "/vela/overview/what-is-vela" },
             { label: "Tutorials", to: "/tutorials/horizen-chain/deploy-erc20" },
-            { label: "Migration", to: "/migration/01-overview" },
+            { label: "Migration", to: "/migration/overview" },
           ],
         },
         {

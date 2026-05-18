@@ -1,6 +1,6 @@
 ---
 title: JSON-RPC Endpoints
-description: "Standard Ethereum and OP Stack JSON-RPC endpoints for Horizen."
+description: "JSON-RPC endpoints for Horizen mainnet (chain ID 26514) and testnet (2651420). Supports full Ethereum JSON-RPC (eth_call, eth_sendRawTransaction, eth_getLogs, etc.) plus OP Stack rollup methods."
 sidebar_position: 1
 ---
 

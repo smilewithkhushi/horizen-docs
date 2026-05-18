@@ -1,6 +1,6 @@
 ---
 title: Using Foundry
-description: "Step-by-step guide to deploying smart contracts on Horizen using Foundry."
+description: "Deploy Solidity smart contracts to Horizen mainnet (chain ID 26514) or testnet (2651420) using Foundry (forge, cast, anvil). Covers install, compile, deploy with forge create, and contract verification."
 sidebar_position: 1
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Migration overview
-description: "Summary of Horizen's chain migration from legacy networks to Base L3."
+description: "Historical reference: Horizen's ZEN token migration from legacy mainchain and EON EVM chain to a Base ERC-20 contract, completed July 23, 2025. Not relevant to current EVM development on Horizen."
 ---
 
 # Migration overview

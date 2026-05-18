@@ -1,6 +1,6 @@
 ---
 title: The L3 Architecture
-description: "Technical overview of Horizen's OP Stack L3 architecture settling on Base and Ethereum."
+description: "How Horizen fits into the Ethereum stack: Ethereum (L1 security) → Base (L2 data availability &amp; settlement) → Horizen (L3 EVM execution) → VELA (TEE confidential coprocessor). OP Stack rollup architecture."
 sidebar_position: 2
 ---
 
@@ -17,7 +17,7 @@ Horizen Chain is an OP Stack L3 rollup that settles directly onto Base (L2), whi
 
 **VELA as Confidential Coprocessor** : It sits alongside Horizen Chain as a coprocessor — applications offload sensitive logic to TEE enclaves inside VELA, receive attested encrypted results back, and anchor those results on-chain.
 
-<img src="/img/horizen-chain/l3-architecture.png" alt="L3 Architecture" style={{width: '80%', display: 'block', margin: '0 auto'}} />
+<img src="/img/horizen-chain/l3-architecture.png" alt="L3 Architecture" style={{width: '520px', display: 'block', margin: '0 auto'}} />
 
 ### What This Means in Practice
 

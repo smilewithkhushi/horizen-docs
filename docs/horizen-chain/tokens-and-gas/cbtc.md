@@ -16,8 +16,6 @@ standard**. When cbBTC is bridged to Horizen, the cbBTC on Base is locked in the
 Adapter contract and an equivalent amount is minted on Horizen. When bridging back, the
 Horizen cbBTC is burned and the corresponding amount is released on Base.
 
----
-
 ## Contract Addresses
 
 ### Mainnet
@@ -43,7 +41,7 @@ On Horizen, the ERC-20 and OFT contract are the **same address** —
 on-chain interactions including balance queries, transfers, and approvals.
 :::
 
----
+
 
 ## Trust Model & Custody
 
@@ -51,18 +49,6 @@ cbBTC's backing is fully custodial. The BTC underlying every cbBTC token is held
 Coinbase in secure custody — not in a decentralised smart contract. Coinbase issues,
 mints, and burns cbBTC, and provides regular attestations confirming 1:1 BTC reserves.
 
-**What this means for developers:**
-
-- cbBTC inherits **Coinbase's custodial risk**. If Coinbase were unable to honour
-  redemptions, cbBTC would not be redeemable for BTC. This is the trust assumption you
-  accept when building with cbBTC.
-- cbBTC is redeemable for BTC by **Coinbase customers only** — by depositing cbBTC into
-  a Coinbase account, which automatically converts it 1:1 back to BTC.
-- The smart contract code is based on the same audited core used for cbETH and was
-  reviewed by **OpenZeppelin**. No material contract code was modified for the cbBTC
-  deployment.
-
----
 
 ## Integrating cbBTC in your dApp
 
@@ -141,9 +127,9 @@ contract BTCCollateral {
 }
 ```
 
----
+
 
 ## Bridging cbBTC
 
 For step-by-step instructions on bridging cbBTC from Base to Horizen and back,
-see the [Bridging](/docs/bridging/cbbtc) section.
+see the [Bridge Assets](/horizen-chain/bridging/bridge-assets) section.

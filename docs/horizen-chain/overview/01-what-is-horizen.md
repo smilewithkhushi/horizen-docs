@@ -1,6 +1,6 @@
 ---
 title: What is Horizen Chain?
-description: "Overview of Horizen as an EVM-identical L3 built on Base with privacy via VELA."
+description: "Horizen is an EVM-compatible L3 on Base (Ethereum L2) using the OP Stack — same Solidity, Foundry, Hardhat, and ethers.js as Base. Adds VELA, a TEE-based confidential execution coprocessor for privacy-preserving apps with cryptographic compliance auditability."
 sidebar_position: 1
 ---
 

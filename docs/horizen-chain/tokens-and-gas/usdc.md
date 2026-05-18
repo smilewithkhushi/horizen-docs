@@ -158,4 +158,4 @@ contract MyHorizenApp {
 ## Bridging USDC.e
 
 For step-by-step instructions on bridging USDC from Base to Horizen and back,
-see the [Bridging](/docs/bridging/usdc-e) section.
+see the [Bridge Assets](/horizen-chain/bridging/bridge-assets) section.

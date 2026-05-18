@@ -1,0 +1,52 @@
+# Horizen — Quick Reference for AI Coding Assistants
+
+> Horizen is an EVM-identical L3 on Base (chain ID 26514) using the OP Stack. Same Solidity, same tooling (Foundry/Hardhat/ethers.js/wagmi). It adds VELA — a confidential execution coprocessor using TEEs for privacy-preserving, compliance-auditable apps.
+>
+> Use this file for fast answers. For complete docs, see /llms-full.txt
+
+
+
+## Network
+
+- [Mainnet Config](https://docs.horizen.io/horizen-chain/network/mainnet): Chain ID 26514 · RPC https://horizen.calderachain.xyz/http · Explorer https://explorer.horizen.io
+- [Testnet Config](https://docs.horizen.io/horizen-chain/network/testnet): Chain ID 2651420 · RPC https://horizen-testnet.rpc.caldera.xyz/http · Explorer https://explorer-testnet.horizen.io
+- [Block Explorer](https://docs.horizen.io/horizen-chain/network/block-explorer): Guide to the Horizen block explorer for browsing transactions, contracts, and verified sources
+- [Faucet](https://docs.horizen.io/horizen-chain/network/faucet): Get testnet ETH from the Horizen testnet faucet
+
+## API Reference
+
+- [JSON-RPC Endpoints](https://docs.horizen.io/horizen-chain/api-reference/json-rpc): Standard eth_ and OP Stack JSON-RPC methods, WebSocket endpoints
+- [Network & Contract Addresses](https://docs.horizen.io/horizen-chain/api-reference/contract-addresses): ZEN token, USDC.e, cBTC, bridge contract addresses on mainnet and testnet
+- [Supported Wallets & Tools](https://docs.horizen.io/horizen-chain/api-reference/supported-wallets): Compatible wallets and developer tools for Horizen
+
+## Deploy a Contract (EVM — no changes needed from Base)
+
+- [Deploy with Foundry](https://docs.horizen.io/horizen-chain/deploy-contracts/using-foundry): Install forge, write contract, deploy with `forge create --rpc-url`, verify
+- [Deploy with Hardhat](https://docs.horizen.io/horizen-chain/deploy-contracts/using-hardhat): Configure hardhat.config.ts with Horizen network, deploy with ignition/scripts
+- [Verify a Contract](https://docs.horizen.io/horizen-chain/deploy-contracts/verify-contract): Source verification on the Horizen block explorer
+
+## Tokens & Gas
+
+- [Gas on Horizen](https://docs.horizen.io/horizen-chain/tokens-and-gas/gas-on-horizen): ETH for gas (L2+L1 fee model), typical costs
+- [ZEN Token](https://docs.horizen.io/horizen-chain/tokens-and-gas/zen-token): ERC-20 governance token on Base (0xf43eB8De897Fbc7F2502483B2Bef7Bb9EA179229)
+- [USDC.e on Horizen](https://docs.horizen.io/horizen-chain/tokens-and-gas/usdc): Bridged stablecoin via Hydra OFT
+- [cBTC on Horizen](https://docs.horizen.io/horizen-chain/tokens-and-gas/cbtc): Coinbase-wrapped Bitcoin (cbBTC) bridged to Horizen
+
+## Bridging
+
+- [How Bridging Works](https://docs.horizen.io/horizen-chain/bridging/how-bridging-works): Native OP Stack bridge (7-day finality)
+- [Bridge Assets via Native Bridge](http://docs.horizen.io/horizen-chain/bridging/bridge-assets)
+
+## VELA (Confidential Execution — TEE coprocessor)
+
+- [What is VELA?](https://docs.horizen.io/vela/overview/what-is-vela): Confidential compute via TEEs, cryptographic attestation, compliance without data exposure
+- [Prerequisites](https://docs.horizen.io/vela/getting-started/prerequisites): Required tools and setup before starting VELA development
+- [Local Environment Setup](https://docs.horizen.io/vela/getting-started/local-environment-setup): Docker-based local dev environment (VELA not yet on testnet/mainnet)
+- [Your First Confidential App](https://docs.horizen.io/vela/getting-started/hello-world): Deploy a private transfer app, deposit ETH into encrypted TEE account, verify private balance
+- [Current Limitations](https://docs.horizen.io/vela/limitations/limitations): VELA is local/Docker only; no testnet or mainnet deployment yet; emulated TEE in dev
+
+## Integrations
+
+- [Subgraph Indexing (Goldsky)](https://docs.horizen.io/horizen-chain/integrations/goldsky): Index Horizen contracts with Goldsky subgraphs (The Graph compatible)
+- [Oracles (Stork)](https://docs.horizen.io/horizen-chain/integrations/stork-oracle): Integrate Stork price feeds into Solidity contracts
+- [Multisig (Den)](https://docs.horizen.io/horizen-chain/integrations/multisig): Safe-compatible multisig wallets via Den
