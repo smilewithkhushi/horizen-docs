@@ -3,13 +3,12 @@
 
 # Dependencies
 /node_modules
-.yarn
-.pnp.*
-yarn.lock
-.yarnrc.yml
+package-lock.json
 
 # VSCode
 .vscode
+
+.claude
 
 # Production
 /build
@@ -29,6 +28,5 @@ yarn.lock
 .env.test.local
 .env.production.local
 
+*.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
