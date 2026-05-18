@@ -1,3 +1,8 @@
+---
+title: "Start Here - Prerequisites"
+sidebar_position: 1
+---
+
 # Start Here - Prerequisites
 
 This guide will explain how to claim ZEN from the Horizen ZEND mainchain to Base L2 chain. Importantly, there is no time window in place for claiming tokens.
@@ -35,4 +40,4 @@ Claiming is a two step process, first you will sign a message with your old Hori
 **Step 1: Create a Signature**<br/>
 **Step 2: Submit the Claim**
 
-Proceed to [Step 1: Create a Signature](/mainnet-migration-instructions/create-a-signature)
+Proceed to [Step 1: Create a Signature](/migration/mainnet-migration-instructions/create-a-signature)

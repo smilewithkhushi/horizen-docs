@@ -35,14 +35,29 @@ Deposits are straightforward and fast. When you deposit from Base to Horizen:
 There is no challenge window for deposits. Once the transaction is confirmed on Base
 and the Horizen Sequencer processes it, your funds are available.
 
+<div style={{display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', margin: '24px 0'}}>
+  <div style={{flex: '1 1 260px', maxWidth: '420px', textAlign: 'center'}}>
+    <img src="/img/horizen-chain/bridge1.png" alt="Bridge UI — set direction from Base to Horizen" style={{width: '100%', borderRadius: '8px', border: '1px solid #e5e7eb'}} />
+    <p style={{fontSize: '13px', color: '#666', marginTop: '6px'}}>Set direction: Base → Horizen</p>
+  </div>
+  <div style={{flex: '1 1 260px', maxWidth: '420px', textAlign: 'center'}}>
+    <img src="/img/horizen-chain/bridge2.png" alt="Bridge UI — enter deposit amount" style={{width: '100%', borderRadius: '8px', border: '1px solid #e5e7eb'}} />
+    <p style={{fontSize: '13px', color: '#666', marginTop: '6px'}}>Enter amount and confirm</p>
+  </div>
+  <div style={{flex: '1 1 260px', maxWidth: '420px', textAlign: 'center'}}>
+    <img src="/img/horizen-chain/bridge3.png" alt="Deposit success screen" style={{width: '100%', borderRadius: '8px', border: '1px solid #e5e7eb'}} />
+    <p style={{fontSize: '13px', color: '#666', marginTop: '6px'}}>Deposit confirmed</p>
+  </div>
+</div>
+
 ### Withdrawals : Horizen → Base
 
 Withdrawals are a two-step process and take significantly longer due to the
 **7-day challenge window** that is a core property of the optimistic rollup model.
 
 
-<div style={{padding: '24px', borderRadius: '8px', display: 'flex', justifyContent: 'center'}}>
-  <img src="/img/horizen-chain/Withdrawalsonhorizen.png" alt="Adding Horizen Testnet to MetaMask" width="520" />
+<div style={{margin: '24px 0', textAlign: 'center'}}>
+  <img src="/img/horizen-chain/WithdrawalsOnHorizen.png" alt="Withdrawal flow diagram — two-step process with 7-day challenge window" style={{width: '100%', maxWidth: '720px', borderRadius: '8px'}} />
 </div>
 
 
@@ -61,6 +76,17 @@ A withdrawal requires **two separate transactions**:
 You must return to `https://hub.horizen.io/` after the 7-day window to complete
 the claim. Funds are not automatically sent to your Base wallet.
 :::
+
+<div style={{display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', margin: '24px 0'}}>
+  <div style={{flex: '1 1 320px', maxWidth: '560px', textAlign: 'center'}}>
+    <img src="/img/horizen-chain/bridge4.png" alt="Bridge UI — set direction from Horizen to Base" style={{width: '100%', borderRadius: '8px', border: '1px solid #e5e7eb'}} />
+    <p style={{fontSize: '13px', color: '#666', marginTop: '6px'}}>Step 1 — Initiate: set direction Horizen → Base, enter amount</p>
+  </div>
+  <div style={{flex: '1 1 320px', maxWidth: '560px', textAlign: 'center'}}>
+    <img src="/img/horizen-chain/bridge5.png" alt="Claim is ready screen after 7-day window" style={{width: '100%', borderRadius: '8px', border: '1px solid #e5e7eb'}} />
+    <p style={{fontSize: '13px', color: '#666', marginTop: '6px'}}>Step 2 — Claim: return after 7 days and submit the claim on Base</p>
+  </div>
+</div>
 
 
 

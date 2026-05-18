@@ -1,3 +1,8 @@
+---
+title: "Other Wallet Users"
+sidebar_position: 5
+---
+
 # Other Wallet Users
 
 If you have direct access to your private key, use the [Private Key Signing Tool](https://github.com/HorizenOfficial/horizen-migration-signing-tool-private-key/releases/latest).
@@ -14,4 +19,4 @@ If you only have your seed phrase, you'll need to derive your private key using 
 
 3. Click **Sign Message** to generate and copy the signed message.
 
-4. Proceed to the [Claim Page](/mainnet-migration-instructions/claim-page).
+4. Proceed to the [Claim Page](/migration/mainnet-migration-instructions/claim-page).

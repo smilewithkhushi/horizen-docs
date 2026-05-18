@@ -116,6 +116,12 @@ const config: Config = {
           label: "Governance",
         },
         {
+          type: "docSidebar",
+          sidebarId: "zenriseSidebar",
+          label: "Zenrise",
+          position: "left",
+        },
+        {
           href: "https://github.com/HorizenOfficial/horizen-docs",
           label: "GitHub",
           position: "right",

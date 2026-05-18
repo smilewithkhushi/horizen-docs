@@ -1,3 +1,8 @@
+---
+title: "Ledger Wallet Users"
+sidebar_position: 4
+---
+
 # Ledger Wallet Users
 If your funds are stored on a Ledger hardware wallet, use the [Ledger Signing Tool](https://github.com/HorizenOfficial/horizen-migration-ledger-signing-tool/releases/latest).
 
@@ -102,4 +107,4 @@ To ensure **no funds are left behind**:
 
    Click **Sign Message** and confirm the message on your Ledger device. Copy the generated signature and save it for the next step in the process.
 
-5. Proceed to the [Claim Page](/mainnet-migration-instructions/claim-page).
+5. Proceed to the [Claim Page](/migration/mainnet-migration-instructions/claim-page).

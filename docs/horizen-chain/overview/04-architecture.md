@@ -7,11 +7,16 @@ Horizen is an EVM L3 powered by op-stack built on top of Base L2, which is one o
 
 The OP Stack architecture is composed of modular layers: Data Availability (DA), Sequencing, Derivation, Execution, and Settlement. These layers work together to form a cohesive optimistic rollup. Below, we detail the primary components relevant to Horizen's implementation.
 
-### Sequencer
+
+<div style={{padding: '24px', borderRadius: '8px', display: 'flex', justifyContent: 'center'}}>
+  <img src="/img/horizen-chain/base-L3.jpeg" alt="Layer 3 Architecture on Base" width="80%" />
+</div>
+
+## Sequencer
 
 The Sequencer is the central actor responsible for ordering and processing user transactions on Horizen. A dedicated node collects transactions from users, executes them locally to compute the new state, and prepares batches for submission.
 
-#### Functionality:
+### Functionality:
 - Aggregates transactions into blocks.
 - Computes the resulting state transitions using the Execution Engine.
 - Compresses transaction data for efficiency.
@@ -19,30 +24,30 @@ The Sequencer is the central actor responsible for ordering and processing user 
 - Ensures soft finality on Horizen, where transactions are considered "safe" shortly after inclusion but require settlement on Base for full finalization.
 
 
-### Batcher
+## Batcher
 
 The Batcher is a specialized component that handles the compression and submission of transaction batches to the DA layer.
 
-#### Functionality:
+### Functionality:
 - Collects sequenced transactions and compresses them using techniques like zlib or custom OP Stack compression to reduce gas costs.
 - Submits batches as calldata to the Batch Inbox contract on Base L2.
 - Manages channel framing: Batches are grouped into channels, which are submitted when full or timed out.
 - Supports EIP-4844 blob transactions if configured, further reducing costs by offloading data to blobs on Ethereum L1 (via Base).
 
-### Proposer
+## Proposer
 The Proposer submits commitments to Horizen's state (output roots) to the settlement layer on Base.
 
-#### Functionality:
+### Functionality:
 - Monitors the Sequencer's output and derives the L3 state root after batch processing.
 - Submits proposals to the L2OutputOracle contract on Base.
 - Proposals include the output root, block number, and other metadata.
 - Only "safe" (finalized on Horizen) blocks are proposed, with submissions triggered by withdrawals or periodic intervals.
 
-### Derivation Layer
+## Derivation Layer
 
 The Derivation layer processes raw data from the DA layer to generate inputs for the Execution Engine.
 
-#### Functionality:
+### Functionality:
 - Fetches batches and deposit events from Base (e.g., via the Batch Inbox and Deposit contracts).
 - Reconstructs the transaction list and applies it to the current state.
 - Handles L2 (Base) attributes, such as gas fees and block metadata.
@@ -50,30 +55,30 @@ The Derivation layer processes raw data from the DA layer to generate inputs for
 
 
 
-### Rollup Module
+## Rollup Module
 The core of derivation, parsing sequencer batches and L2-originated deposits (e.g., bridge transactions from Base to Horizen).
 Indexer Module (Proposed): For advanced tracking of specific Base contracts or events.
 Interactions: The derivation pipeline feeds into the Engine API, allowing any node to sync and verify the chain independently by replaying data from Base.
 
-### Execution Engine
+## Execution Engine
 Horizen uses a near-vanilla Ethereum Virtual Machine (EVM) for state transitions It processes derived inputs to execute transactions and update the state trie. Supports all Ethereum opcodes, with minor OP Stack extensions (e.g., L2 data fee for batches).
 Maintains compatibility with Ethereum tools and smart contracts.
 
-### Fault Proofs and Settlement
+## Fault Proofs and Settlement
 Settlement verifies and finalizes Horizen's state on Base, enabling secure withdrawals and cross-chain interactions.
 
-#### Optimistic Model: 
+### Optimistic Model
 - State proposals from the Proposer are assumed correct unless challenged during the dispute window (7 days in standard configuration).
 - **Fault Proof System**: Initial proposals can be disputed by a multisig of trusted parties. If a threshold attests to an invalid state, the proposal is rejected.
 - Anyone can submit a fault proof using on-chain verification games. This involves interactive disputes resolved by bisecting state transitions until the fault is pinpointed.
 
-### Withdrawal Process: 
+## Withdrawal Process
 - Users initiate withdrawals on Horizen, which are included in batches. 
 - After proposal and the challenge window, funds are released on Base via the OptimismPortal contract.
 - **Security**: Relies on the economic incentive for honest challengers and the immutability of DA on Base.
 
 
-### Understanding the workflow
+## Understanding the workflow
 - **Transaction Submission**: Users send transactions to the Horizen Sequencer (via RPC endpoints).
 - **Sequencing and Batching**: The Sequencer orders transactions, executes them locally, and passes data to the Batcher. The Batcher compresses and submits batches to Base (as calldata or blobs).
 - **Data Availability**: Batches are recorded on Ethereum blobs, making them immutable and retrievable.

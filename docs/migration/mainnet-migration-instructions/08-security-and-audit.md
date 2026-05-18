@@ -1,3 +1,8 @@
+---
+title: "Security and Audits"
+sidebar_position: 8
+---
+
 # Security and Audits
 **Important:** Make sure to only use the official claim page from Horizen’s website: https://www.horizen.io/zenclaim. Be on the lookout for scams or nefarious actors sending you to other websites which may look like Horizen’s. Be sure to always check the URL when claiming.
 

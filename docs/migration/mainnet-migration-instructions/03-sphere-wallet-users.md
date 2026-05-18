@@ -1,3 +1,8 @@
+---
+title: "Sphere Wallet Users"
+sidebar_position: 3
+---
+
 # Sphere Wallet Users
 If you have your seed phrase, you can use [Sphere](https://github.com/HorizenOfficial/Sphere_by_Horizen_Private/releases/latest) to sign a message.
 
@@ -11,4 +16,4 @@ If you have your seed phrase, you can use [Sphere](https://github.com/HorizenOff
 
    > **Note:** _if you have several addresses with balances to claim in your wallet, you need to repeat the procedure for every address._
 
-5. Proceed to the [Claim Page](/mainnet-migration-instructions/claim-page).
+5. Proceed to the [Claim Page](/migration/mainnet-migration-instructions/claim-page).

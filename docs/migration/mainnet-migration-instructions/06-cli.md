@@ -1,3 +1,8 @@
+---
+title: "Super Users - CLI Tool"
+sidebar_position: 6
+---
+
 # Super Users - CLI Tool
 
 The CLI tool provides functionality for signing and verifying messages. It also supports claiming tokens from ZEN addresses, both standard transparent and multisignature addresses. The CLI can be used directly from the command line or imported as a module into a Node.js project.
