@@ -26,6 +26,13 @@ const config: Config = {
         description: 'Developer documentation for Horizen — an EVM-identical L3 on Base (Ethereum L2) using the OP Stack. Horizen adds compliant, verifiable privacy via VELA, a confidential execution coprocessor powered by Trusted Execution Environments (TEEs). Deploy standard Solidity contracts with Foundry or Hardhat (same tooling as Base/Ethereum), or build privacy-preserving apps with VELA. Mainnet chain ID: 26514. Testnet chain ID: 2651420. ZEN is the native governance token.',
       },
     ],
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        language: ['en'],
+      },
+    ],
   ],
 
   presets: [

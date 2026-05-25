@@ -97,37 +97,11 @@
   background: rgba(0, 0, 0, 0.1);
 }
 
-/* Search button */
+/* Search bar container */
 .searchBtn {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 1.25rem;
   width: 220px;
-  border: 1px solid rgba(93, 78, 51, 0.35);
-  border-radius: 8px;
-  background: transparent;
-  color: #111;
-  cursor: pointer;
-  font-size: 0.875rem;
-  font-weight: 500;
-  opacity: 1;
-  transition: opacity 0.15s ease, border-color 0.15s ease, background 0.15s ease;
-  font-family: inherit;
-}
-
-.searchBtn:hover {
-  opacity: 1;
-  border-color: var(--ifm-color-primary);
-  background: rgba(0, 0, 0, 0.04);
-}
-
-[data-theme='dark'] .searchBtn {
-  border-color: rgba(93, 78, 51, 0.35);
-}
-
-[data-theme='dark'] .searchBtn:hover {
-  background: rgba(0, 0, 0, 0.04);
 }
 
 /* Icon group: Discord + GitHub flush right */
@@ -302,12 +276,7 @@
     padding: 0.65rem 1.25rem;
   }
 
-  .searchBtn span {
-    display: none;
-  }
-
   .searchBtn {
     width: auto;
-    padding: 0.4rem 0.6rem;
   }
 }

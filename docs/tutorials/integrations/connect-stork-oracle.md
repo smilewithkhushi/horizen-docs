@@ -13,29 +13,19 @@ This tutorial covers the full data flow:
 2. Push that price on-chain to the Stork contract
 3. Read the verified price from your own smart contract
 
-<br/>
 
 ## How Stork Works on Horizen
 
 Stork operates as a **pull oracle**. Prices are not continuously pushed on-chain - instead, your application fetches a cryptographically signed price payload from Stork's API, then submits it to the Stork on-chain contract to verify and store it. Other contracts read from that stored value.
 
-```
-Off-chain                              On-chain (Horizen)
-─────────                              ──────────────────
-Stork REST API
-  │
-  │  signed price payload
-  ▼
-Your application
-  │
-  │  updateTemporalNumericValuesV1(payload)
-  ▼
-Stork Contract ──── getTemporalNumericValueV1(assetId) ──▶ Your Contract
-```
+
+<div style={{padding: '24px', borderRadius: '8px', display: 'flex', justifyContent: 'center'}}>
+  <img src="/img/tutorials/StorkModel.png" alt="Stork Working on Horizen" width="85%" />
+</div>
+
 
 This model means gas is only spent when a price is actually needed, and freshness is guaranteed by the cryptographic signature rather than a heartbeat.
 
-<br/>
 
 ## Prerequisites
 
@@ -93,7 +83,7 @@ The response contains the latest signed price with its encoded asset ID:
 
 Note the `encoded_asset_id` - this is the `bytes32` identifier used in all on-chain calls.
 
-<br/>
+
 
 ## Step 2 - The Stork Contract Interface
 
@@ -122,7 +112,7 @@ struct TemporalNumericValue {
 
 > **Price representation:** Stork prices use 18 decimal places. A BTC price of $67,500 is represented as `67500 * 1e18 = 67500000000000000000000`. Divide by `1e18` in your application logic.
 
-<br/>
+
 
 ## Step 3 - Push a Price Update (Off-Chain Script)
 
@@ -214,7 +204,7 @@ Run it:
 PRIVATE_KEY=0x... STORK_API_KEY=your_key npx ts-node push-price.ts
 ```
 
-<br/>
+
 
 
 ## Step 4 - Consume the Price in Your Smart Contract
@@ -303,7 +293,7 @@ cast call <YOUR_VAULT_ADDRESS> "getPrice()(int128,uint256)" \
   --rpc-url https://horizen-testnet.rpc.caldera.xyz/http
 ```
 
-<br/>
+
 
 ## Step 5 - Keeping Prices Fresh (Automation)
 
@@ -354,7 +344,7 @@ function depositWithPriceUpdate(
 }
 ```
 
-<br/>
+
 
 ## Encoding Asset IDs
 
