@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -6,6 +8,8 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-navbar-height: 120px;
+  --ifm-font-family-base: 'Space Grotesk', sans-serif;
   --ifm-color-primary: #ac946b;
   --ifm-color-primary-dark: #a48c61;
   --ifm-color-primary-darker: #887659;
@@ -13,6 +17,7 @@
   --ifm-color-primary-light: #d5c09b;
   --ifm-color-primary-lighter: #e5dac6;
   --ifm-color-primary-lightest: #e1dad0;
+  --ifm-h1-font-size: 1.75rem;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --deep-blue: #030E24;
@@ -31,34 +36,75 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-[data-theme='dark'] .navbar, 
-[data-theme='dark'] .footer {
-  background-color: var(--deep-blue);
-}
-
-[data-theme='dark'] .navbar {
-  border-bottom-color: var(--ifm-toc-border-color);
-}
-
-[data-theme='dark'] .footer {
-  border-top: 1px solid var(--ifm-toc-border-color);
-}
-
-/* need to be more specific to override this variable */
 html[data-theme='dark'] {
   --ifm-background-color: var(--deep-blue);
 }
-.navbar {
-  background-color: #fff4d6;
-  border-bottom: #5d4e33 1px solid;
+
+
+
+.footer {
+  background-color: #0d1a2e;
+  border-top: 1px solid rgba(252, 209, 26, 0.15);
 }
+
+[data-theme='dark'] .footer {
+  background-color: #0d1a2e;
+  border-top: 1px solid rgba(252, 209, 26, 0.15);
+}
+
+.footer__link-item:hover {
+  color: #FCD11A;
+}
+
+/* Always show code block copy button */
+.theme-code-block [class*='buttonGroup'] button {
+  opacity: 0.4 !important;
+}
+
 img.bordered {
   border: #5d4e33 1px solid;
-}
-.footer {
-  background-color: #272729;
 }
 
 .menu__list-item.hidden {
   display: none;
+}
+
+/* ── Sidebar: more vertical spacing between top-level categories ────────── */
+nav.menu .menu__list > .menu__list-item {
+  margin-bottom: 0.4rem;
+}
+
+nav.menu .menu__list > .menu__list-item > .menu__list-item-collapsible {
+  margin-bottom: 0.1rem;
+}
+
+/* ── Sidebar: category label sizing ─────────────────────────────────────── */
+.menu__list-item-collapsible .menu__link,
+.menu__list > .menu__list-item > .menu__link {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* ── Sidebar: active/selected link color ────────────────────────────────── */
+.menu__link--active,
+.menu__link--active:hover {
+  color: #a07800 !important;
+  font-weight: 700;
+}
+
+[data-theme='dark'] .menu__link--active,
+[data-theme='dark'] .menu__link--active:hover {
+  color: #FCD11A !important;
+  font-weight: 700;
+}
+
+/* ── Layout: push footer to bottom on short pages ───────────────────────── */
+.main-wrapper {
+  min-height: calc(100vh - var(--ifm-navbar-height));
+  display: flex;
+  flex-direction: column;
+}
+
+.main-wrapper > * {
+  flex: 1;
 }

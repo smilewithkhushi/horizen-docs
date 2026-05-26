@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# AI/LLM access — three files available:
+# /llms-ctx.txt   — minimal curated quick-reference (start here for coding assistants)
+# /llms.txt       — full structured index of all documentation pages
+# /llms-full.txt  — complete documentation in markdown (~300KB, for full-context retrieval)
+Sitemap: https://docs.horizen.io/sitemap.xml

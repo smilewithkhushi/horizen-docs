@@ -1,0 +1,282 @@
+/* ── Outer wrapper ─────────────────────────────────────────────────────── */
+.header {
+  display: block !important;
+  position: sticky;
+  top: 0;
+  z-index: var(--ifm-z-index-fixed);
+  background: #FFF4D6;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
+}
+
+[data-theme='dark'] .header {
+  background: #FFF4D6;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Row 1: Logo + utilities ───────────────────────────────────────────── */
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none !important;
+  flex-shrink: 0;
+}
+
+.logo {
+  height: 34px;
+  width: auto;
+}
+
+.brandDivider {
+  display: inline-block;
+  width: 1px;
+  height: 28px;
+  background: currentColor;
+  opacity: 0.25;
+  margin: 0 0.85rem;
+  flex-shrink: 0;
+}
+
+.brandLabel {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+[data-theme='dark'] .brandLabel {
+  color: #000;
+}
+
+/* Both modes use the same yellow navbar, so always show the dark-text logo */
+.logoDark {
+  display: none;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Icon links: Discord + GitHub */
+.iconLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  color: #111 !important;
+  text-decoration: none !important;
+  background: transparent;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+.iconLink:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .iconLink {
+  color: #111 !important;
+}
+
+[data-theme='dark'] .iconLink:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Search bar container */
+.searchBtn {
+  display: flex;
+  align-items: center;
+  width: 220px;
+}
+
+/* Icon group: Discord + GitHub flush right */
+.iconGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  margin-left: 0.5rem;
+}
+
+/* Hamburger (mobile only) */
+.mobileToggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-left: 0.25rem;
+  border: none;
+  border-radius: 8px;
+  background: #FFF4D6;
+  color: #111;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.15s, background 0.15s;
+  padding: 0;
+}
+
+.mobileToggle:hover {
+  opacity: 1;
+  background: #f5e4a0;
+}
+
+[data-theme='dark'] .mobileToggle {
+  background: #FFF4D6;
+}
+
+[data-theme='dark'] .mobileToggle:hover {
+  background: #f5e4a0;
+}
+
+/* ── Row 2: Nav links ──────────────────────────────────────────────────── */
+.navRow {
+  border-top: 1px solid rgba(93, 78, 51, 0.15);
+  padding: 0.6rem 2rem 0.4rem;
+}
+
+[data-theme='dark'] .navRow {
+  border-top-color: rgba(93, 78, 51, 0.15);
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 42px;
+}
+
+.navItemWrap {
+  display: flex;
+  align-items: center;
+}
+
+/* Override Docusaurus NavbarItem link styles */
+.navItemWrap :global(.navbar__link),
+.navItemWrap :global(.navbar__item) {
+  display: flex;
+  align-items: center;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #111 !important;
+  text-decoration: none !important;
+  opacity: 0.85;
+  transition: opacity 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+
+[data-theme='dark'] .navItemWrap :global(.navbar__link),
+[data-theme='dark'] .navItemWrap :global(.navbar__item) {
+  color: #111 !important;
+}
+
+.navItemWrap :global(.navbar__link:hover),
+.navItemWrap :global(.navbar__item:hover) {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='dark'] .navItemWrap :global(.navbar__link:hover),
+[data-theme='dark'] .navItemWrap :global(.navbar__item:hover) {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.navItemWrap :global(.navbar__link--active) {
+  opacity: 1;
+  color: var(--ifm-color-primary-darkest) !important;
+  font-weight: 600;
+  background: rgba(93, 78, 51, 0.12);
+  border-radius: 6px;
+}
+
+[data-theme='dark'] .navItemWrap :global(.navbar__link--active) {
+  color: var(--ifm-color-primary-darkest) !important;
+  background: rgba(93, 78, 51, 0.12);
+  border-radius: 6px;
+}
+
+/* ── Mobile ────────────────────────────────────────────────────────────── */
+@media (max-width: 996px) {
+  .mobileToggle {
+    display: flex;
+  }
+
+  .navRow {
+    display: none;
+    padding: 0.5rem 1.25rem 0.75rem;
+    background: #FFF4D6;
+  }
+
+  [data-theme='dark'] .navRow {
+    background: #FFF4D6;
+  }
+
+  .navRowOpen {
+    display: block;
+  }
+
+  /* Dropdown menus inside the mobile nav */
+  .navRow :global(.dropdown__menu) {
+    background: #FFF4D6 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  [data-theme='dark'] .navRow :global(.dropdown__menu) {
+    background: #FFF4D6 !important;
+  }
+
+  .navRow :global(.dropdown__link) {
+    color: #111 !important;
+  }
+
+  .navRow :global(.dropdown__link:hover),
+  .navRow :global(.dropdown__link--active) {
+    background: #f5e4a0 !important;
+    color: #111 !important;
+  }
+
+  .navItems {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    gap: 0.15rem;
+  }
+
+  .navItemWrap {
+    width: 100%;
+  }
+
+  .navItemWrap :global(.navbar__link),
+  .navItemWrap :global(.navbar__item) {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .topRow {
+    padding: 0.65rem 1.25rem;
+  }
+
+  .searchBtn {
+    width: auto;
+  }
+}
