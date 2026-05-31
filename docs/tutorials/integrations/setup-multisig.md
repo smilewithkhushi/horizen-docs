@@ -85,9 +85,9 @@ Safe address: 0xYourSafe...  (on Horizen, Chain ID 26514)
 
 ## Step 4 - Fund the Safe
 
-Send ETH (or any ERC-20 tokens) to your Safe address. The Safe holds funds like any other address - you can verify the balance on the [Horizen Explorer](https://horizen.calderaexplorer.xyz/).
+Send ETH (or any ERC-20 tokens) to your Safe address. The Safe holds funds like any other address - you can verify the balance on the [Horizen Explorer](https://explorer.horizen.io/).
 
-For testnet, use the [Horizen Testnet Faucet](https://horizen-testnet.hub.caldera.xyz/) to fund your signers' wallets, then send ETH to your Safe.
+For testnet, use the [Horizen Testnet Faucet](https://hub-testnet.horizen.io/) to fund your signers' wallets, then send ETH to your Safe.
 
 
 
@@ -195,7 +195,7 @@ If you already have a Safe deployed (e.g., from a previous deployment or another
 
 ## Safe Contract Addresses on Horizen
 
-Safe contracts are deployed at canonical addresses across EVM chains. Verify the current Safe deployment on Horizen at the [Safe deployments repository](https://github.com/safe-global/safe-deployments) or through the [Horizen Explorer](https://horizen.calderaexplorer.xyz/).
+Safe contracts are deployed at canonical addresses across EVM chains. Verify the current Safe deployment on Horizen at the [Safe deployments repository](https://github.com/safe-global/safe-deployments) or through the [Horizen Explorer](https://explorer.horizen.io/).
 
 The key contracts:
 - **SafeProxyFactory** - deploys new Safe instances

@@ -1,5 +1,5 @@
 ---
-title: "Bridge Assets"
+title: "Bridge Assets via Native Bridge"
 description: Step-by-step instructions for depositing assets from Base to Horizen and withdrawing assets from Horizen back to Base using the native bridge.
 sidebar_position: 2
 ---
@@ -54,7 +54,7 @@ Your ETH will arrive on Horizen within a few minutes. You can verify the balance
 by checking your wallet address on the Horizen explorer:
 
 - Mainnet: `https://explorer.horizen.io/`
-- Testnet: `https://horizen-testnet.explorer.caldera.xyz/`
+- Testnet: `https://explorer.horizen.io/`
 
 :::note
 If your wallet is not yet configured for Horizen, add the network first.

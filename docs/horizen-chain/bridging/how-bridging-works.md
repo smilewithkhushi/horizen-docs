@@ -6,8 +6,7 @@ sidebar_position: 1
 
 ## The Native Bridge
 
-The only bridge currently available on Horizen is the **native OP Stack bridge**. It is the canonical, most trust-minimized way to move
-assets between Base and Horizen Chain.
+Horizen supports two bridges: the **native OP Stack bridge** and the **Stargate bridge**. This page covers how the native bridge works — it is the canonical, most trust-minimized way to move ETH between Base and Horizen. For bridging ZEN, USDC, cbBTC, or other chains, see [Bridge Assets via Stargate](./bridge-assets-stargate.md).
 
 | Network | Bridge URL |
 | --- | --- |

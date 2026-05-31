@@ -3,7 +3,7 @@ title: Index Your Contract with Goldsky
 description: "Index your Horizen smart contract events and data using Goldsky subgraphs."
 ---
 
-Goldsky is a high-performance blockchain data indexing platform. It lets you extract on-chain events from your Horizen smart contracts, transform them into queryable entities, and serve them over a GraphQL API — all without running your own infrastructure.
+[Goldsky](https://goldsky.com) is a high-performance blockchain data indexing platform. It lets you extract on-chain events from your Horizen smart contracts, transform them into queryable entities, and serve them over a GraphQL API — all without running your own infrastructure.
 
 This tutorial walks through two paths:
 
@@ -24,8 +24,16 @@ By the end you'll have a live GraphQL endpoint indexing your Horizen contract's 
 
 ## Step 1 — Install the Goldsky CLI
 
+For macOS/Linux:
+
 ```bash
-curl https://goldsky.com/install | bash
+curl https://goldsky.com | sh
+```
+
+For Windows (requires [Node.js](https://nodejs.org)):
+
+```bash
+npm install -g @goldskycom/cli
 ```
 
 Verify the installation:
@@ -40,13 +48,13 @@ Log in to your Goldsky account:
 goldsky login
 ```
 
-This opens a browser window for OAuth. Once authenticated, your session token is stored locally.
+When prompted, paste the API key from your [Goldsky Project Settings](https://app.goldsky.com) page.
 
 <br/>
 
-## Path A — Instant Subgraph (No Config Required)
+## Path A — Instant Subgraph (Low-Code)
 
-The instant subgraph mode is the fastest path to a working GraphQL API. You pass a contract address and an ABI file; Goldsky auto-generates the subgraph manifest, schema, and event mappings.
+The instant subgraph mode is the fastest path to a working GraphQL API. You provide a config file with your contract details; Goldsky auto-generates the subgraph manifest, schema, and event mappings.
 
 ### 1. Export your contract ABI
 
@@ -62,25 +70,48 @@ With Hardhat:
 cat artifacts/contracts/MyToken.sol/MyToken.json | jq '.abi' > abi.json
 ```
 
-### 2. Deploy the instant subgraph
+Alternatively, find the ABI in the **Contract** tab of the [Horizen Testnet Explorer](https://explorer.horizen.io/) and save it to `abi.json`.
 
-```bash
-goldsky subgraph deploy my-token/1.0.0 \
-  --from-abi abi.json \
-  --address 0xYourContractAddress \
-  --chain horizen-testnet \
-  --start-block 0
+### 2. Create a config file
+
+Create a file named `horizen-config.json` in your project directory:
+
+```json
+{
+  "version": "1",
+  "name": "my-token",
+  "abis": {
+    "mytoken": {
+      "path": "./abi.json"
+    }
+  },
+  "instances": [
+    {
+      "abi": "mytoken",
+      "address": "0xYourContractAddress",
+      "startBlock": 1500000,
+      "chain": "horizen-testnet"
+    }
+  ]
+}
 ```
 
-**Flags explained:**
+**Fields explained:**
 
-| Flag | Description |
+| Field | Description |
 |---|---|
-| `my-token/1.0.0` | Subgraph name and version (semver, arbitrary) |
-| `--from-abi` | Path to the ABI JSON file |
-| `--address` | Your deployed contract address |
-| `--chain` | Goldsky chain slug — use `horizen-testnet` or `horizen` |
-| `--start-block` | Block number to begin indexing from. Use your contract's deployment block for efficiency |
+| `abis` | Maps a name to your local ABI file. The key (`mytoken`) is referenced by instances |
+| `instances[].address` | Your deployed contract address |
+| `instances[].startBlock` | Block number to begin indexing from — use your contract's deployment block |
+| `instances[].chain` | Goldsky chain slug — use `horizen-testnet` or `horizen` |
+
+> For multiple contracts or chains, add more entries to `instances`. Each additional chain produces a separate subgraph.
+
+### 3. Deploy the instant subgraph
+
+```bash
+goldsky subgraph deploy my-token/1.0.0 --from-abi horizen-config.json
+```
 
 Once deployed, Goldsky returns a GraphQL endpoint:
 
@@ -180,7 +211,7 @@ dataSources:
       file: ./src/mapping.ts
 ```
 
-> **Finding your start block:** Look up your contract deployment transaction on the [Horizen Testnet Explorer](https://horizen-testnet.explorer.caldera.xyz/) and use that block number. Indexing from block 0 works but is slow.
+> **Finding your start block:** Look up your contract deployment transaction on the [Horizen Testnet Explorer](https://explorer.horizen.io/) and use that block number. Indexing from block 0 works but is slow.
 
 ### 4. Write event handlers (`src/mapping.ts`)
 

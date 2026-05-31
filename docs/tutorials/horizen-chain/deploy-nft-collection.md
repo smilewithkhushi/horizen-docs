@@ -208,16 +208,6 @@ contract HorizenNFT is ERC721Enumerable, ERC721URIStorage, Ownable, ReentrancyGu
 }
 ```
 
-### Design decisions worth understanding
-
-**Why `ERC721Enumerable`?** It adds `tokenOfOwnerByIndex` and `tokenByIndex`, letting you list all tokens owned by a wallet on-chain. The tradeoff is higher gas on transfer (it maintains two storage mappings). If your dApp indexes ownership off-chain via Goldsky or The Graph, skip `Enumerable` and drop the associated overrides — you'll save ~20,000 gas per transfer.
-
-**Why `_nextTokenId` instead of `totalSupply()`?** `totalSupply()` decrements on burn. Using a monotonically incrementing counter gives you stable, predictable token IDs that survive burn operations.
-
-**Why `nonReentrant` on `mint` and `withdraw`?** The `_safeMint` call invokes `onERC721Received` on the recipient if it's a contract. A malicious contract could re-enter `mint` during that callback. `nonReentrant` is cheap insurance.
-
-**Why `ReentrancyGuard` from OZ v5?** OZ v5 replaces the `_status` slot with a transient storage slot (EIP-1153) on supported compilers. Since Horizen runs near-vanilla EVM, transient storage support depends on the `solc` version and EVM target you compile with. If you hit issues, pin to OZ v4 or use `Solidity >=0.8.24` with `evmVersion = "cancun"`.
-
 
 ## Step 2 — Foundry Setup
 
@@ -460,14 +450,3 @@ npx hardhat ignition deploy ignition/modules/HorizenNFT.ts \
   --network horizen \
   --parameters '{"owner": "0xYourOwnerAddress"}'
 ```
-
-
-## Gas Considerations
-
-The `ERC721Enumerable` extension adds two storage operations per transfer — roughly 40,000–50,000 additional gas. On Horizen this is still extremely cheap in dollar terms, but it's worth benchmarking with `forge test --gas-report` if you expect high transfer volume:
-
-```bash
-forge test --gas-report
-```
-
-Look at `HorizenNFT::mint` and `HorizenNFT::_update`. If the numbers bother you, drop `ERC721Enumerable` and replace with a simpler off-chain indexing approach using Goldsky.
