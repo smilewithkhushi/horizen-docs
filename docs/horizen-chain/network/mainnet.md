@@ -23,5 +23,5 @@ Add the following network to your wallet or development environment to connect t
 4. Click Save - Horizen Mainnet is now available in your wallet
 
 <div style={{background: '#000', padding: '24px', borderRadius: '8px', display: 'flex', justifyContent: 'center'}}>
-  <img src="/img/horizen-chain/mainnet-network.gif" alt="Adding Horizen Testnet to MetaMask" width="280" />
+  <img src="/img/horizen-chain/mainnet-network.gif" alt="Animated walkthrough of adding Horizen Mainnet to MetaMask: opening Networks settings, clicking Add a network manually, entering chain ID 26514 and RPC details, then saving" width="280" />
 </div>
