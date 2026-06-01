@@ -20,7 +20,6 @@ is not issued by Circle, is not directly redeemable through Circle, and does not
 access to Circle products such as Circle Mint or CCTP. These are properties of native
 USDC. USDC.e's value is entirely backed by USDC locked in Stargate's pool.
 
----
 
 ## Circle's Bridged USDC Standard
 
@@ -51,7 +50,7 @@ in-place to native USDC with the contract address unchanged and no developer act
 required.
 :::
 
----
+
 
 ## Contract Addresses
 
@@ -74,7 +73,7 @@ integrating USDC.e into your dApp, always use the **ERC-20 address**. The OFT co
 is the bridge mechanism, not the token itself.
 :::
 
----
+
 
 ## Integrating USDC.e in your dApp
 
@@ -152,8 +151,6 @@ contract MyHorizenApp {
     }
 }
 ```
-
----
 
 ## Bridging USDC.e
 

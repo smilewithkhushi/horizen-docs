@@ -40,7 +40,7 @@
 
 ## VELA (Confidential Execution — TEE coprocessor)
 
-- [What is VELA?](https://docs.horizen.io/vela/overview/what-is-vela): Confidential compute via TEEs, cryptographic attestation, compliance without data exposure
+- [What is VELA?](https://docs.horizen.io/vela/introduction): Confidential compute via TEEs, cryptographic attestation, compliance without data exposure
 - [Prerequisites](https://docs.horizen.io/vela/getting-started/prerequisites): Required tools and setup before starting VELA development
 - [Local Environment Setup](https://docs.horizen.io/vela/getting-started/local-environment-setup): Docker-based local dev environment (VELA not yet on testnet/mainnet)
 - [Your First Confidential App](https://docs.horizen.io/vela/getting-started/hello-world): Deploy a private transfer app, deposit ETH into encrypted TEE account, verify private balance

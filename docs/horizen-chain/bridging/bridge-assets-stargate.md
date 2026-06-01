@@ -31,7 +31,7 @@ These tokens use the LayerZero OFT standard — they are burned on the source ch
 ZEN on Horizen and Base share the same OFT contract address (`0x57da2D504bf8b83Ef304759d9f2648522D7a9280`) — this is expected behavior for the OFT standard.
 :::
 
----
+
 
 ## Bridge via the Stargate UI
 

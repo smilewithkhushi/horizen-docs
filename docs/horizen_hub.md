@@ -1,5 +1,6 @@
 ---
 title: Horizen Hub
+description: "Quick reference for Horizen links, resources, block explorer, and recommended wallets."
 ---
 
 # Horizen Hub
