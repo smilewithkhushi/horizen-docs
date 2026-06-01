@@ -11,7 +11,7 @@ Stargate is a cross-chain liquidity protocol built on [LayerZero](https://layerz
 ZEN, USDC, and cbBTC are all bridgeable via Stargate using the LayerZero OFT (Omnichain Fungible Token) standard.
 
 :::info
-For bridging between **Horizen and Base only**, the [native Caldera bridge](https://horizen.hub.caldera.xyz/) may be simpler. Use Stargate when bridging to or from chains beyond Base.
+For bridging between **Horizen and Base only**, the [native bridge](https://hub.horizen.io/) may be simpler. Use Stargate when bridging to or from chains beyond Base.
 :::
 
 

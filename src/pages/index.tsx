@@ -150,7 +150,7 @@ const buildingCards = [
     tag: 'MIGRATE',
     title: 'Bring Your dApp from Base',
     description: 'Already on Base? Horizen is EVM-identical. Your contracts deploy as-is.',
-    link: '/tutorials/horizen-chain/bridge-from-base',
+    link: '/tutorials/horizen-chain/deploy-erc20',
     accent: 'linear-gradient(90deg, #0ea5e9, #06b6d4)',
     subLinks: [],
   },
