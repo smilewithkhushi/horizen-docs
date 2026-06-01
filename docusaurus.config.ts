@@ -2,6 +2,16 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
+const algoliaConfig = process.env.ALGOLIA_APP_ID
+  ? {
+      appId: process.env.ALGOLIA_APP_ID,
+      apiKey: process.env.ALGOLIA_API_KEY!,
+      indexName: process.env.ALGOLIA_INDEX_NAME!,
+      contextualSearch: true,
+      searchPagePath: 'search' as const,
+    }
+  : undefined;
+
 const config: Config = {
   title: "Horizen Documentation",
   tagline: "Build Private. Build Compliant. Build on Horizen.",
@@ -26,13 +36,6 @@ const config: Config = {
         description: 'Developer documentation for Horizen — an EVM-identical L3 on Base (Ethereum L2) using the OP Stack. Horizen adds compliant, verifiable privacy via VELA, a confidential execution coprocessor powered by Trusted Execution Environments (TEEs). Deploy standard Solidity contracts with Foundry or Hardhat (same tooling as Base/Ethereum), or build privacy-preserving apps with VELA. Mainnet chain ID: 26514. Testnet chain ID: 2651420. ZEN is the native governance token.',
       },
     ],
-    [
-      require.resolve('@easyops-cn/docusaurus-search-local'),
-      {
-        hashed: true,
-        language: ['en'],
-      },
-    ],
   ],
 
   presets: [
@@ -50,6 +53,7 @@ const config: Config = {
             "ecosystem/**",
             "4-mainnet-migration-instructions/**",
             "5-zenrise/**",
+            "tutorials/vela/**",
           ],
           // showLastUpdateTime: true,
         },
@@ -71,13 +75,12 @@ const config: Config = {
     metadata: [
       {
         name: 'description',
-        content: 'Developer documentation for Horizen — an EVM-identical L3 on Base (Ethereum L2) using the OP Stack with compliant, verifiable privacy via VELA TEE coprocessor.',
-      },
-      {
-        name: 'keywords',
-        content: 'Horizen, VELA, EVM, L3, Base, OP Stack, TEE, Trusted Execution Environment, confidential execution, privacy blockchain, ZEN token, Foundry, Hardhat, Solidity, smart contracts, DeFi, KYC, compliance, attestation',
+        content: 'Deploy smart contracts, bridge assets, and build privacy-preserving apps on Horizen — an EVM-identical L3 on Base powered by the OP Stack.',
       },
       { property: 'og:type', content: 'website' },
+      { property: 'og:description', content: 'Deploy smart contracts, bridge assets, and build privacy-preserving apps on Horizen — an EVM-identical L3 on Base powered by the OP Stack.' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@HorizenOfficial' },
     ],
     navbar: {
       logo: {
@@ -123,12 +126,6 @@ const config: Config = {
           label: "Governance",
         },
         {
-          type: "docSidebar",
-          sidebarId: "zenriseSidebar",
-          label: "Zenrise",
-          position: "left",
-        },
-        {
           href: "https://github.com/HorizenOfficial/horizen-docs",
           label: "GitHub",
           position: "right",
@@ -142,7 +139,7 @@ const config: Config = {
           title: "Docs",
           items: [
             { label: "Horizen Chain", to: "/horizen-chain/overview/what-is-horizen" },
-            { label: "VELA", to: "/vela/overview/what-is-vela" },
+            { label: "VELA", to: "/vela/introduction" },
             { label: "Tutorials", to: "/tutorials/horizen-chain/deploy-erc20" },
             { label: "Migration", to: "/migration/overview" },
           ],
@@ -170,12 +167,7 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
       additionalLanguages: ["solidity", "bash", "json"],
     },
-    // TODO: Configure Algolia DocSearch
-    /* algolia: {
-      appId: process.env.ALGOLIA_APP_ID,
-      apiKey: process.env.ALGOLIA_API_KEY,
-      indexName: process.env.ALGOLIA_INDEX_NAME,
-    }, */
+    ...(algoliaConfig && { algolia: algoliaConfig }),
   } satisfies Preset.ThemeConfig,
 };
 

@@ -32,7 +32,7 @@ Horizen cbBTC is burned and the corresponding amount is released on Base.
 | --- | --- | --- |
 | Base Sepolia | cbBTC ERC-20 | [`0xcbb7c0006f23900c38eb856149f799620fcb8a4a`](https://sepolia.basescan.org/token/0xcbb7c0006f23900c38eb856149f799620fcb8a4a) |
 | Base Sepolia | OFT Adapter (LayerZero) | [`0x5dE29d14E72feb79967596F3Ae57A9BfBA192769`](https://sepolia.basescan.org/address/0x5dE29d14E72feb79967596F3Ae57A9BfBA192769) |
-| Horizen Testnet | cbBTC ERC-20 / OFT | [`0x06DA6bDD2aB23447af5162ab0975edDA7E8d3747`](https://horizen-testnet.explorer.caldera.xyz/token/0x06DA6bDD2aB23447af5162ab0975edDA7E8d3747) |
+| Horizen Testnet | cbBTC ERC-20 / OFT | [`0x06DA6bDD2aB23447af5162ab0975edDA7E8d3747`](https://explorer.horizen.io/token/0x06DA6bDD2aB23447af5162ab0975edDA7E8d3747) |
 
 :::note
 On Horizen, the ERC-20 and OFT contract are the **same address** —

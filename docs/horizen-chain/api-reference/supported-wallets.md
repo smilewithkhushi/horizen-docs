@@ -33,7 +33,7 @@ Network Name:    Horizen Testnet
 RPC URL:         https://horizen-testnet.rpc.caldera.xyz/http
 Chain ID:        2651420
 Currency Symbol: ETH
-Block Explorer:  https://horizen-testnet.explorer.caldera.xyz/
+Block Explorer:  https://explorer.horizen.io/
 ```
 
 
@@ -136,7 +136,7 @@ Blockscout API docs: [docs.blockscout.com/for-users/api](https://docs.blockscout
 | Testnet RPC | `https://horizen-testnet.rpc.caldera.xyz/http` |
 | Testnet WebSocket | `wss://horizen-testnet.rpc.caldera.xyz/ws` |
 | Mainnet Explorer | `https://explorer.horizen.io/` |
-| Testnet Explorer | `https://horizen-testnet.explorer.caldera.xyz/` |
+| Testnet Explorer | `https://explorer.horizen.io/` |
 | Mainnet Bridge | `https://hub.horizen.io/` |
 | Testnet Bridge / Faucet | `https://hub-testnet.horizen.io/` |
 | ZEN Bridge (Stargate V2) | `https://stargate.finance/?srcChain=base&srcToken=0xf43eB8De897Fbc7F2502483B2Bef7Bb9EA179229&dstChain=horizen&dstToken=0x57da2D504bf8b83Ef304759d9f2648522D7a9280` |

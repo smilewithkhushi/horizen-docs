@@ -15,7 +15,7 @@ Foundry's `forge verify-contract` command supports Blockscout-based explorers di
 forge verify-contract <DEPLOYED_CONTRACT_ADDRESS> \
   src/Counter.sol:Counter \
   --verifier blockscout \
-  --verifier-url https://horizen-testnet.explorer.caldera.xyz/api/
+  --verifier-url https://explorer.horizen.io/api/
 ```
 
 **Mainnet:**
@@ -23,7 +23,7 @@ forge verify-contract <DEPLOYED_CONTRACT_ADDRESS> \
 forge verify-contract <DEPLOYED_CONTRACT_ADDRESS> \
   src/Counter.sol:Counter \
   --verifier blockscout \
-  --verifier-url https://horizen.calderaexplorer.xyz/api/
+  --verifier-url https://explorer.horizen.io/api/
 ```
 
 If your contract uses a specific compiler version or optimization settings, add them explicitly:
@@ -31,7 +31,7 @@ If your contract uses a specific compiler version or optimization settings, add 
 forge verify-contract <DEPLOYED_CONTRACT_ADDRESS> \
   src/Counter.sol:Counter \
   --verifier blockscout \
-  --verifier-url https://horizen-testnet.explorer.caldera.xyz/api/ \
+  --verifier-url https://explorer.horizen.io/api/ \
   --compiler-version 0.8.28 \
   --num-optimization-runs 200
 ```
@@ -59,16 +59,16 @@ const config: HardhatUserConfig = {
         network: "horizen_testnet",
         chainId: 2651420,
         urls: {
-          apiURL: "https://horizen-testnet.explorer.caldera.xyz/api",
-          browserURL: "https://horizen-testnet.explorer.caldera.xyz",
+          apiURL: "https://explorer.horizen.io/api",
+          browserURL: "https://explorer.horizen.io",
         },
       },
       {
         network: "horizen_mainnet",
         chainId: 26514,
         urls: {
-          apiURL: "https://horizen.calderaexplorer.xyz/api",
-          browserURL: "https://horizen.calderaexplorer.xyz",
+          apiURL: "https://explorer.horizen.io/api",
+          browserURL: "https://explorer.horizen.io",
         },
       },
     ],

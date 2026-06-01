@@ -1,5 +1,6 @@
 ---
 title: Zenrise Loyalty Program Terms of Use
+description: Terms of use for the Zenrise Loyalty Program offered by Horizen Foundation.
 ---
 
 

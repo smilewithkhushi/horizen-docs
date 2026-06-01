@@ -27,7 +27,7 @@ function Hero() {
           <Link className="button button--primary button--lg" to="/horizen-chain/deploy-contracts/using-foundry">
             Start Building
           </Link>
-          <Link className="button button--outline button--lg" to="/vela/overview/what-is-vela">
+          <Link className="button button--outline button--lg" to="/vela/introduction">
             Explore VELA
           </Link>
         </div>
@@ -72,7 +72,7 @@ const personas = [
   {
     title: 'Enterprise Developer',
     description: 'Need compliance-ready privacy for regulated finance or institutional use.',
-    link: '/vela/overview/what-is-vela',
+    link: '/vela/introduction',
     cta: 'Explore compliance →',
   },
 ];
@@ -147,12 +147,15 @@ const buildingCards = [
     subLinks: [],
   },
   {
-    tag: 'MIGRATE',
-    title: 'Bring Your dApp from Base',
-    description: 'Already on Base? Horizen is EVM-identical. Your contracts deploy as-is.',
-    link: '/tutorials/horizen-chain/bridge-from-base',
+    tag: 'BRIDGE',
+    title: 'Bridge Assets to Horizen',
+    description: 'Move ETH via the native OP Stack bridge, or bridge ZEN, USDC, and cbBTC across 80+ chains via Stargate.',
+    link: '/horizen-chain/bridging/how-bridging-works',
     accent: 'linear-gradient(90deg, #0ea5e9, #06b6d4)',
-    subLinks: [],
+    subLinks: [
+      { label: 'Native Bridge', link: '/horizen-chain/bridging/bridge-assets' },
+      { label: 'Stargate', link: '/horizen-chain/bridging/bridge-assets-stargate' },
+    ],
   },
 ];
 

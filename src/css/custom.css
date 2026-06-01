@@ -98,6 +98,29 @@ nav.menu .menu__list > .menu__list-item > .menu__list-item-collapsible {
   font-weight: 700;
 }
 
+/* ── Search input: match yellow navbar in both light and dark modes ─────── */
+:root,
+[data-theme='dark'] {
+  --ifm-navbar-search-input-background-color: rgba(0, 0, 0, 0.08);
+  --ifm-navbar-search-input-color: #111;
+  --ifm-navbar-search-input-placeholder-color: rgba(17, 17, 17, 0.5);
+  --docsearch-font-family: 'Space Grotesk', sans-serif;
+  --docsearch-font-size: 0.95rem;
+}
+
+/* ── Algolia DocSearch: font matching ───────────────────────────────────── */
+.DocSearch-Button,
+.DocSearch-Button-Placeholder,
+.DocSearch-Input,
+.DocSearch-Hit-title,
+.DocSearch-Hit-path,
+.DocSearch-Label,
+.DocSearch-Commands,
+.DocSearch-NoResults {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 0.95rem !important;
+}
+
 /* ── Layout: push footer to bottom on short pages ───────────────────────── */
 .main-wrapper {
   min-height: calc(100vh - var(--ifm-navbar-height));

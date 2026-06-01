@@ -25,7 +25,7 @@ Horizen is fully EVM-compatible and supports the standard Ethereum JSON-RPC API.
 | **RPC (HTTPS)** | `https://horizen-testnet.rpc.caldera.xyz/http` |
 | **RPC (WebSocket)** | `wss://horizen-testnet.rpc.caldera.xyz/ws` |
 | **Currency Symbol** | `ETH` |
-| **Block Explorer** | `https://horizen-testnet.explorer.caldera.xyz/` |
+| **Block Explorer** | `https://explorer.horizen.io/` |
 | **Faucet** | `https://hub-testnet.horizen.io/` |
 
 

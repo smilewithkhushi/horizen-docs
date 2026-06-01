@@ -55,12 +55,12 @@ docker compose up
 
  
 
-## What Starts and In What Order
+## Service Startup Sequence
 
 Docker Compose brings up six services in a defined dependency chain:
 
 | Step | Service | What It Does |
-| | | |
+| --- | --- | --- |
 | 1 | `chain` | Starts Foundry Anvil — a local EVM dev chain |
 | 2 | `subgraph-postgres`, `subgraph-ipfs` | Starts Graph Node infrastructure |
 | 3 | `deployer` | Deploys all VELA smart contracts, writes addresses to a shared volume, then exits |
