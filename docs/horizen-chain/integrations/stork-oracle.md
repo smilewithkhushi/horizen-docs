@@ -11,7 +11,7 @@ Unlike push oracles (which maintain feeds on-chain at all times), Stork operates
 **How Stork works on Horizen:**
 
 <div style={{ padding: '12px', borderRadius: '8px', display: 'flex', justifyContent: 'center'}}>
-  <img src="/img/horizen-chain/StorkOnHorizen.png" alt="Adding Horizen Testnet to MetaMask" width="520" />
+  <img src="/img/horizen-chain/StorkOnHorizen.png" alt="Diagram showing how Stork pull oracle works on Horizen: off-chain aggregator signs price data, app fetches it via REST API, pushes it on-chain to the Stork contract, then reads the verified price" width="520" />
 </div>
 
 
