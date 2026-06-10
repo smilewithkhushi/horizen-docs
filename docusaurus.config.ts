@@ -15,7 +15,7 @@ const algoliaConfig = process.env.ALGOLIA_APP_ID
 const config: Config = {
   title: "Horizen Documentation",
   tagline: "Build Private. Build Compliant. Build on Horizen.",
-  favicon: "img/favicon-32x32.png",
+  favicon: "img/Logos/PNG/Horizen2.0-logo_icon-on-yellow.png",
 
   url: "https://docs.horizen.io",
   baseUrl: "/",
@@ -26,6 +26,15 @@ const config: Config = {
   },
 
   plugins: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        indexDocs: true,
+        indexBlog: false,
+        docsRouteBasePath: '/',
+      },
+    ],
     [
       'docusaurus-plugin-llms',
       {
@@ -71,7 +80,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: "img/horizenbase.png",
+    image: "img/Logos/PNG/Horizen2.0-logo_primary-dark.png",
     metadata: [
       {
         name: 'description',
@@ -85,8 +94,8 @@ const config: Config = {
     navbar: {
       logo: {
         alt: "Horizen",
-        src: "img/horizenlogo.png",
-        srcDark: "img/horizenlogo_darkmode.png",
+        src: "img/Logos/SVG/Horizen2.0-logo_primary-dark.svg",
+        srcDark: "img/Logos/SVG/Horizen2.0-logo_primary-dark.svg",
         href: "/",
       },
       items: [
@@ -134,33 +143,7 @@ const config: Config = {
     },
     footer: {
       style: "dark",
-      links: [
-        {
-          title: "Docs",
-          items: [
-            { label: "Horizen Chain", to: "/horizen-chain/overview/what-is-horizen" },
-            { label: "VELA", to: "/vela/introduction" },
-            { label: "Tutorials", to: "/tutorials/horizen-chain/deploy-erc20" },
-            { label: "Migration", to: "/migration/overview" },
-          ],
-        },
-        {
-          title: "Community",
-          items: [
-            { label: "Discord", href: "https://discord.gg/horizen" },
-            { label: "GitHub", href: "https://github.com/HorizenOfficial" },
-          ],
-        },
-        {
-          title: "More",
-          items: [
-            { label: "Horizen.io", href: "https://horizen.io" },
-            { label: "Whitepaper", href: "https://horizen.io/whitepaper" },
-            { label: "Block Explorer", href: "https://explorer.horizen.io" },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Horizen`,
+      copyright: `© ${new Date().getFullYear()} Horizen. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,

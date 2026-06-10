@@ -1,7 +1,7 @@
 ---
 title: cBTC on Horizen
 description: "Coinbase-wrapped BTC (cbBTC) token details and usage on Horizen."
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 ## What is cbBTC?

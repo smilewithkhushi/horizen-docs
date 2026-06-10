@@ -4,6 +4,10 @@ description: "How to index Horizen onchain data using Goldsky subgraphs."
 sidebar_position: 2
 ---
 
+<div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
+  <img src="/img/tutorials/goldsky-banner.png" alt="Goldsky" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
+</div>
+
 Goldsky is the official data indexing provider for Horizen Chain. It makes it straightforward to extract, transform, and serve on-chain data as queryable APIs — powering dashboards, analytics, and application backends without building custom indexing infrastructure.
 
 Goldsky offers two core products:

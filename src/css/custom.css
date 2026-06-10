@@ -43,12 +43,12 @@ html[data-theme='dark'] {
 
 
 .footer {
-  background-color: #0d1a2e;
+  background-color: #030e24;
   border-top: 1px solid rgba(252, 209, 26, 0.15);
 }
 
 [data-theme='dark'] .footer {
-  background-color: #0d1a2e;
+  background-color: #030e24;
   border-top: 1px solid rgba(252, 209, 26, 0.15);
 }
 
@@ -130,4 +130,8 @@ nav.menu .menu__list > .menu__list-item > .menu__list-item-collapsible {
 
 .main-wrapper > * {
   flex: 1;
+}
+
+.footer__copyright {
+  font-size: 0.75rem;
 }

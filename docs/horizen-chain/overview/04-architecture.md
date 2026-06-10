@@ -8,9 +8,11 @@ Horizen is an EVM L3 powered by op-stack built on top of Base L2, which is one o
 The OP Stack architecture is composed of modular layers: Data Availability (DA), Sequencing, Derivation, Execution, and Settlement. These layers work together to form a cohesive optimistic rollup. Below, we detail the primary components relevant to Horizen's implementation.
 
 
+{/* TODO: Update diagram — current image references OP Enclave which is not part of our stack
 <div style={{padding: '24px', borderRadius: '8px', display: 'flex', justifyContent: 'center'}}>
   <img src="/img/horizen-chain/base-L3.jpeg" alt="Layer 3 Architecture on Base" width="80%" />
 </div>
+*/}
 
 ## Sequencer
 
