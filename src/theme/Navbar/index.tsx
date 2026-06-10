@@ -110,7 +110,7 @@ export default function Navbar(): JSX.Element {
           </div>
           <div className={styles.iconGroup}>
             <Link
-              to="https://discord.gg/horizen"
+              to="https://discord.gg/horizen-334085157441110017"
               className={styles.iconLink}
               target="_blank"
               rel="noopener noreferrer"

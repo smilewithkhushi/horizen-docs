@@ -4,6 +4,10 @@ description: "Integrate Stork price oracle feeds into your Horizen smart contrac
 sidebar_position: 1
 ---
 
+<div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
+  <img src="/img/tutorials/stork-banner.png" alt="Stork Oracle" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
+</div>
+
 Stork is the official oracle integration for Horizen Chain. It is a **pull oracle** that delivers price data and other off-chain data feeds at sub-second latency — designed for use cases like perpetuals, lending protocols, and any application that requires fast, verifiable market data.
 
 Unlike push oracles (which maintain feeds on-chain at all times), Stork operates on a **consumer-driven model**: feeds are not posted to the chain continuously. Instead, your application fetches the latest signed data off-chain and pushes it on-chain exactly when needed. This makes it highly cost-efficient — you only pay for the data updates your protocol actually uses.

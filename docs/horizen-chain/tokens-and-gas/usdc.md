@@ -1,6 +1,6 @@
 ---
-title: USDC.e on Horizen
-description: "USDC.e bridged stablecoin availability and contract details on Horizen."
+title: USDC on Horizen
+description: "USDC bridged stablecoin availability and contract details on Horizen."
 sidebar_position: 3
 ---
 

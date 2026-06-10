@@ -46,8 +46,14 @@
 - [Your First Confidential App](https://docs.horizen.io/vela/getting-started/hello-world): Deploy a private transfer app, deposit ETH into encrypted TEE account, verify private balance
 - [Current Limitations](https://docs.horizen.io/vela/limitations/limitations): VELA is local/Docker only; no testnet or mainnet deployment yet; emulated TEE in dev
 
+## Privacy & Compliance
+
+- [Privacy Tools](https://docs.horizen.io/horizen-chain/privacy-tools): Overview of privacy primitives on Horizen — VELA (TEE confidential execution) and zkVerify (on-chain ZK proof verification)
+- [Compliance](https://docs.horizen.io/horizen-chain/compliance): Compliance patterns on Horizen — contract-level rules (Solidity), confidential enforcement via VELA/TEE, and AML/KYC gating via PureFi
+
 ## Integrations
 
 - [Subgraph Indexing (Goldsky)](https://docs.horizen.io/horizen-chain/integrations/goldsky): Index Horizen contracts with Goldsky subgraphs (The Graph compatible)
 - [Oracles (Stork)](https://docs.horizen.io/horizen-chain/integrations/stork-oracle): Integrate Stork price feeds into Solidity contracts
 - [Multisig (Den)](https://docs.horizen.io/horizen-chain/integrations/multisig): Safe-compatible multisig wallets via Den
+- [Compliance Gating (PureFi)](https://docs.horizen.io/horizen-chain/integrations/purefi): Add AML verification to Horizen contracts — off-chain issuer check with synchronous on-chain enforcement via PureFi Verifier proxy (0x681Edd4906e2a0a277E2A6c394A4595f83e1329c, chain ID 26514)

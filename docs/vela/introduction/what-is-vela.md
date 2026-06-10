@@ -7,6 +7,10 @@ slug: /vela/introduction
 
 # What is VELA?
 
+<div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
+  <img src="/img/vela/vela-hl-banner.png" alt="VELA" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
+</div>
+
 VELA is a confidential coprocessor for Web3 applications. It allows developers to run application logic inside Trusted Execution Environments (TEEs), where data is encrypted in memory and computations are cryptographically attested.
 
 No operator, cloud provider, or third party can access the data being processed. At the same time, regulators and auditors can verify compliance through cryptographic proof without requiring access to raw application state.

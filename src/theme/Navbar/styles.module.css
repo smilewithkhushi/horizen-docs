@@ -4,12 +4,12 @@
   position: sticky;
   top: 0;
   z-index: var(--ifm-z-index-fixed);
-  background: #FFF4D6;
+  background: #fecb17;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
 }
 
 [data-theme='dark'] .header {
-  background: #FFF4D6;
+  background: #fecb17;
   border-bottom-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
@@ -122,7 +122,7 @@
   margin-left: 0.25rem;
   border: none;
   border-radius: 8px;
-  background: #FFF4D6;
+  background: #fecb17;
   color: #111;
   cursor: pointer;
   opacity: 1;
@@ -132,15 +132,15 @@
 
 .mobileToggle:hover {
   opacity: 1;
-  background: #f5e4a0;
+  background: #f0bf00;
 }
 
 [data-theme='dark'] .mobileToggle {
-  background: #FFF4D6;
+  background: #fecb17;
 }
 
 [data-theme='dark'] .mobileToggle:hover {
-  background: #f5e4a0;
+  background: #f0bf00;
 }
 
 /* ── Row 2: Nav links ──────────────────────────────────────────────────── */
@@ -223,11 +223,11 @@
   .navRow {
     display: none;
     padding: 0.5rem 1.25rem 0.75rem;
-    background: #FFF4D6;
+    background: #fecb17;
   }
 
   [data-theme='dark'] .navRow {
-    background: #FFF4D6;
+    background: #fecb17;
   }
 
   .navRowOpen {
@@ -236,12 +236,12 @@
 
   /* Dropdown menus inside the mobile nav */
   .navRow :global(.dropdown__menu) {
-    background: #FFF4D6 !important;
+    background: #fecb17 !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   [data-theme='dark'] .navRow :global(.dropdown__menu) {
-    background: #FFF4D6 !important;
+    background: #fecb17 !important;
   }
 
   .navRow :global(.dropdown__link) {
@@ -250,7 +250,7 @@
 
   .navRow :global(.dropdown__link:hover),
   .navRow :global(.dropdown__link--active) {
-    background: #f5e4a0 !important;
+    background: #f0bf00 !important;
     color: #111 !important;
   }
 

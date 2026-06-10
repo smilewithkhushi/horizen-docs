@@ -21,16 +21,16 @@ function Hero() {
           Build Private. Build Compliant.<br />Build on Horizen.
         </h1>
         <p className={styles.heroSubtitle}>
-          Horizen is the privacy layer for Base — bringing confidential, auditable execution to Ethereum's most active L2.
+          Horizen is a privacy and compliance chain on Base. Build apps that are confidential by default and compliant by design.
         </p>
-        <div className={styles.heroCtas}>
+        {/* <div className={styles.heroCtas}>
           <Link className="button button--primary button--lg" to="/horizen-chain/deploy-contracts/using-foundry">
             Start Building
           </Link>
           <Link className="button button--outline button--lg" to="/vela/introduction">
             Explore VELA
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );
@@ -61,19 +61,38 @@ const personas = [
     title: 'EVM Developer',
     description: 'Already building on Base or Ethereum? Deploy on Horizen in minutes with the same tools you use today.',
     link: '/horizen-chain/deploy-contracts/using-foundry',
-    cta: 'Deploy a contract →',
+    cta: 'Deploy a contract',
+    icon: (
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="16 18 22 12 16 6" />
+        <polyline points="8 6 2 12 8 18" />
+      </svg>
+    ),
   },
   {
     title: 'Privacy-First Builder',
     description: 'Building confidential DeFi, payments, or identity apps from scratch.',
-    link: '/vela/getting-started/hello-world',
-    cta: 'Start with VELA →',
+    link: '/horizen-chain/privacy-tools',
+    cta: 'Explore privacy tools',
+    icon: (
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <polyline points="9 12 11 14 15 10" />
+      </svg>
+    ),
   },
   {
-    title: 'Enterprise Developer',
-    description: 'Need compliance-ready privacy for regulated finance or institutional use.',
-    link: '/vela/introduction',
-    cta: 'Explore compliance →',
+    title: 'Compliance Engineer',
+    description: 'Gate contract actions behind AML verification for regulated markets. No new toolchain needed.',
+    link: '/horizen-chain/compliance',
+    cta: 'Explore compliance patterns',
+    icon: (
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+        <polyline points="14 2 14 8 20 8" />
+        <polyline points="9 15 11 17 15 13" />
+      </svg>
+    ),
   },
 ];
 
@@ -85,9 +104,13 @@ function PersonaCards() {
         <div className={styles.personaGrid}>
           {personas.map((p) => (
             <Link key={p.title} to={p.link} className={styles.personaCard}>
+              <div className={styles.personaCardIcon}>{p.icon}</div>
               <h3>{p.title}</h3>
               <p>{p.description}</p>
-              <span className={styles.personaCta}>{p.cta}</span>
+              <span className={styles.personaCta}>
+                {p.cta}
+                <span className={styles.personaCtaArrow}>→</span>
+              </span>
             </Link>
           ))}
         </div>
@@ -180,7 +203,7 @@ function StartBuilding() {
 }
 
 const bottomLinks = [
-  { label: 'Join the Discord', link: 'https://discord.gg/horizen', external: true, note: null },
+  { label: 'Join the Discord', link: 'https://discord.gg/horizen-334085157441110017', external: true, note: null },
   { label: 'Open a GitHub Issue', link: 'https://github.com/HorizenOfficial', external: true, note: null },
   { label: 'Read the Whitepaper', link: 'https://horizen.io/whitepaper', external: true, note: null },
 ];

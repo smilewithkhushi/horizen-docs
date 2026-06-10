@@ -1,0 +1,160 @@
+.footer {
+  background-color: #030e24;
+  border-top: 1px solid rgba(252, 209, 26, 0.15);
+  padding: 56px 48px 0;
+  font-family: inherit;
+}
+
+.inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.logoArea {
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.logoLink {
+  display: inline-block;
+}
+
+.logo {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+
+.linksArea {
+  display: flex;
+  gap: 56px;
+  flex: 1;
+  padding-left: 48px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.columnTitle {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 20px;
+}
+
+.columnLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.columnLinks li {
+  margin: 0;
+}
+
+.link {
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 2;
+  text-decoration: none !important;
+  display: block;
+  transition: color 0.15s ease;
+}
+
+.link:hover {
+  color: #fcd11a !important;
+  text-decoration: none !important;
+}
+
+.socialArea {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.socialBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fcd11a;
+  color: #030e24;
+  text-decoration: none;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+  flex-shrink: 0;
+}
+
+.socialBtn:hover {
+  background-color: #e6bc17;
+  transform: translateY(-1px);
+}
+
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 28px 0;
+  margin-top: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.45);
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottomSep {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.bottomLink {
+  color: #fcd11a !important;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.bottomLink:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 24px 0;
+  }
+
+  .inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .linksArea {
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .socialArea {
+    flex-wrap: wrap;
+  }
+}
