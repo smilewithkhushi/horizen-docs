@@ -2,11 +2,11 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
-const algoliaConfig = process.env.ALGOLIA_APP_ID
+const algoliaConfig = process.env.ALGOLIA_APP_ID && process.env.ALGOLIA_API_KEY && process.env.ALGOLIA_INDEX_NAME
   ? {
       appId: process.env.ALGOLIA_APP_ID,
-      apiKey: process.env.ALGOLIA_API_KEY!,
-      indexName: process.env.ALGOLIA_INDEX_NAME!,
+      apiKey: process.env.ALGOLIA_API_KEY,
+      indexName: process.env.ALGOLIA_INDEX_NAME,
       contextualSearch: true,
       searchPagePath: 'search' as const,
     }
