@@ -21,7 +21,7 @@ function Hero() {
           Build Private. Build Compliant.<br />Build on Horizen.
         </h1>
         <p className={styles.heroSubtitle}>
-          Horizen is a privacy and compliance chain on Base. Build apps that are confidential by default and compliant by design.
+          Horizen is an EVM-compatible L3 on Base for private onchain finance. Build with the tools you already use, and add confidentiality where your app needs it.
         </p>
         {/* <div className={styles.heroCtas}>
           <Link className="button button--primary button--lg" to="/horizen-chain/deploy-contracts/using-foundry">
@@ -43,9 +43,10 @@ function WhatIsHorizen() {
         <div className={styles.whatIsText}>
           <h2>What is Horizen?</h2>
           <p>
-            Horizen is an EVM-native L3 built on Base. It adds what Base doesn't have: compliant,
-            verifiable privacy. Through the Horizen Chain and VELA, developers can build apps that
-            are private by default and auditable by design.
+            Horizen is an EVM-compatible L3 built on Base. It adds what Base doesn't have: compliant,
+            verifiable privacy that developers opt into per use case. Through the Horizen Chain and its
+            confidentiality tooling, you ship a standard Solidity dApp and choose the privacy primitive
+            that fits. No mandated stack, no new language.
           </p>
         </div>
         <div className={styles.architectureImage}>
@@ -164,7 +165,7 @@ const buildingCards = [
   {
     tag: 'VELA',
     title: 'Your First Confidential App',
-    description: 'Run attested computation inside a TEE. Private by default, auditable by design.',
+    description: 'Run attested computation inside a TEE. VELA is an emerging confidential coprocessor — start with a hello-world build and engage early.',
     link: '/vela/getting-started/hello-world',
     accent: 'linear-gradient(90deg, #7c3aed, #4f46e5)',
     subLinks: [],
@@ -172,7 +173,8 @@ const buildingCards = [
   {
     tag: 'BRIDGE',
     title: 'Bridge Assets to Horizen',
-    description: 'Move ETH via the native OP Stack bridge, or bridge ZEN, USDC, and cbBTC across 80+ chains via Stargate.',
+    // TODO (provenance): verify Stargate-supported tokens, chain count, and that ETH is NOT supported via Stargate on Horizen before re-adding specifics. Do not call it "Stargate V2". Source: live bridge UI + Stargate docs.
+    description: 'Move ETH via the native OP Stack bridge, or bridge supported assets via Stargate.',
     link: '/horizen-chain/bridging/how-bridging-works',
     accent: 'linear-gradient(90deg, #0ea5e9, #06b6d4)',
     subLinks: [

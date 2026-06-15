@@ -22,7 +22,7 @@ By the end you'll have a live GraphQL endpoint indexing your Horizen contract's 
 
 <br/>
 
-## Step 1 — Install the Goldsky CLI
+## Step 1: Install the Goldsky CLI
 
 For macOS/Linux:
 
@@ -70,7 +70,7 @@ With Hardhat:
 cat artifacts/contracts/MyToken.sol/MyToken.json | jq '.abi' > abi.json
 ```
 
-Alternatively, find the ABI in the **Contract** tab of the [Horizen Testnet Explorer](https://explorer.horizen.io/) and save it to `abi.json`.
+Alternatively, find the ABI in the **Contract** tab of the [Horizen Testnet Explorer](https://explorer-testnet.horizen.io/) and save it to `abi.json`.
 
 ### 2. Create a config file
 
@@ -211,7 +211,7 @@ dataSources:
       file: ./src/mapping.ts
 ```
 
-> **Finding your start block:** Look up your contract deployment transaction on the [Horizen Testnet Explorer](https://explorer.horizen.io/) and use that block number. Indexing from block 0 works but is slow.
+> **Finding your start block:** Look up your contract deployment transaction on the [Horizen Testnet Explorer](https://explorer-testnet.horizen.io/) and use that block number. Indexing from block 0 works but is slow.
 
 ### 4. Write event handlers (`src/mapping.ts`)
 

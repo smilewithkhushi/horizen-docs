@@ -38,7 +38,7 @@ The Verifier on Horizen is a proxy contract. Your contract makes a synchronous c
 - Foundry or Hardhat for contract deployment
 - Node.js ≥ 18 and `ethers` v6 for the off-chain script
 
-## Step 1 - Install the PureFi Solidity SDK
+## Step 1: Install the PureFi Solidity SDK
 
 **Foundry:**
 
@@ -58,7 +58,7 @@ Add to `remappings.txt`:
 npm i @purefi/sdk-solidity-v5
 ```
 
-## Step 2 - Write and Deploy Your Verified Receiver Contract
+## Step 2: Write and Deploy Your Verified Receiver Contract
 
 The PureFi SDK provides a base abstract contract that handles chain ID validation and Verifier calls. Extend it for Horizen Mainnet with the hardcoded proxy address.
 
@@ -142,7 +142,7 @@ forge create src/YourCompliantContract.sol:CompliantMinter \
 
 Note the deployed contract address — you will need it in the next step.
 
-## Step 3 - Register Your Contract in the PureFi Dashboard
+## Step 3: Register Your Contract in the PureFi Dashboard
 
 Before any `_purefidata` will be issued for your contract, you must bind it to your subscription.
 
@@ -154,7 +154,7 @@ Before any `_purefidata` will be issued for your contract, you must bind it to y
 If your contract is not registered in the Dashboard, the issuer will not return `_purefidata` for transactions targeting it. Registering is required before any end-to-end test will work.
 :::
 
-## Step 4 - Build the Off-chain Verification Flow
+## Step 4: Build the Off-chain Verification Flow
 
 In production, your frontend or backend handles the request construction, signing, and issuer call. Here is a complete Node.js/TypeScript script that runs all three steps and prints the `_purefidata` ready to submit on-chain.
 
@@ -278,7 +278,7 @@ npx ts-node scripts/get-purefidata.ts
 
 On success, the script prints the `_purefidata` bytes string. Copy it — you submit it in the next step.
 
-## Step 5 - Submit the Compliance-Gated Transaction
+## Step 5: Submit the Compliance-Gated Transaction
 
 With `_purefidata` in hand, call your contract. This single transaction performs both the on-chain compliance verification and your business logic atomically.
 
@@ -329,7 +329,7 @@ If `validatePayload` succeeds, your `Minted` event will be emitted and the trans
 
 Before wiring up your own frontend and backend, use PureFi's Playground to manually run through the full flow. Playground is accessible from your [PureFi Dashboard](https://dashboard.purefi.io/) and lets you generate `_purefidata` without writing any code — useful for verifying your contract is correctly registered and that the Verifier accepts calls to it.
 
-#### Payload Constructor
+### Payload Constructor
 
 Fill in your package type, rule ID, the test wallet address as `from`, and your deployed contract as `to`. This generates the payload submitted to the issuer.
 
@@ -337,7 +337,7 @@ Fill in your package type, rule ID, the test wallet address as `from`, and your 
 *[Screenshot: Payload Constructor UI — package type, rule ID, from/to fields]*
 :::
 
-#### Signature Process
+### Signature Process
 
 Connect your browser wallet. The chain ID must be Horizen Mainnet (26514). Confirm the signing prompt to produce the EIP-712 signature.
 
@@ -345,7 +345,7 @@ Connect your browser wallet. The chain ID must be Horizen Mainnet (26514). Confi
 *[Screenshot: Signature step — wallet prompt and resulting EIP-712 data]*
 :::
 
-#### Verification Process
+### Verification Process
 
 Select the issuer environment and submit. A successful AML check returns the `_purefidata` bytes string in the response panel.
 
@@ -353,7 +353,7 @@ Select the issuer environment and submit. A successful AML check returns the `_p
 *[Screenshot: Verification step — issuer response with _purefidata]*
 :::
 
-#### Transaction Builder
+### Transaction Builder
 
 Paste your contract address, ABI, select the `mint` method (or whichever method accepts `purefiData`), and paste `_purefidata` as the argument. Submit the transaction and confirm in your wallet.
 

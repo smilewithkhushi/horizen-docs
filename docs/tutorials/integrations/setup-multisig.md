@@ -23,7 +23,7 @@ A Safe wallet is a smart contract, not an EOA. It lives on-chain at a determinis
 - A browser with a Web3 wallet extension (MetaMask recommended)
 
 
-## Step 1 - Add Horizen to Your Wallet
+## Step 1: Add Horizen to Your Wallet
 
 Before connecting to Den, add Horizen to your wallet. Follow the steps on the relevant network page:
 
@@ -32,14 +32,14 @@ Before connecting to Den, add Horizen to your wallet. Follow the steps on the re
 
 
 
-## Step 2 - Open Den and Connect
+## Step 2: Open Den and Connect
 
 Navigate to the **[Den dashboard for Horizen](https://app.onchainden.com)** and connect your wallet. Make sure your wallet is set to the correct Horizen network before connecting.
 
 Den will display your connected address and let you switch between your existing Safes or create a new one.
 
 
-## Step 3 - Create a New Safe
+## Step 3: Create a New Safe
 
 Click **New Safe** and walk through the creation wizard.
 
@@ -83,7 +83,7 @@ Safe address: 0xYourSafe...  (on Horizen, Chain ID 26514)
 
 
 
-## Step 4 - Fund the Safe
+## Step 4: Fund the Safe
 
 Send ETH (or any ERC-20 tokens) to your Safe address. The Safe holds funds like any other address - you can verify the balance on the [Horizen Explorer](https://explorer.horizen.io/).
 
@@ -91,7 +91,7 @@ For testnet, use the [Horizen Testnet Faucet](https://hub-testnet.horizen.io/) t
 
 
 
-## Step 5 - Create Your First Transaction
+## Step 5: Create Your First Transaction
 
 In Den, navigate to your Safe and click **New Transaction**.
 
@@ -119,7 +119,7 @@ Paste raw calldata for custom interactions. Useful for interacting with unverifi
 
 
 
-## Step 6 - Simulate the Transaction
+## Step 6: Simulate the Transaction
 
 Before collecting signatures, simulate the transaction. Den executes the transaction against a fork of the current chain state and reports:
 
@@ -132,7 +132,7 @@ Simulation catches errors before signers spend time signing a broken transaction
 
 
 
-## Step 7 - Collect Signatures
+## Step 7: Collect Signatures
 
 Once the transaction is created, Den generates a shareable link. Distribute this to the other owners.
 
@@ -148,7 +148,7 @@ Signatures are aggregated by Den until the threshold is met.
 
 
 
-## Step 8 - Execute the Transaction
+## Step 8: Execute the Transaction
 
 Once M signatures have been collected, any owner (or any funded address) can execute the transaction. Click **Execute** in Den. This bundles all signatures into a single on-chain transaction:
 
@@ -166,7 +166,7 @@ The Safe contract verifies that the signatures are valid and that the required t
 
 
 
-## Step 9 - Batch Multiple Transactions
+## Step 9: Batch Multiple Transactions
 
 Batching lets you execute multiple operations in a single on-chain transaction, saving gas and ensuring atomicity (all operations succeed or all revert together).
 

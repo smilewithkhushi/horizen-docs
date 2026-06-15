@@ -22,7 +22,7 @@ NFT metadata URIs typically point to IPFS or a centralized server. Horizen has n
 What Horizen does give you: fast block times (OP Stack block every 2 seconds), low fees, and full EVM compatibility.
 
 
-## Step 1 — The Contract
+## Step 1: The Contract
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -209,7 +209,7 @@ contract HorizenNFT is ERC721Enumerable, ERC721URIStorage, Ownable, ReentrancyGu
 ```
 
 
-## Step 2 — Foundry Setup
+## Step 2: Foundry Setup
 
 ```bash
 forge init horizen-nft && cd horizen-nft
@@ -354,7 +354,7 @@ forge script script/Deploy.s.sol:DeployScript \
 ```
 
 
-## Step 3 — Prepare Your Metadata
+## Step 3: Prepare Your Metadata
 
 Your metadata must be ready before you deploy or reveal. The standard structure for each token (`0.json`, `1.json`, etc.):
 

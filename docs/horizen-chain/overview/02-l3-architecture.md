@@ -7,7 +7,7 @@ sidebar_position: 2
 Horizen Chain is an OP Stack rollup that settles directly onto Base, which in turn settles onto Ethereum.
 
 
-### The Layered Model
+## The Layered Model
 
 **Ethereum — Security & Final Settlement**: The root of trust. Ethereum provides the cryptographic finality that everything above it inherits.
 
