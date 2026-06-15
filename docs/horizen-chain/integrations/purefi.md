@@ -12,7 +12,7 @@ PureFi is a compliance layer that combines off-chain AML checking with on-chain 
 
 The critical mental model: **your contract is not monitoring logs**. It is making a synchronous call to the PureFi Verifier and blocking on the result.
 
-### How PureFi Works
+## How PureFi Works
 
 The full integration flow, from user action to business logic execution:
 
@@ -23,7 +23,7 @@ The full integration flow, from user action to business logic execution:
 5. Your contract receives `_purefidata` and calls `verifier.validatePayload(_purefidata)` — the call reverts if validation fails
 6. Only after a clean return from the Verifier does your contract execute its business logic (mint, swap, access grant, etc.)
 
-### Step 1 — Install the PureFi Solidity SDK
+## Step 1: Install the PureFi Solidity SDK
 
 **Foundry:**
 
@@ -43,7 +43,7 @@ Then add to `remappings.txt`:
 npm i @purefi/sdk-solidity-v5
 ```
 
-### Step 2 — Implement the Verifier in Your Contract
+## Step 2: Implement the Verifier in Your Contract
 
 Import the two core interfaces:
 
@@ -102,7 +102,7 @@ contract PureFiSdkVerifiedReceiverHorizenMainnet is PureFiSdkVerifiedReceiverBas
 The Verifier address is a proxy. When your contract calls it, the proxy `delegatecall`s to the implementation contract, which performs signature and payload verification. On success, it returns to the proxy, which returns to your contract. There is no log-watching — this is a real blocking call with a synchronous result.
 :::
 
-### Step 3 — Build the Off-chain Integration Flow
+## Step 3: Build the Off-chain Integration Flow
 
 In production, your frontend or backend is responsible for steps 1–3 of the flow. Playground (covered below) lets you run through these manually before wiring them into your app.
 
@@ -125,7 +125,7 @@ Prompt the user's connected wallet to sign the payload via EIP-712. The signatur
 
 Submit the payload and signature to the issuer endpoint. If the AML check passes, the issuer returns a `_purefidata` bytes string. If it fails, no `_purefidata` is returned and you should not attempt to submit a transaction.
 
-### Step 4 — Submit the Transaction
+## Step 4: Submit the Transaction
 
 Pass the `_purefidata` bytes string returned by the issuer as the argument to your contract's verification method:
 
@@ -139,13 +139,13 @@ function yourMethod(bytes calldata purefiData, /* ...other args */ ) external {
 
 From your frontend, call this method with `purefiData` as the argument after receiving it from the issuer.
 
-### Testing with Playground
+## Testing with Playground
 
 PureFi's Playground lets you manually run the complete flow — construct a payload, sign it, call the issuer, and submit the resulting `_purefidata` to your contract — without writing any frontend code. Use it to verify your integration before wiring up your own app.
 
 **Playground is a debugging and learning tool, not a production entry point.**
 
-#### Payload Constructor
+### Payload Constructor
 
 Set the package type, rule ID, `from` (your test wallet), and `to` (your deployed contract address) to generate the payload for the issuer.
 
@@ -153,7 +153,7 @@ Set the package type, rule ID, `from` (your test wallet), and `to` (your deploye
   <img src="/img/purefi/payload-constructor.png" alt="PureFi Payload Constructor" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
-#### Signature Process
+### Signature Process
 
 Connect your browser wallet. The chain ID must match the target network. After confirming, the wallet produces the EIP-712 signature included in the next step.
 
@@ -161,7 +161,7 @@ Connect your browser wallet. The chain ID must match the target network. After c
   <img src="/img/purefi/signature-process.png" alt="PureFi Signature Process" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
-#### Verification Process
+### Verification Process
 
 Select the issuer environment and submit. A successful response returns the `_purefidata` string you will use on-chain.
 
@@ -169,7 +169,7 @@ Select the issuer environment and submit. A successful response returns the `_pu
   <img src="/img/purefi/verification-process.png" alt="PureFi Verification Process" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
-#### Transaction Builder
+### Transaction Builder
 
 Paste your contract address, ABI, and select the method that accepts `_purefidata`. Fill in the returned `_purefidata` as the parameter and submit the transaction.
 
@@ -177,7 +177,7 @@ Paste your contract address, ABI, and select the method that accepts `_purefidat
   <img src="/img/purefi/transaction-builder.png" alt="PureFi Transaction Builder" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
-### Horizen Mainnet Deployment
+## Horizen Mainnet Deployment
 
 | | Value |
 |---|---|
@@ -188,7 +188,7 @@ Paste your contract address, ABI, and select the method that accepts `_purefidat
 
 Register your deployed contract against your PureFi subscription in the [PureFi Dashboard](https://dashboard.purefi.io/) before testing.
 
-### Debugging: Success and Failure Indicators
+## Debugging: Success and Failure Indicators
 
 **Signs the integration is working:**
 - The issuer returns a non-empty `_purefidata` string

@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Horizen is fully EVM-compatible and supports the standard Ethereum JSON-RPC API. Use these endpoints to connect wallets, submit transactions, query state, and interact with deployed contracts.
 
-### Mainnet
+## Mainnet
 
 | Parameter | Value |
 |---|---|
@@ -17,7 +17,7 @@ Horizen is fully EVM-compatible and supports the standard Ethereum JSON-RPC API.
 | **Block Explorer** | `https://explorer.horizen.io/` |
 | **Bridge** | `https://hub.horizen.io/` |
 
-### Testnet (Base Sepolia)
+## Testnet (Base Sepolia)
 
 | Parameter | Value |
 |---|---|
@@ -25,12 +25,12 @@ Horizen is fully EVM-compatible and supports the standard Ethereum JSON-RPC API.
 | **RPC (HTTPS)** | `https://horizen-testnet.rpc.caldera.xyz/http` |
 | **RPC (WebSocket)** | `wss://horizen-testnet.rpc.caldera.xyz/ws` |
 | **Currency Symbol** | `ETH` |
-| **Block Explorer** | `https://explorer.horizen.io/` |
+| **Block Explorer** | `https://explorer-testnet.horizen.io/` |
 | **Faucet** | `https://hub-testnet.horizen.io/` |
 
 
 
-### Supported JSON-RPC Methods
+## Supported JSON-RPC Methods
 
 Horizen supports the full standard Ethereum JSON-RPC specification. The most commonly used methods are listed below.
 

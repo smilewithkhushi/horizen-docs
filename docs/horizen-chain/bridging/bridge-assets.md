@@ -17,7 +17,7 @@ This page covers step-by-step instructions for using the Horizen native bridge.
 :::
 
 
-## Deposit : Base → Horizen
+## Deposit: Base → Horizen
 
 Use this flow to move ETH from Base into Horizen Chain. The estimated time is a few minutes after Base confirmation
 
@@ -54,7 +54,7 @@ Your ETH will arrive on Horizen within a few minutes. You can verify the balance
 by checking your wallet address on the Horizen explorer:
 
 - Mainnet: `https://explorer.horizen.io/`
-- Testnet: `https://explorer.horizen.io/`
+- Testnet: `https://explorer-testnet.horizen.io/`
 
 :::note
 If your wallet is not yet configured for Horizen, add the network first.
@@ -63,7 +63,7 @@ See [Network Configuration →](/horizen-chain/network/mainnet) for the RPC deta
 
 
 
-## Withdrawal : Horizen → Base
+## Withdrawal: Horizen → Base
 
 Use this flow to move ETH from Horizen Chain back to Base.
 

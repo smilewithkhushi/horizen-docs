@@ -1,6 +1,6 @@
 ---
-title: cBTC on Horizen
-description: "Coinbase-wrapped BTC (cbBTC) token details and usage on Horizen."
+title: cbBTC on Horizen
+description: "cbBTC (Coinbase Wrapped BTC) on Horizen: contract addresses, custody model, and ERC-20 integration guide."
 sidebar_position: 4
 ---
 
@@ -92,7 +92,7 @@ console.log(`cbBTC balance: ${formatted}`);
 
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
 interface IERC20 {
     function balanceOf(address account) external view returns (uint256);

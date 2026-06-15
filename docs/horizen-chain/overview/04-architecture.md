@@ -1,18 +1,13 @@
 ---
 title: "Horizen's Architecture"
-description: "Full technical architecture of Horizen: OP Stack sequencer, data availability on Base, derivation pipeline, execution engine, and how VELA TEE coprocessor integrates with on-chain settlement."
+description: "Full technical architecture of Horizen: OP Stack sequencer, data availability on Base, derivation pipeline, execution engine, fault proofs, and settlement."
+sidebar_position: 3
 ---
 
-Horizen is an EVM L3 powered by op-stack built on top of Base L2, which is one of the most high performant L2 in Ethereum ecosystem. OP Stack is an open-source, modular framework developed by the Optimism Collective, enabling the creation of scalable, Ethereum-aligned rollups. By leveraging Base as its settlement layer, Horizen L3 inherits the security and decentralization of Ethereum while benefiting from Base's low fees and high throughput.
+Horizen is an EVM-compatible L3 built on [Base](https://www.base.org/) using the [OP Stack](https://docs.optimism.io/stack/getting-started) — an open-source, modular rollup framework from the Optimism Collective. By settling on Base, Horizen inherits Ethereum's security and Base's low fees and high throughput, with opt-in confidential execution layered on top for private onchain finance.
 
 The OP Stack architecture is composed of modular layers: Data Availability (DA), Sequencing, Derivation, Execution, and Settlement. These layers work together to form a cohesive optimistic rollup. Below, we detail the primary components relevant to Horizen's implementation.
 
-
-{/* TODO: Update diagram — current image references OP Enclave which is not part of our stack
-<div style={{padding: '24px', borderRadius: '8px', display: 'flex', justifyContent: 'center'}}>
-  <img src="/img/horizen-chain/base-L3.jpeg" alt="Layer 3 Architecture on Base" width="80%" />
-</div>
-*/}
 
 ## Sequencer
 
@@ -58,13 +53,14 @@ The Derivation layer processes raw data from the DA layer to generate inputs for
 
 
 ## Rollup Module
-The core of derivation, parsing sequencer batches and L2-originated deposits (e.g., bridge transactions from Base to Horizen).
-Indexer Module (Proposed): For advanced tracking of specific Base contracts or events.
-Interactions: The derivation pipeline feeds into the Engine API, allowing any node to sync and verify the chain independently by replaying data from Base.
+The core of the derivation pipeline, responsible for parsing sequencer batches and L2-originated deposits (e.g., bridge transactions from Base to Horizen). The derivation pipeline feeds into the Engine API, allowing any node to independently sync and verify the chain by replaying data from Base.
 
 ## Execution Engine
-Horizen uses a near-vanilla Ethereum Virtual Machine (EVM) for state transitions It processes derived inputs to execute transactions and update the state trie. Supports all Ethereum opcodes, with minor OP Stack extensions (e.g., L2 data fee for batches).
-Maintains compatibility with Ethereum tools and smart contracts.
+Horizen uses a near-vanilla Ethereum Virtual Machine (EVM) for state transitions. It processes derived inputs to execute transactions and update the state trie.
+
+### Functionality:
+- Supports all Ethereum opcodes, with minor OP Stack extensions (e.g., L2 data fee for batches)
+- Maintains full compatibility with Ethereum tools and smart contracts
 
 ## Fault Proofs and Settlement
 Settlement verifies and finalizes Horizen's state on Base, enabling secure withdrawals and cross-chain interactions.

@@ -1,6 +1,6 @@
 ---
 title: Subgraph Indexing (Goldsky)
-description: "How to index Horizen onchain data using Goldsky subgraphs."
+description: "How to index Horizen onchain data using Goldsky subgraphs and Mirror pipelines."
 sidebar_position: 2
 ---
 
@@ -8,7 +8,7 @@ sidebar_position: 2
   <img src="/img/tutorials/goldsky-banner.png" alt="Goldsky" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
-Goldsky is the official data indexing provider for Horizen Chain. It makes it straightforward to extract, transform, and serve on-chain data as queryable APIs — powering dashboards, analytics, and application backends without building custom indexing infrastructure.
+Goldsky is a data indexing provider that makes it straightforward to extract, transform, and serve on-chain data as queryable APIs — powering dashboards, analytics, and application backends without building custom indexing infrastructure.
 
 Goldsky offers two core products:
 
@@ -19,7 +19,7 @@ Goldsky offers two core products:
 
 
 
-### Getting Started
+## Getting Started
 
 **Install the Goldsky CLI:**
 
@@ -35,7 +35,7 @@ goldsky login
 
 
 
-### Deploy via CLI (Subgraph Config Files)
+## Deploy via CLI (Subgraph Config Files)
 
 This is the standard approach if you are already familiar with subgraph development. You define your indexing logic locally across three files:
 
@@ -82,7 +82,7 @@ Full step-by-step guide: [docs.goldsky.com/subgraphs/deploying-subgraphs](https:
 
 
 
-### Deploy via Instant Subgraphs (No Config Required)
+## Deploy via Instant Subgraphs (No Config Required)
 
 If you want to get up and running immediately without writing indexing logic, Goldsky can auto-generate the subgraph configuration from a contract address and ABI. This is the fastest way to start querying contract events as a GraphQL API.
 
@@ -98,7 +98,7 @@ Goldsky will generate the `subgraph.yaml`, `schema.graphql`, and mapping files a
 
 
 
-### Mirror — Real-Time Data Pipelines
+## Mirror — Real-Time Data Pipelines
 
 Goldsky Mirror lets you stream raw on-chain data — blocks, transactions, logs, traces — directly into your own infrastructure in real time. This is useful for analytics databases, alerting systems, and any use case where you need the full raw chain data rather than event-driven entity indexing.
 
@@ -124,7 +124,7 @@ Definition files are useful for complex pipelines with multiple sources or sinks
 
 
 
-### Reference Links
+## Reference Links
 
 | Resource | URL |
 |---|---|

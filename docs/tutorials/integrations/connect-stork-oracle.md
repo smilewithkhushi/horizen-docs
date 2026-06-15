@@ -36,7 +36,7 @@ This model means gas is only spent when a price is actually needed, and freshnes
 
 
 
-## Step 1 - Identify Your Asset ID
+## Step 1: Identify Your Asset ID
 
 Stork identifies price feeds using an **asset ID** - a human-readable string like `BTCUSD`, `ETHUSD`, or `ZENUSD`. You can browse available feeds via the Stork REST API:
 
@@ -85,7 +85,7 @@ Note the `encoded_asset_id` - this is the `bytes32` identifier used in all on-ch
 
 
 
-## Step 2 - The Stork Contract Interface
+## Step 2: The Stork Contract Interface
 
 The Stork contract on Horizen exposes two core functions:
 
@@ -114,7 +114,7 @@ struct TemporalNumericValue {
 
 
 
-## Step 3 - Push a Price Update (Off-Chain Script)
+## Step 3: Push a Price Update (Off-Chain Script)
 
 Here's a complete Node.js script that fetches a fresh price from the Stork API and pushes it on-chain:
 
@@ -207,7 +207,7 @@ PRIVATE_KEY=0x... STORK_API_KEY=your_key npx ts-node push-price.ts
 
 
 
-## Step 4 - Consume the Price in Your Smart Contract
+## Step 4: Consume the Price in Your Smart Contract
 
 Now write a Solidity contract that reads the Stork price and uses it in business logic. This example is a minimal price-gated contract that only accepts deposits when the asset price is above a threshold:
 
@@ -295,7 +295,7 @@ cast call <YOUR_VAULT_ADDRESS> "getPrice()(int128,uint256)" \
 
 
 
-## Step 5 - Keeping Prices Fresh (Automation)
+## Step 5: Keeping Prices Fresh (Automation)
 
 For production apps, you need a process that periodically pushes price updates so they're never stale when your contract checks them. Options:
 

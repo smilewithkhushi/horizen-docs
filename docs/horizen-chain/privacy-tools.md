@@ -1,10 +1,10 @@
 ---
 title: Privacy Tools
-description: "Privacy primitives available on Horizen: VELA for confidential TEE execution and zkVerify for on-chain ZK proof verification."
-sidebar_position: 5
+description: "Confidentiality primitives available on Horizen: VELA for TEE-based confidential execution and zkVerify for on-chain ZK proof verification. No mandated stack — adopt what your use case needs."
+sidebar_position: 6
 ---
 
-Horizen supports two privacy primitives. They solve different problems — choosing the right one depends on what your application needs to keep private and how it needs to prove correctness.
+Horizen gives you two complementary confidentiality primitives that operate at different layers. VELA keeps inputs and computation private during execution. zkVerify proves that computation ran correctly on-chain. They can be used independently or together — what you adopt depends on what your application needs to keep private and how it needs to demonstrate correctness.
 
 ## VELA - Confidential Execution
 
@@ -12,7 +12,7 @@ Horizen supports two privacy primitives. They solve different problems — choos
   <img src="/img/vela/vela-hl-banner.png" alt="VELA" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
-VELA is a confidential coprocessor. Application logic runs inside TEE hardware enclaves where data is encrypted in memory, inaccessible to any external observer including the host machine and cloud provider. Every computation produces a cryptographic attestation proving the code ran correctly inside a genuine enclave, without revealing the underlying data or intermediate state.
+VELA is an emerging confidential coprocessor. Application logic runs inside TEE hardware enclaves where data is encrypted in memory, inaccessible to any external observer including the host machine and cloud provider. Every computation produces a cryptographic attestation proving the code ran correctly inside a genuine enclave, without revealing the underlying data or intermediate state.
 
 **Use VELA when:**
 - Your application processes sensitive inputs that must stay private during computation — confidential balances, sealed bids, private order books, encrypted AI inference
@@ -27,7 +27,7 @@ VELA is a confidential coprocessor. Application logic runs inside TEE hardware e
   <img src="/img/tutorials/zkverify.png" alt="zkVerify" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
-zkVerify is a purpose-built L1 for verifying ZK proofs. Applications generate proofs off-chain using a ZK proving system, submit them to zkVerify, and receive on-chain verification results consumable by contracts on Horizen or any other EVM-compatible chain, without deploying a custom verifier contract or paying native chain gas costs for proof verification.
+zkVerify is a purpose-built L1 for verifying ZK proofs — a separate protocol that integrates with Horizen and any other EVM-compatible chain. Applications generate proofs off-chain using a ZK proving system, submit them to zkVerify, and receive on-chain verification results consumable by Horizen contracts, without deploying a custom verifier contract or paying native chain gas costs for proof verification.
 
 **Use zkVerify when:**
 - Your application already generates ZK proofs (from a ZK circuit, prover library, or ZK rollup) and needs cheap, fast on-chain verification

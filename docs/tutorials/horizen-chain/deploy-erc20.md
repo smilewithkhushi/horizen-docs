@@ -29,7 +29,7 @@ For full network details (RPC endpoints, chain IDs, explorer, faucet), see:
 
 
 
-## Step 1 — Write the Contract
+## Step 1: Write the Contract
 
 Write a minimal but complete ERC-20 contract with an owner-controlled mint function and a fixed max supply:
 

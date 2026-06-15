@@ -1,18 +1,20 @@
 ---
 title: What is Horizen Chain?
-description: "Horizen is an EVM-compatible L3 on Base (Ethereum L2) using the OP Stack — same Solidity, Foundry, Hardhat, and ethers.js as Base. Adds VELA, a TEE-based confidential execution coprocessor for privacy-preserving apps with cryptographic compliance auditability."
+description: "Horizen is an EVM-compatible L3 on Base for private onchain finance. Ship standard Solidity and choose your confidentiality primitive — ZK, TEE, or none. No new language, no mandated privacy stack."
 sidebar_position: 1
 ---
 
-**Horizen** is an EVM-compatible Layer 3 blockchain built on top of [Base](https://www.base.org/) (Ethereum's Layer 2), powered by the OP Stack. It is designed as the privacy execution layer for the Base ecosystem — bringing regulatory-compliant, auditable confidentiality to where Ethereum's liquidity and activity already live.
+**Horizen** is an EVM-compatible Layer 3 blockchain built on top of [Base](https://www.base.org/) (Ethereum's Layer 2), powered by the OP Stack. Built for private onchain finance, it brings regulatory-compliant, auditable confidentiality to where Ethereum's liquidity and activity already live.
 
-Unlike first-generation privacy chains that achieved anonymity by isolating themselves from mainstream networks, Horizen Chain is built within the Ethereum stack. It inherits Base's security, composability, and liquidity while extending it with confidential computation through the [**VELA**](https://docs.horizen.io/vela) — a secure, hardware-backed execution layer powered by Trusted Execution Environments (TEEs).
+Unlike chains that require learning a new language or committing to a fixed privacy model, Horizen lets you ship standard Solidity and choose your confidentiality primitive per use case or skip it entirely. There is no mandated privacy stack and nothing new to adopt before your first deployment. 
+
+Horizen Chain is built within the Ethereum stack, inheriting Base's security, composability, and liquidity while making confidential computation available through [**VELA**](https://docs.horizen.io/vela) — an emerging confidential coprocessor — and ZK-based verification via zkVerify.
 
 The result is a chain where:
 
-- Smart contracts execute privately, with outputs that are cryptographically attested
-- Compliance and auditability are programmable — regulators can verify without seeing raw data
-- Developers build with familiar EVM tooling (Hardhat, Foundry, ethers.js, wagmi)
-- Liquidity moves freely between Horizen and Base via fast bridging through Stargate V2 and the native bridge.
+- Contracts can execute with confidentiality as outputs are cryptographically attested when privacy is enabled
+- Compliance and auditability are programmable (regulators can verify without seeing raw data)
+- Developers build with familiar EVM tooling (Hardhat, Foundry, ethers.js, wagmi, etc)
+- Liquidity moves freely between Horizen and Base via fast bridging
 
-Horizen is the settlement and coordination layer for a new class of applications: confidential DeFi, private payments, verifiable AI agents, and compliance-aware institutional finance  - all composable with Base and the broader Superchain.
+Horizen is the settlement and coordination layer for a new class of applications, such as confidential DeFi, private payments, verifiable AI agents, and compliance-aware institutional finance  - all composable with Base and the broader Superchain.

@@ -8,7 +8,7 @@ The testnet faucet provides free test ETH for development and testing on Horizen
 
 Faucet URL: [https://hub-testnet.horizen.io/](https://hub-testnet.horizen.io/)
 
-### To claim testnet ETH
+## To claim testnet ETH
 
 - Connect your wallet on the faucet page.
 - Ensure your wallet is set to Horizen Testnet (Chain ID: 2651420).

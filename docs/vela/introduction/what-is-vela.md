@@ -1,6 +1,6 @@
 ---
 title: What is VELA?
-description: "VELA is Horizen's confidential execution coprocessor: run application logic inside TEE hardware enclaves where data is encrypted in memory, outputs are cryptographically attested, and compliance is verifiable without exposing raw data. Chain-agnostic, integrates with EVM contracts."
+description: "VELA is Horizen's emerging confidential execution coprocessor: run application logic inside TEE hardware enclaves where data is encrypted in memory, outputs are cryptographically attested, and compliance is verifiable without exposing raw data. Chain-agnostic, integrates with EVM contracts."
 sidebar_position: 1
 slug: /vela/introduction
 ---
@@ -11,7 +11,7 @@ slug: /vela/introduction
   <img src="/img/vela/vela-hl-banner.png" alt="VELA" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
-VELA is a confidential coprocessor for Web3 applications. It allows developers to run application logic inside Trusted Execution Environments (TEEs), where data is encrypted in memory and computations are cryptographically attested.
+VELA is an emerging confidential coprocessor for Web3 applications. It allows developers to run application logic inside Trusted Execution Environments (TEEs), where data is encrypted in memory and computations are cryptographically attested.
 
 No operator, cloud provider, or third party can access the data being processed. At the same time, regulators and auditors can verify compliance through cryptographic proof without requiring access to raw application state.
 

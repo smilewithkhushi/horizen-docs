@@ -143,6 +143,17 @@ const config: Config = {
     },
     footer: {
       style: "dark",
+      links: [
+        {
+          title: "Protocol",
+          items: [
+            {
+              label: "Whitepaper",
+              href: "https://downloads.horizen.io/file/web-assets/Horizen+Whitepaper+v1.0.0.pdf",
+            },
+          ],
+        },
+      ],
       copyright: `© ${new Date().getFullYear()} Horizen. All rights reserved.`,
     },
     prism: {
