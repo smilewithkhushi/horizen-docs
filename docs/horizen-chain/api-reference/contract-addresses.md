@@ -1,14 +1,14 @@
 ---
 title: Network & Contract Addresses
-description: "Official contract addresses for Horizen and Base: ZEN ERC-20, USDC.e, cBTC, OP Stack bridge contracts, and integration partner contracts (Goldsky, Stork, Den) on mainnet and testnet."
+description: "Official contract addresses for Horizen and Base: ZEN ERC-20, USDC.e, cbBTC, OP Stack bridge contracts, and integration partner contracts (Stork, Den) on mainnet and testnet."
 sidebar_position: 2
 ---
 
 All addresses below are sourced directly from official Horizen and integration partner documentation. Always verify addresses before interacting with any contract on mainnet.
 
-### Token Contracts
+## Token Contracts
 
-#### ZEN
+### ZEN
 
 | Network | Type | Address |
 |---|---|---|
@@ -19,16 +19,16 @@ All addresses below are sourced directly from official Horizen and integration p
 | Testnet Base | OFT Adapter (LayerZero) | [`0x2ead4B0beBD8e54F9B7cC1007DF4c44a27b9a339`](https://sepolia.basescan.org/address/0x2ead4B0beBD8e54F9B7cC1007DF4c44a27b9a339) |
 | Testnet Horizen | OFT (LayerZero) | [`0xb06EC4ce262D8dbDc24Fac87479A49A7DC4cFb87`](https://explorer-testnet.horizen.io/address/0xb06EC4ce262D8dbDc24Fac87479A49A7DC4cFb87) |
 
-#### USDC / USDC.e
+### USDC / USDC.e
 
 | Network | Type | Address |
 |---|---|---|
-| Mainnet Base | USDC ERC-20 | [`0x833589fcd6edb6e08f4c7c32d4f71b54bda02913`](https://basescan.org/address/0x833589fcd6edb6e08f4c7c32d4f71b54bda02913) |
-| Mainnet Base | Lock Contract (LayerZero) | [`0x27a16dc786820b16e5c9028b75b99f6f604b5d26`](https://basescan.org/address/0x27a16dc786820b16e5c9028b75b99f6f604b5d26) |
+| Mainnet Base | USDC ERC-20 | [`0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913`](https://basescan.org/address/0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913) |
+| Mainnet Base | Lock Contract (LayerZero) | [`0x27a16dc786820B16E5c9028b75B99F6f604b5d26`](https://basescan.org/address/0x27a16dc786820B16E5c9028b75B99F6f604b5d26) |
 | Mainnet Horizen | USDC.e ERC-20 | [`0xDF7108f8B10F9b9eC1aba01CCa057268cbf86B6c`](https://explorer.horizen.io/address/0xDF7108f8B10F9b9eC1aba01CCa057268cbf86B6c) |
 | Mainnet Horizen | OFT (LayerZero) | [`0x3a1293Bdb83bBbDd5Ebf4fAc96605aD2021BbC0f`](https://explorer.horizen.io/address/0x3a1293Bdb83bBbDd5Ebf4fAc96605aD2021BbC0f) |
 
-#### cbBTC
+### cbBTC
 
 | Network | Type | Address |
 |---|---|---|
@@ -41,7 +41,7 @@ All addresses below are sourced directly from official Horizen and integration p
 
 <br/>
 
-### Migration Contracts (Base Mainnet)
+## Migration Contracts (Base Mainnet)
 
 These contracts handle the ZEN token migration from the legacy Horizen mainchain and EON chain. Relevant for integrations that verify ZEN token provenance or check unclaimed migration balances.
 
@@ -55,7 +55,7 @@ Source code: [github.com/HorizenOfficial/horizen-migration](https://github.com/H
 
 
 
-### Oracle Contracts: Stork
+## Oracle Contracts: Stork
 
 Verified directly from [docs.stork.network/resources/contract-addresses/evm](https://docs.stork.network/resources/contract-addresses/evm).
 
@@ -67,7 +67,7 @@ Verified directly from [docs.stork.network/resources/contract-addresses/evm](htt
 > Both mainnet and testnet share the same Stork contract address on Horizen.
 
 
-### Multisig: Den / Safe
+## Multisig: Den / Safe
 
 | Resource | URL |
 |---|---|

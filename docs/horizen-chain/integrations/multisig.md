@@ -4,7 +4,7 @@ description: "Set up and manage multisig wallets on Horizen using Den and Safe c
 sidebar_position: 3
 ---
 
-Den is the official multisig wallet interface for Horizen Chain. It is a **self-custodial, multi-signature wallet** built on top of **Safe contracts** — the most widely audited and trusted smart contract wallet infrastructure in the EVM ecosystem, securing billions in assets across hundreds of protocols.
+Den is the multisig wallet interface for Horizen Chain. It is a **self-custodial, multi-signature wallet** built on top of **Safe contracts** — the most widely audited and trusted smart contract wallet infrastructure in the EVM ecosystem, securing billions in assets across hundreds of protocols.
 
 Den is available for Horizen at: **`https://safe.horizen.io/welcome`**
 
@@ -18,7 +18,7 @@ With Den on Horizen you can:
 
 
 
-### Creating a New Multisig Wallet
+## Creating a New Multisig Wallet
 
 1. Go to `https://safe.horizen.io/welcome` and connect your wallet
 2. Click **Create new Safe**
@@ -31,7 +31,7 @@ Full guide: [docs.onchainden.com/set-up-den/creating-and-managing-safes](https:/
 
 
 
-### Using an Existing Safe
+## Using an Existing Safe
 
 If you already have a Safe deployed on another EVM network, you can import it into Den on Horizen using the same address (EVM addresses are consistent across chains).
 
@@ -39,7 +39,7 @@ Guide: [docs.onchainden.com/set-up-den/using-existing-safes](https://docs.onchai
 
 
 
-### Creating Transactions
+## Creating Transactions
 
 1. Open your Safe in Den at `https://safe.horizen.io`
 2. Click **New Transaction**
@@ -52,7 +52,7 @@ Guide: [docs.onchainden.com/creating-transactions/getting-started](https://docs.
 
 
 
-### Simulating Transactions
+## Simulating Transactions
 
 Before executing a multisig transaction on-chain, Den lets you simulate it to preview exactly what state changes will occur — token transfers, contract state changes, and any potential reverts — without spending gas.
 
@@ -60,7 +60,7 @@ Guide: [docs.onchainden.com/creating-transactions/simulations](https://docs.onch
 
 
 
-### Batching Transactions
+## Batching Transactions
 
 Den supports batching multiple transactions into a single on-chain execution. This is particularly useful for DeFi operations (e.g. approve + swap in one step) or protocol management actions that need to be atomic.
 
@@ -68,7 +68,7 @@ Guide: [docs.onchainden.com/creating-transactions/batching](https://docs.onchain
 
 
 
-### Reference Links
+## Reference Links
 
 | Resource | URL |
 |---|---|

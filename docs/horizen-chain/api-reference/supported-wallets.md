@@ -4,7 +4,7 @@ description: "List of wallets, developer tools, and SDKs compatible with Horizen
 sidebar_position: 3
 ---
 
-### Wallets
+## Wallets
 
 Any EVM-compatible wallet works on Horizen Chain. Add the network using the RPC configuration above.
 
@@ -33,16 +33,16 @@ Network Name:    Horizen Testnet
 RPC URL:         https://horizen-testnet.rpc.caldera.xyz/http
 Chain ID:        2651420
 Currency Symbol: ETH
-Block Explorer:  https://explorer.horizen.io/
+Block Explorer:  https://explorer-testnet.horizen.io/
 ```
 
 
 
-### Developer Tools
+## Developer Tools
 
 | Tool | Type | Notes |
 |---|---|---|
-| **Foundry** | Smart contract development | Fully support |
+| **Foundry** | Smart contract development | Fully supported |
 | **Hardhat** | Smart contract development | Fully supported |
 | **ethers.js** | JavaScript library | Works out of the box with Horizen RPC |
 | **viem** | TypeScript library | Works out of the box with Horizen RPC |
@@ -103,7 +103,7 @@ console.log("Current block:", blockNumber);
 ```
 
 
-### Block Explorers
+## Block Explorers
 
 | Network | Explorer | API Base URL |
 |---|---|---|
@@ -116,18 +116,18 @@ Blockscout API docs: [docs.blockscout.com/for-users/api](https://docs.blockscout
 
 
 
-### Bridge & Faucet
+## Bridge & Faucet
 
 | Resource | Network | URL |
 |---|---|---|
 | **Bridge** | Mainnet | `https://hub.horizen.io/` |
 | **Bridge** | Testnet | `https://hub-testnet.horizen.io/` |
-| **ZEN Bridge (Stargate V2)** | Base → Horizen | `https://stargate.finance/?srcChain=base&srcToken=0xf43eB8De897Fbc7F2502483B2Bef7Bb9EA179229&dstChain=horizen&dstToken=0x57da2D504bf8b83Ef304759d9f2648522D7a9280` |
+| **ZEN Bridge (Stargate)** | Base → Horizen | `https://stargate.finance/?srcChain=base&srcToken=0xf43eB8De897Fbc7F2502483B2Bef7Bb9EA179229&dstChain=horizen&dstToken=0x57da2D504bf8b83Ef304759d9f2648522D7a9280` |
 | **Faucet** | Testnet | `https://hub-testnet.horizen.io/` |
 
 
 
-### Quick Reference — All URLs
+## Quick Reference — All URLs
 
 | Resource | URL |
 |---|---|
@@ -136,10 +136,10 @@ Blockscout API docs: [docs.blockscout.com/for-users/api](https://docs.blockscout
 | Testnet RPC | `https://horizen-testnet.rpc.caldera.xyz/http` |
 | Testnet WebSocket | `wss://horizen-testnet.rpc.caldera.xyz/ws` |
 | Mainnet Explorer | `https://explorer.horizen.io/` |
-| Testnet Explorer | `https://explorer.horizen.io/` |
+| Testnet Explorer | `https://explorer-testnet.horizen.io/` |
 | Mainnet Bridge | `https://hub.horizen.io/` |
 | Testnet Bridge / Faucet | `https://hub-testnet.horizen.io/` |
-| ZEN Bridge (Stargate V2) | `https://stargate.finance/?srcChain=base&srcToken=0xf43eB8De897Fbc7F2502483B2Bef7Bb9EA179229&dstChain=horizen&dstToken=0x57da2D504bf8b83Ef304759d9f2648522D7a9280` |
+| ZEN Bridge (Stargate) | `https://stargate.finance/?srcChain=base&srcToken=0xf43eB8De897Fbc7F2502483B2Bef7Bb9EA179229&dstChain=horizen&dstToken=0x57da2D504bf8b83Ef304759d9f2648522D7a9280` |
 | Multisig (Den) | `https://safe.horizen.io/welcome` |
 | Official Docs | `https://docs.horizen.io` |
 | GitHub | `https://github.com/HorizenOfficial` |

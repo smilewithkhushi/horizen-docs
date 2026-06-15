@@ -4,14 +4,12 @@ description: Step-by-step instructions for bridging assets to and from Horizen u
 sidebar_position: 3
 ---
 
-# Stargate Bridge
+Stargate is a cross-chain liquidity protocol built on [LayerZero](https://layerzero.network). It is the primary bridge for ZEN, USDC.e, and cbBTC on Horizen, supporting transfers across 80+ chains.
 
-Stargate is a cross-chain liquidity protocol built on [LayerZero](https://layerzero.network), and serves as the canonical cross-chain bridge for Horizen. It enables native asset transfers between Horizen and 80+ other blockchains without wrapping tokens or using intermediary assets.
+ZEN and cbBTC use the LayerZero OFT (Omnichain Fungible Token) standard — burned on the source chain and minted on the destination. USDC uses Stargate's lock/mint model: USDC is locked on Base and USDC.e is minted on Horizen.
 
-ZEN, USDC, and cbBTC are all bridgeable via Stargate using the LayerZero OFT (Omnichain Fungible Token) standard.
-
-:::info
-For bridging between **Horizen and Base only**, the [native bridge](https://hub.horizen.io/) may be simpler. Use Stargate when bridging to or from chains beyond Base.
+:::warning
+ETH is not currently supported via Stargate on Horizen. For ETH or Base-only transfers, use the [native bridge](./how-bridging-works.md) instead.
 :::
 
 
@@ -19,17 +17,21 @@ For bridging between **Horizen and Base only**, the [native bridge](https://hub.
 
 The following tokens are supported on Horizen via Stargate:
 
-| Token | Horizen Contract | Type |
+| Token | Horizen Contract | Bridge Mechanism |
 |-------|-----------------|------|
-| ZEN | `0x57da2D504bf8b83Ef304759d9f2648522D7a9280` | OFT |
-| USDC | `0x3a1293Bdb83bBbDd5Ebf4fAc96605aD2021BbC0f` | OFT |
-| cbBTC | `0x68fb5BB8330C0b9d907F50f278143873276ee056` | OFT |
+| ZEN | `0x57da2D504bf8b83Ef304759d9f2648522D7a9280` | OFT (burn/mint) |
+| USDC.e | `0x3a1293Bdb83bBbDd5Ebf4fAc96605aD2021BbC0f` | Lock/Mint |
+| cbBTC | `0x68fb5BB8330C0b9d907F50f278143873276ee056` | OFT (burn/mint) |
 
-These tokens use the LayerZero OFT standard — they are burned on the source chain and minted on the destination chain, maintaining a single canonical supply across all connected chains.
+ZEN and cbBTC use the LayerZero OFT standard — burned on the source chain and minted on the destination, maintaining a single canonical supply across all connected chains. USDC bridges via a lock/mint model: USDC is locked in Stargate's pool on Base and USDC.e is minted on Horizen.
 
 :::note
 ZEN on Horizen and Base share the same OFT contract address (`0x57da2D504bf8b83Ef304759d9f2648522D7a9280`) — this is expected behavior for the OFT standard.
 :::
+
+<div style={{textAlign: 'center', margin: '24px 0'}}>
+  <img src="/img/horizen-chain/stargate-bridge.png" alt="Stargate bridge UI showing supported tokens on Horizen" style={{width: '100%', maxWidth: '720px', borderRadius: '8px', border: '1px solid #e5e7eb'}} />
+</div>
 
 
 
@@ -85,8 +87,8 @@ For developers integrating token bridging directly, here are the full contract r
 |-------|-------|-------------|
 | ZEN | Base | OFT Adapter: `0x57da2D504bf8b83Ef304759d9f2648522D7a9280` |
 | ZEN | Horizen | OFT: `0x57da2D504bf8b83Ef304759d9f2648522D7a9280` |
-| USDC | Base | Lock contract: `0x27a16dc786820b16e5c9028b75b99f6f604b5d26` |
-| USDC | Horizen | OFT: `0x3a1293Bdb83bBbDd5Ebf4fAc96605aD2021BbC0f` |
+| USDC | Base | Lock contract: `0x27a16dc786820B16E5c9028b75B99F6f604b5d26` |
+| USDC.e | Horizen | OFT: `0x3a1293Bdb83bBbDd5Ebf4fAc96605aD2021BbC0f` |
 | cbBTC | Base | OFT Adapter: `0x68fb5BB8330C0b9d907F50f278143873276ee056` |
 | cbBTC | Horizen | OFT: `0x68fb5BB8330C0b9d907F50f278143873276ee056` |
 

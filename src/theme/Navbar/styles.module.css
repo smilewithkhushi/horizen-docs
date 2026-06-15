@@ -46,7 +46,7 @@
 
 .brandLabel {
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 700;
   color: #000;
   letter-spacing: 0.01em;
   white-space: nowrap;
@@ -202,15 +202,16 @@
 
 .navItemWrap :global(.navbar__link--active) {
   opacity: 1;
-  color: var(--ifm-color-primary-darkest) !important;
-  font-weight: 600;
-  background: rgba(93, 78, 51, 0.12);
+  color: #000 !important;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.12);
   border-radius: 6px;
 }
 
 [data-theme='dark'] .navItemWrap :global(.navbar__link--active) {
-  color: var(--ifm-color-primary-darkest) !important;
-  background: rgba(93, 78, 51, 0.12);
+  color: #000 !important;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.12);
   border-radius: 6px;
 }
 

@@ -1,13 +1,13 @@
 ---
 title: USDC on Horizen
-description: "USDC bridged stablecoin availability and contract details on Horizen."
+description: "USDC.e (bridged USDC) on Horizen: contract addresses, Circle's Bridged USDC Standard compliance, and ERC-20 integration guide."
 sidebar_position: 3
 ---
 
 ## What is USDC.e?
 
 USDC.e is the bridged form of USDC available on Horizen Chain. It is deployed via
-**Stargate Hydra** — Stargate V2's Bridging-as-a-Service model — and backed 1:1 by
+**Stargate Hydra** — Stargate's Bridging-as-a-Service model- and backed 1:1 by
 USDC locked in Stargate's liquidity pool on Base.
 
 When a user bridges USDC from any Stargate-connected chain to Horizen, their USDC is
@@ -61,8 +61,8 @@ USDC.e is available on **mainnet only**.
 
 | Network | Type | Address |
 | --- | --- | --- |
-| Mainnet Base | USDC ERC-20 (Circle) | [`0x833589fcd6edb6e08f4c7c32d4f71b54bda02913`](https://basescan.org/token/0x833589fcd6edb6e08f4c7c32d4f71b54bda02913) |
-| Mainnet Base | Stargate Pool / Lock Contract | [`0x27a16dc786820b16e5c9028b75b99f6f604b5d26`](https://basescan.org/address/0x27a16dc786820b16e5c9028b75b99f6f604b5d26) |
+| Mainnet Base | USDC ERC-20 (Circle) | [`0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913`](https://basescan.org/token/0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913) |
+| Mainnet Base | Stargate Pool / Lock Contract | [`0x27a16dc786820B16E5c9028b75B99F6f604b5d26`](https://basescan.org/address/0x27a16dc786820B16E5c9028b75B99F6f604b5d26) |
 | Mainnet Horizen | **USDC.e ERC-20** | [`0xDF7108f8B10F9b9eC1aba01CCa057268cbf86B6c`](https://explorer.horizen.io/token/0xDF7108f8B10F9b9eC1aba01CCa057268cbf86B6c) |
 | Mainnet Horizen | OFT Contract (LayerZero) | [`0x3a1293Bdb83bBbDd5Ebf4fAc96605aD2021BbC0f`](https://explorer.horizen.io/address/0x3a1293Bdb83bBbDd5Ebf4fAc96605aD2021BbC0f) |
 
@@ -117,7 +117,7 @@ console.log(`USDC.e balance: ${formatted}`);
 
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
 interface IERC20 {
     function balanceOf(address account) external view returns (uint256);

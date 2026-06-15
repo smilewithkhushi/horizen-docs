@@ -8,18 +8,29 @@ sidebar_position: 1
   <img src="/img/tutorials/stork-banner.png" alt="Stork Oracle" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
-Stork is the official oracle integration for Horizen Chain. It is a **pull oracle** that delivers price data and other off-chain data feeds at sub-second latency — designed for use cases like perpetuals, lending protocols, and any application that requires fast, verifiable market data.
+Stork is the primary oracle integration for Horizen Chain. It is a **pull oracle** that delivers price data and other off-chain data feeds at sub-second latency, designed for use cases like perpetuals, lending protocols, and any application that requires fast, verifiable market data.
 
-Unlike push oracles (which maintain feeds on-chain at all times), Stork operates on a **consumer-driven model**: feeds are not posted to the chain continuously. Instead, your application fetches the latest signed data off-chain and pushes it on-chain exactly when needed. This makes it highly cost-efficient — you only pay for the data updates your protocol actually uses.
+Unlike push oracles (which maintain feeds on-chain at all times), Stork operates on a **consumer-driven model**: feeds are not posted to the chain continuously. Instead, your application fetches the latest signed data off-chain and pushes it on-chain exactly when needed. This makes it highly cost-efficient: you only pay for the data updates your protocol actually uses.
 
-**How Stork works on Horizen:**
+## How Stork Works on Horizen
 
 <div style={{ padding: '12px', borderRadius: '8px', display: 'flex', justifyContent: 'center'}}>
   <img src="/img/horizen-chain/StorkOnHorizen.png" alt="Diagram showing how Stork pull oracle works on Horizen: off-chain aggregator signs price data, app fetches it via REST API, pushes it on-chain to the Stork contract, then reads the verified price" width="520" />
 </div>
 
 
-### Step 1 — Fetch Data via the Stork REST API
+## Contract Addresses
+
+| Network | Stork Contract Address |
+|---|---|
+| Mainnet Horizen | [`0xacC0a0cF13571d30B4b8637996F5D6D774d4fd62`](https://explorer.horizen.io/address/0xacC0a0cF13571d30B4b8637996F5D6D774d4fd62) |
+| Testnet Horizen | [`0xacC0a0cF13571d30B4b8637996F5D6D774d4fd62`](https://explorer-testnet.horizen.io/address/0xacC0a0cF13571d30B4b8637996F5D6D774d4fd62) |
+
+Both mainnet and testnet share the same Stork contract address on Horizen. Source: [docs.stork.network/resources/contract-addresses/evm](https://docs.stork.network/resources/contract-addresses/evm).
+
+## Integration Steps
+
+### Step 1: Fetch Data via the Stork REST API
 
 Before pushing anything on-chain, fetch the latest signed price data from Stork's off-chain API. Each response contains a signed payload ready to be submitted directly to the on-chain contract.
 
@@ -34,7 +45,7 @@ Available asset IDs (e.g. `BTCUSD`, `ETHUSD`) are listed in the [Stork Asset ID 
 
 
 
-### Step 2 — Push Data On-Chain
+### Step 2: Push Data On-Chain
 
 Once you have the signed payload, submit it to the Stork contract on Horizen using `updateTemporalNumericValuesV1`. This verifies the aggregator signature and stores the price on-chain.
 
@@ -64,7 +75,7 @@ stork.updateTemporalNumericValuesV1{value: fee}(updateData);
 
 
 
-### Step 3 — Read Data On-Chain
+### Step 3: Read Data On-Chain
 
 Once a feed is updated on-chain, your smart contract can read it using `getTemporalNumericValueV1`. This function includes an automatic staleness check — it reverts with `StaleValue` if the stored price is older than the chain's configured freshness threshold.
 
@@ -87,7 +98,7 @@ struct TemporalNumericValue {
 
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
 interface IStork {
     struct TemporalNumericValue {
@@ -102,10 +113,11 @@ interface IStork {
 contract PriceConsumer {
     IStork public immutable stork;
 
-    // ETHUSD feed ID — verify from Stork Asset Registry
+    // ETHUSD feed ID (verify from Stork Asset Registry)
     bytes32 public constant ETH_USD_ID =
         0x7404e3d104ea7841c3d9e6fd20adfe99b4ad586bc08d8f3bd3afef894cf184de;
 
+    // Stork contract on Horizen mainnet: 0xacC0a0cF13571d30B4b8637996F5D6D774d4fd62
     constructor(address _stork) {
         stork = IStork(_stork);
     }

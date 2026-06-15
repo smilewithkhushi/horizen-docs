@@ -6,7 +6,7 @@ sidebar_position: 2
 
 [**Hardhat**](https://hardhat.org/) is a flexible JavaScript/TypeScript development environment for Ethereum. It is well suited for teams that prefer a Node.js-based workflow, plugin ecosystem, and scripted deployments.
 
-### Initialize a new project
+## Initialize a new project
 
 Hardhat requires **Node.js (v18+)** and **npm**. It works on **macOS**, **Linux**, and **Windows**. On Windows, we recommend using [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install) for a smoother experience, though native CMD/PowerShell is also supported.
 
@@ -18,13 +18,13 @@ npx hardhat init
 
 Follow the prompts to create a TypeScript project. Hardhat will scaffold the project with a sample contract, test, and ignition deployment module.
 
-### Install dependencies
+## Install dependencies
 
 ```bash
 npm install
 ```
 
-### Configure Horizen in hardhat.config.ts
+## Configure Horizen in hardhat.config.ts
 
 Open `hardhat.config.ts` and add Horizen Testnet and Mainnet as named networks:
 
@@ -55,13 +55,13 @@ export default config;
 
 Use environment variables for your private key in production. See the `.env` pattern in the Foundry section above — it works identically with `process.env.PRIVATE_KEY` in Hardhat configs.
 
-### Compile your contracts
+## Compile your contracts
 
 ```bash
 npx hardhat compile
 ```
 
-### Deploy to Horizen Testnet
+## Deploy to Horizen Testnet
 
 Hardhat uses Ignition for deployments. Your deployment module lives at `ignition/modules/`. Deploy with:
 
@@ -69,14 +69,16 @@ Hardhat uses Ignition for deployments. Your deployment module lives at `ignition
 npx hardhat ignition deploy ignition/modules/Counter.ts --network horizen_testnet
 ```
 
-### Deploy to Horizen Mainnet
+## Deploy to Horizen Mainnet
 
 ```bash
 npx hardhat ignition deploy ignition/modules/Counter.ts --network horizen_mainnet
 ```
 
-### Run tests
+## Run tests
 
 ```bash
 npx hardhat test
 ```
+
+For contract verification after deployment, see [Verify a Contract](/horizen-chain/deploy-contracts/verify-contract).

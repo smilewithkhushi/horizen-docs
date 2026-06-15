@@ -6,7 +6,7 @@ sidebar_position: 2
 
 The Horizen Testnet runs on Base Sepolia and is the recommended environment for all development and testing before deploying to mainnet.
 
-### Horizen Testnet (Base Sepolia)
+## Horizen Testnet (Base Sepolia)
 
 | Parameter | Value |
 | --- | --- |
@@ -18,11 +18,11 @@ The Horizen Testnet runs on Base Sepolia and is the recommended environment for 
 | Block Explorer | https://explorer-testnet.horizen.io/ |
 | Faucet | https://hub-testnet.horizen.io/|
 
-### Adding to MetaMask manually:
+## Adding to MetaMask manually:
 1. Open MetaMask → Networks → Add Network
 2. Click Add a network manually
 3. Fill in the values from the table above
-4. Click Save - Horizen Mainnet is now available in your wallet
+4. Click Save - Horizen Testnet is now available in your wallet
 
 <div style={{background: '#000', padding: '24px', borderRadius: '8px', display: 'flex', justifyContent: 'center'}}>
   <img src="/img/horizen-chain/testnet-network.gif" alt="Adding Horizen Testnet to MetaMask" width="280" />

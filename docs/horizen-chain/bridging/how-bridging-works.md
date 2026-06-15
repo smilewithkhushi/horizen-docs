@@ -18,12 +18,12 @@ the same model that secures Base itself. No third-party protocol is involved in 
 bridging path.
 
 
-## Deposit and WIthdrawal Mechanics
+## Deposit and Withdrawal Mechanics
 
 Moving assets in each direction behaves very differently. Understanding this before
 you bridge will prevent surprises.
 
-### Deposits : Base → Horizen
+### Deposits: Base → Horizen
 
 Deposits are straightforward and fast. When you deposit from Base to Horizen:
 
@@ -49,7 +49,7 @@ and the Horizen Sequencer processes it, your funds are available.
   </div>
 </div>
 
-### Withdrawals : Horizen → Base
+### Withdrawals: Horizen → Base
 
 Withdrawals are a two-step process and take significantly longer due to the
 **7-day challenge window** that is a core property of the optimistic rollup model.

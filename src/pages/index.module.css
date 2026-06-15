@@ -230,13 +230,14 @@
 /* ─── Quick Setup ──────────────────────────────────────────────────────── */
 .quickSetupSection {
   padding: 5rem 2rem;
-  background: var(--ifm-background-color);
+  background: #ffffff;
 }
 
 .quickSetupSection h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 3rem;
+  color: #1a1a1a;
 }
 
 .quickSetupGrid {

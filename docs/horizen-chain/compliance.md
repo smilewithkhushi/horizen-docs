@@ -1,7 +1,7 @@
 ---
 title: Compliance
-description: "Compliance patterns on Horizen: contract-level rules, confidential enforcement via TEE, and third-party AML/KYC screening with PureFi."
-sidebar_position: 6
+description: "Compliance patterns on Horizen: contract-level rules, confidential enforcement via VELA, and third-party AML/KYC screening with PureFi."
+sidebar_position: 7
 ---
 
 On Horizen, compliance logic is code instead of a platform guardrail. Since Horizen is EVM-identical, you can implement compliance at whatever layer matches your requirement: encode rules directly in Solidity, enforce policies over private data using confidential computation, or integrate a purpose-built AML/KYC protocol. 

@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Verifying your contract publishes the source code to the block explorer, allowing anyone to read and audit it.
 
-### Verify using Foundry
+## Verify using Foundry
 
 Foundry's `forge verify-contract` command supports Blockscout-based explorers directly.
 
@@ -15,7 +15,7 @@ Foundry's `forge verify-contract` command supports Blockscout-based explorers di
 forge verify-contract <DEPLOYED_CONTRACT_ADDRESS> \
   src/Counter.sol:Counter \
   --verifier blockscout \
-  --verifier-url https://explorer.horizen.io/api/
+  --verifier-url https://explorer-testnet.horizen.io/api/
 ```
 
 **Mainnet:**
@@ -36,7 +36,7 @@ forge verify-contract <DEPLOYED_CONTRACT_ADDRESS> \
   --num-optimization-runs 200
 ```
 
-### Verify using Hardhat
+## Verify using Hardhat
 
 Install the Hardhat Verify plugin if it is not already included:
 ```bash
@@ -59,8 +59,8 @@ const config: HardhatUserConfig = {
         network: "horizen_testnet",
         chainId: 2651420,
         urls: {
-          apiURL: "https://explorer.horizen.io/api",
-          browserURL: "https://explorer.horizen.io",
+          apiURL: "https://explorer-testnet.horizen.io/api",
+          browserURL: "https://explorer-testnet.horizen.io",
         },
       },
       {
@@ -87,7 +87,7 @@ npx hardhat verify --network horizen_testnet <DEPLOYED_CONTRACT_ADDRESS>
 npx hardhat verify --network horizen_mainnet <DEPLOYED_CONTRACT_ADDRESS>
 ```
 
-### Verify manually via the block explorer
+## Verify manually via the block explorer
 
 If you prefer a UI:
 1. Go to your contract address on the explorer.
