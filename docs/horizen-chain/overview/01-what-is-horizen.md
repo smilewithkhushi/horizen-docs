@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Unlike chains that require learning a new language or committing to a fixed privacy model, Horizen lets you ship standard Solidity and choose your confidentiality primitive per use case or skip it entirely. There is no mandated privacy stack and nothing new to adopt before your first deployment. 
 
-Horizen Chain is built within the Ethereum stack, inheriting Base's security, composability, and liquidity while making confidential computation available through [**VELA**](https://docs.horizen.io/vela) — an emerging confidential coprocessor — and ZK-based verification via zkVerify.
+Horizen Chain is built within the Ethereum stack, inheriting Base's security, composability, and liquidity while making confidential computation available through [**VELA**](https://docs.horizen.io/vela) - an emerging confidential coprocessor and ZK-based verification via [**zkVerify**](https://zkverify.io).
 
 The result is a chain where:
 
