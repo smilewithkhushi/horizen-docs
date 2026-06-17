@@ -4,7 +4,9 @@ description: "Full technical architecture of Horizen: OP Stack sequencer, data a
 sidebar_position: 3
 ---
 
-Horizen is an EVM-compatible L3 built on [Base](https://www.base.org/) using the [OP Stack](https://docs.optimism.io/stack/getting-started) — an open-source, modular rollup framework from the Optimism Collective. By settling on Base, Horizen inherits Ethereum's security and Base's low fees and high throughput, with opt-in confidential execution layered on top for private onchain finance.
+Horizen is an EVM-compatible L3 built on [Base](https://www.base.org/) using the [OP Stack](https://docs.optimism.io/stack/getting-started) - an open-source, modular rollup framework from the Optimism Collective. By settling on Base, Horizen inherits Ethereum's security and Base's low fees and high throughput  while execution on Horizen adds confidentiality and compliance features integrated at the application level.
+
+
 
 The OP Stack architecture is composed of modular layers: Data Availability (DA), Sequencing, Derivation, Execution, and Settlement. These layers work together to form a cohesive optimistic rollup. Below, we detail the primary components relevant to Horizen's implementation.
 

@@ -1,3 +1,4 @@
+import path from 'path';
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
@@ -26,6 +27,8 @@ const config: Config = {
   },
 
   plugins: [
+    path.resolve(__dirname, 'plugins/tailwind-plugin.js'),
+    path.resolve(__dirname, 'plugins/llms-per-page/index.ts'),
     [
       '@easyops-cn/docusaurus-search-local',
       {
@@ -95,7 +98,7 @@ const config: Config = {
       logo: {
         alt: "Horizen",
         src: "img/Logos/SVG/Horizen2.0-logo_primary-dark.svg",
-        srcDark: "img/Logos/SVG/Horizen2.0-logo_primary-dark.svg",
+        srcDark: "img/Logos/SVG/Horizen2.0-logo_primary-white.svg",
         href: "/",
       },
       items: [
@@ -129,8 +132,8 @@ const config: Config = {
           label: "Migration",
         },
         {
-          type: "docSidebar",
-          sidebarId: "governanceSidebar",
+          type: "doc",
+          docId: "governance/overview/about",
           position: "left",
           label: "Governance",
         },

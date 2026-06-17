@@ -6,11 +6,7 @@ sidebar_position: 3
 
 Stargate is a cross-chain liquidity protocol built on [LayerZero](https://layerzero.network). It is the primary bridge for ZEN, USDC.e, and cbBTC on Horizen, supporting transfers across 80+ chains.
 
-ZEN and cbBTC use the LayerZero OFT (Omnichain Fungible Token) standard — burned on the source chain and minted on the destination. USDC uses Stargate's lock/mint model: USDC is locked on Base and USDC.e is minted on Horizen.
-
-:::warning
-ETH is not currently supported via Stargate on Horizen. For ETH or Base-only transfers, use the [native bridge](./how-bridging-works.md) instead.
-:::
+ZEN and cbBTC use the LayerZero OFT (Omnichain Fungible Token) standard — burned on the source chain and minted on the destination. USDC uses Stargate's lock/mint model - USDC is locked on Base and USDC.e is minted on Horizen.
 
 
 ## Supported Tokens
@@ -22,8 +18,6 @@ The following tokens are supported on Horizen via Stargate:
 | ZEN | `0x57da2D504bf8b83Ef304759d9f2648522D7a9280` | OFT (burn/mint) |
 | USDC.e | `0x3a1293Bdb83bBbDd5Ebf4fAc96605aD2021BbC0f` | Lock/Mint |
 | cbBTC | `0x68fb5BB8330C0b9d907F50f278143873276ee056` | OFT (burn/mint) |
-
-ZEN and cbBTC use the LayerZero OFT standard — burned on the source chain and minted on the destination, maintaining a single canonical supply across all connected chains. USDC bridges via a lock/mint model: USDC is locked in Stargate's pool on Base and USDC.e is minted on Horizen.
 
 :::note
 ZEN on Horizen and Base share the same OFT contract address (`0x57da2D504bf8b83Ef304759d9f2648522D7a9280`) — this is expected behavior for the OFT standard.
@@ -54,8 +48,8 @@ ZEN on Horizen and Base share the same OFT contract address (`0x57da2D504bf8b83E
 
 Stargate offers two transfer modes:
 
-- **Simple** — sends assets to your same connected wallet address on the destination chain. Use this for most cases.
-- **Advanced** — lets you specify a custom destination address. Use this if you're bridging to a different wallet.
+- **Simple** - sends assets to your same connected wallet address on the destination chain. Use this for most cases.
+- **Advanced** - lets you specify a custom destination address. Use this if you're bridging to a different wallet.
 
 ### Fees
 
