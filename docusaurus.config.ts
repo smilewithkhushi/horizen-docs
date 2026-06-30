@@ -97,7 +97,7 @@ const config: Config = {
       logo: {
         alt: "Horizen",
         src: "img/Logos/SVG/Horizen2.0-logo_primary-dark.svg",
-        srcDark: "img/Logos/SVG/Horizen2.0-logo_primary-dark.svg",
+        srcDark: "img/Logos/SVG/Horizen2.0-logo_primary-white.svg",
         href: "/",
       },
       items: [
