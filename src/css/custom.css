@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 /* Tailwind v4 — skip preflight to avoid conflicts with Docusaurus/Infima */
 @import "tailwindcss/theme" layer(base);
@@ -16,7 +16,9 @@
 /* You can override the default Infima variables here. */
 :root {
   --ifm-navbar-height: 120px;
-  --ifm-font-family-base: 'Space Grotesk', sans-serif;
+  --ifm-font-family-base: 'Nunito Sans', sans-serif;
+  --ifm-font-family-heading: 'Funnel Display', sans-serif;
+  --ifm-heading-font-weight: 700;
   --ifm-color-primary: #b07d00;
   --ifm-color-primary-dark: #9a6d00;
   --ifm-color-primary-darker: #855e00;
@@ -100,15 +102,13 @@ nav.menu .menu__list > .menu__list-item > .menu__list-item-collapsible {
 
 /* ── Sidebar: active/selected link color ────────────────────────────────── */
 .menu__link--active,
-.menu__link--active:hover {
-  color: var(--horizen-accent-light) !important;
-  font-weight: 700;
-}
-
+.menu__link--active:hover,
 [data-theme='dark'] .menu__link--active,
 [data-theme='dark'] .menu__link--active:hover {
-  color: var(--sunrise-yellow) !important;
+  background-color: #FFF5CE !important;
+  color: #000000 !important;
   font-weight: 700;
+  border-radius: 6px;
 }
 
 /* ── Search input: theme-aware colors ──────────────────────────────────── */

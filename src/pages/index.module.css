@@ -1,5 +1,6 @@
 /* ─── Shared section heading ─────────────────────────────────────────────── */
 .sectionHeading {
+  font-family: 'Funnel Display', sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
   margin-bottom: 3rem;
