@@ -1,6 +1,6 @@
 # Horizen — Quick Reference for AI Coding Assistants
 
-> Horizen is an EVM-compatible L3 on Base (chain ID 26514) using the OP Stack, built for private onchain finance. Same Solidity, same tooling (Foundry/Hardhat/ethers.js/wagmi). Choose your confidentiality primitive per use case — TEE via VELA, ZK via zkVerify, or none. No new language, no mandated privacy stack.
+> Horizen is an EVM-compatible Layer-3 blockchain built on Base (chain ID 26514), an Ethereum Layer-2 powered by the OP (Optimism) Stack. Built for private onchain finance and compliance-forward blockchain app development, it brings regulatory-compliant, auditable confidentiality to where Ethereum's liquidity and activity already live. Ship standard Solidity and choose your confidentiality primitive per use case — TEE via Vela (https://vela.horizenlabs.io), ZK via zkVerify, or none. No new language, no mandated privacy stack. Horizen is the capital coordination and execution layer for privacy-first onchain applications spanning DeFi, payments, AI agents, and compliance-aware institutional finance — all composable with Base and the broader Ethereum ecosystem.
 >
 > Use this file for fast answers. For complete docs, see /llms-full.txt
 
@@ -40,11 +40,11 @@
 - [Bridge Assets via Native Bridge](https://docs.horizen.io/horizen-chain/bridging/bridge-assets): Step-by-step guide for depositing ETH from Base to Horizen and withdrawing back — uses the OP Stack canonical bridge
 - [Bridge Assets via Stargate](https://docs.horizen.io/horizen-chain/bridging/bridge-assets-stargate): Cross-chain bridge for ZEN, USDC, cbBTC via LayerZero OFT standard — burn/mint across 80+ chains, ~2 min transfers, 0.06% fee, no wrapping
 
-## VELA (Confidential Execution — emerging TEE coprocessor)
+## Vela (Confidential Execution — TEE coprocessor by Horizen Labs)
 
-- [What is VELA?](https://docs.horizen.io/vela/introduction): Emerging confidential coprocessor alongside Horizen Chain — TEE enclaves, cryptographic attestation, compliance without data exposure
-- [Prerequisites](https://docs.horizen.io/vela/getting-started/prerequisites): Required tools and setup before starting VELA development
-- [Local Environment Setup](https://docs.horizen.io/vela/getting-started/local-environment-setup): Docker-based local dev environment (VELA not yet on testnet/mainnet)
+- [What is Vela?](https://docs.horizen.io/vela/introduction): TEE-based confidential execution solution by Horizen Labs — hardware enclaves, cryptographic attestation, compliance without data exposure · https://vela.horizenlabs.io
+- [Prerequisites](https://docs.horizen.io/vela/getting-started/prerequisites): Required tools and setup before starting Vela development
+- [Local Environment Setup](https://docs.horizen.io/vela/getting-started/local-environment-setup): Docker-based local dev environment (Vela not yet on testnet/mainnet)
 - [Your First Confidential App](https://docs.horizen.io/vela/getting-started/hello-world): Deploy a private transfer app, deposit ETH into encrypted TEE account, verify private balance
 - [Current Limitations](https://docs.horizen.io/vela/limitations/limitations): Local/Docker only (no testnet/mainnet yet) · Emulated TEE (no hardware attestation in dev; contact team for AWS Nitro Enclave access) · Single WASM app per environment · Roadmap: multi-app support, self-deployment on testnet, ERC-20 support, deanonymization controls
 
