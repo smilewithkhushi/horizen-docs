@@ -13,9 +13,9 @@ Horizen Chain is an OP Stack rollup that settles directly onto Base, which in tu
 
 **Base — Scalable Execution & Data Availability**: Horizen's settlement surface. Transaction data and state commitments from Horizen are published directly to Base's native data-availability layer.
 
-**Horizen Chain — Horizen Chain — Capital Coordination & Execution:**: An EVM-compatible rollup using the OP Stack. Horizen inherits Base's scalability and sequencing infrastructure, with opt-in confidential execution available through VELA.
+**Horizen Chain — Capital Coordination & Execution**: An EVM-compatible rollup using the OP Stack. Horizen inherits Base's scalability and sequencing infrastructure, with opt-in confidential execution available through [Vela](https://vela.horizenlabs.io/).
 
-**VELA — Confidential Coprocessor**: An emerging confidential coprocessor that sits alongside Horizen Chain. Applications offload sensitive computation to TEE enclaves, receive cryptographically attested results back, and anchor those results on-chain.
+**Vela — Confidential Coprocessor**: An emerging confidential coprocessor by Horizen Labs that sits alongside Horizen Chain. Applications offload sensitive computation to TEE enclaves, receive cryptographically attested results back, and anchor those results on-chain.
 
 <img src="/img/horizen-chain/l3-architecture.png" alt="L3 Architecture" style={{width: '520px', display: 'block', margin: '0 auto'}} />
 

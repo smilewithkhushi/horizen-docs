@@ -4,10 +4,10 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--horizen-accent-light);
+  color: #030E24;
   margin: 0 0 0.6rem 0;
 }
 
 [data-theme='dark'] .tocHeading {
-  color: var(--sunrise-yellow);
+  color: #ffffff;
 }
