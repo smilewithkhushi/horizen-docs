@@ -16,7 +16,7 @@ const buildingCards = [
     tag: 'VELA',
     title: 'Your First Confidential App',
     description: 'Run attested computation inside a TEE. VELA is an emerging confidential coprocessor — start with a hello-world build and engage early.',
-    link: '/vela/getting-started/hello-world',
+    link: '/vela/introduction',
   },
   {
     tag: 'BRIDGE',
@@ -58,20 +58,20 @@ function Hero() {
       <div className="relative z-10 px-24 pt-[150px] pb-24 max-[900px]:px-8 max-[900px]:pt-24 max-[600px]:px-5 max-[600px]:pt-20 max-[600px]:pb-16">
         <div className="flex items-center justify-between gap-32 max-[900px]:flex-col max-[900px]:items-start max-[900px]:gap-10">
           <div className="flex-1 min-w-0 max-w-4xl">
-            <div className="text-[clamp(2.4rem,5.5vw,4rem)] font-extrabold leading-[1.1] mb-6 text-[#030E24] tracking-tight [html[data-theme='dark']_&]:text-white">
-              Build Private.<br />
-              Build Compliant.<br />
-              Build on Horizen.
+            <div className="text-[clamp(2.4rem,5.5vw,4rem)] font-extrabold leading-[1.1] mb-6 text-[#030E24] tracking-tight [html[data-theme='dark']_&]:text-white" style={{ fontFamily: "'Funnel Display', sans-serif" }}>
+              Horizen is home <br />
+              for privacy-first <br />
+              onchain app developers.
             </div>
             <div className="text-base leading-[1.7] text-[rgba(3,14,36,0.7)] m-0 max-w-[520px] [html[data-theme='dark']_&]:text-white/75">
-              Horizen is an EVM-compatible L3 on Base for private onchain finance. Build with the tools you already use, and add confidentiality where your app needs it.
+              Horizen is an EVM-native L3 on Base designed for private onchain finance and compliance-forward blockchain app development.
             </div>
             <div className="flex gap-4 flex-wrap mt-7">
               <Link
                 to={buildingCards[0].link}
               >
-                <button 
-                className="inline-flex border-none items-center justify-center h-12 px-8 rounded-[60px] text-[0.95rem] font-bold bg-[#FECB17] !text-[#030E24] no-underline! transition-colors duration-150 hover:bg-[#f5c800]"
+                <button
+                  className="inline-flex border-none items-center justify-center h-12 px-8 rounded-[60px] text-[0.95rem] font-bold bg-[#FECB17] !text-[#030E24] no-underline! transition-colors duration-150 hover:bg-[#f5c800]"
                 >
                   Get Started
                 </button>
@@ -80,11 +80,11 @@ function Hero() {
                 to={buildingCards[1].link}
               >
                 <button
-                className="inline-flex items-center border-none justify-center h-12 px-8 rounded-[60px] text-[0.95rem] font-bold bg-[#FECB17] !text-[#030E24] no-underline! transition-colors duration-150 hover:bg-[#f5c800]"
+                  className="inline-flex items-center border-none justify-center h-12 px-8 rounded-[60px] text-[0.95rem] font-bold bg-[#FECB17] !text-[#030E24] no-underline! transition-colors duration-150 hover:bg-[#f5c800]"
                 >
- Learn More
+                  Learn More
                 </button>
-               
+
               </Link>
             </div>
           </div>
@@ -104,7 +104,7 @@ function Hero() {
       <div className="px-24 py-24 max-[1100px]:px-10 max-[900px]:px-5 max-[900px]:py-14">
         <div className="grid grid-cols-3 items-start gap-6 w-full max-[900px]:grid-cols-1 max-[900px]:gap-7">
           <div className="min-w-0">
-            <div className="text-[clamp(1.8rem,2.4vw,2.25rem)] font-extrabold text-[#030E24] m-0 leading-[1.15] tracking-tight [html[data-theme='dark']_&]:text-white">
+            <div className="text-[clamp(1.8rem,2.4vw,2.25rem)] font-extrabold text-[#030E24] m-0 leading-[1.15] tracking-tight [html[data-theme='dark']_&]:text-white" style={{ fontFamily: "'Funnel Display', sans-serif" }}>
               What is Horizen?
             </div>
           </div>
@@ -126,7 +126,7 @@ function Hero() {
           </div>
           <div className="min-w-0">
             <p className="text-base leading-[1.8] text-[rgba(3,14,36,0.75)] m-0 [html[data-theme='dark']_&]:text-white/65">
-              Horizen adds what other EVM chains lack – a tight focus and supportive tooling for private onchain finance and regulatory-compliant blockchain application development, while retaining what other privacy blockchain projects left behind – familiar EVM architecture, composability, and developer ergonomics.{' '}
+              Horizen adds what other EVM chains lack – a tight focus and supportive tooling for private onchain finance and regulatory-compliant blockchain application development, while retaining what other privacy blockchain projects left behind – familiar EVM architecture, composability, and developer ergonomics.
               <strong>No new language, no obscure tech stack.</strong>
             </p>
           </div>
@@ -162,12 +162,12 @@ const personas = [
     cta: 'Deploy a Contract',
     icon: (
       <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="70" height="70" rx="14" fill="#1038BB"/>
-<path d="M29.1667 32.0834L26.25 35L29.1667 37.9167" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M40.8335 32.0834L43.7502 35L40.8335 37.9167" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M34.9998 49.5833C43.054 49.5833 49.5832 43.0541 49.5832 35C49.5832 26.9458 43.054 20.4166 34.9998 20.4166C26.9457 20.4166 20.4165 26.9458 20.4165 35C20.4165 43.0541 26.9457 49.5833 34.9998 49.5833Z" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M36.4582 31.6019L33.5415 38.3978" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+        <rect width="70" height="70" rx="14" fill="#1038BB" />
+        <path d="M29.1667 32.0834L26.25 35L29.1667 37.9167" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M40.8335 32.0834L43.7502 35L40.8335 37.9167" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M34.9998 49.5833C43.054 49.5833 49.5832 43.0541 49.5832 35C49.5832 26.9458 43.054 20.4166 34.9998 20.4166C26.9457 20.4166 20.4165 26.9458 20.4165 35C20.4165 43.0541 26.9457 49.5833 34.9998 49.5833Z" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M36.4582 31.6019L33.5415 38.3978" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
 
     ),
   },
@@ -177,11 +177,11 @@ const personas = [
     link: '/horizen-chain/privacy-tools',
     cta: 'Explore Privacy Tools',
     icon: (
-     <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="70" height="70" rx="14" fill="#1038BB"/>
-<path d="M32.7981 20.752L25.5211 23.4937C23.844 24.1208 22.4731 26.1041 22.4731 27.8833V38.7187C22.4731 40.4395 23.6106 42.6999 24.9961 43.7354L31.2669 48.4166C33.3231 49.9624 36.7065 49.9624 38.7627 48.4166L45.0336 43.7354C46.419 42.6999 47.5565 40.4395 47.5565 38.7187V27.8833C47.5565 26.0895 46.1856 24.1062 44.5086 23.4791L37.2315 20.752C35.9919 20.2999 34.0086 20.2999 32.7981 20.752Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M30.6978 34.8104L33.0457 37.1583L39.3165 30.8875" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+      <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="70" height="70" rx="14" fill="#1038BB" />
+        <path d="M32.7981 20.752L25.5211 23.4937C23.844 24.1208 22.4731 26.1041 22.4731 27.8833V38.7187C22.4731 40.4395 23.6106 42.6999 24.9961 43.7354L31.2669 48.4166C33.3231 49.9624 36.7065 49.9624 38.7627 48.4166L45.0336 43.7354C46.419 42.6999 47.5565 40.4395 47.5565 38.7187V27.8833C47.5565 26.0895 46.1856 24.1062 44.5086 23.4791L37.2315 20.752C35.9919 20.2999 34.0086 20.2999 32.7981 20.752Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M30.6978 34.8104L33.0457 37.1583L39.3165 30.8875" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
 
     ),
   },
@@ -191,13 +191,13 @@ const personas = [
     link: '/horizen-chain/compliance',
     cta: 'Explore Compliance Patterns',
     icon: (
-     <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="70" height="70" rx="14" fill="#1038BB"/>
-<path d="M31.0771 38.9375L33.2646 41.125L39.098 35.2916" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M33.4832 20.4166H32.0832C30.6248 20.4166 29.1665 20.4166 29.1665 23.3333C29.1665 26.25 30.6248 26.25 32.0832 26.25H37.9165C40.8332 26.25 40.8332 24.7916 40.8332 23.3333C40.8332 20.4166 39.3748 20.4166 37.9165 20.4166" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M21.875 32.0834C21.875 25.4334 24.3104 23.625 29.1667 23.3625" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M40.8333 23.3625C45.6896 23.625 48.125 25.4188 48.125 32.0834V40.8334C48.125 46.6667 46.6667 49.5834 39.375 49.5834H30.625C23.3333 49.5834 21.875 46.6667 21.875 40.8334V37.7855" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+      <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="70" height="70" rx="14" fill="#1038BB" />
+        <path d="M31.0771 38.9375L33.2646 41.125L39.098 35.2916" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M33.4832 20.4166H32.0832C30.6248 20.4166 29.1665 20.4166 29.1665 23.3333C29.1665 26.25 30.6248 26.25 32.0832 26.25H37.9165C40.8332 26.25 40.8332 24.7916 40.8332 23.3333C40.8332 20.4166 39.3748 20.4166 37.9165 20.4166" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M21.875 32.0834C21.875 25.4334 24.3104 23.625 29.1667 23.3625" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M40.8333 23.3625C45.6896 23.625 48.125 25.4188 48.125 32.0834V40.8334C48.125 46.6667 46.6667 49.5834 39.375 49.5834H30.625C23.3333 49.5834 21.875 46.6667 21.875 40.8334V37.7855" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
 
     ),
   },
@@ -206,7 +206,7 @@ const personas = [
 function PersonaCards() {
   return (
     <section className="w-full px-24 py-24 bg-[#F4F4F4] [html[data-theme='dark']_&]:bg-[#030E24] max-[1100px]:px-10 max-[900px]:px-5 max-[900px]:py-14">
-      <div className="text-4xl font-extrabold mb-10 text-[#030E24] [html[data-theme='dark']_&]:text-white">Choose Your Path</div>
+      <div className="text-4xl font-extrabold mb-10 text-[#030E24] [html[data-theme='dark']_&]:text-white" style={{ fontFamily: "'Funnel Display', sans-serif" }}>Choose Your Path</div>
       <div className="grid grid-cols-3 gap-6 max-[900px]:grid-cols-1">
         {personas.map((p) => (
           <div
@@ -225,13 +225,13 @@ function PersonaCards() {
             <div className="mt-2">
               <Link
                 to={p.link}
-              
+
               >
-                <button 
+                <button
                   className={
-                  "inline-block border-none bg-[#FECB17] text-black font-bold text-sm px-6 py-3 rounded-full " +
-                  "hover:bg-[#e6bc17] no-underline! transition-colors duration-150"
-                }
+                    "inline-block border-none bg-[#FECB17] text-black font-bold text-sm px-6 py-3 rounded-full " +
+                    "hover:bg-[#e6bc17] no-underline! transition-colors duration-150"
+                  }
                 >
                   {p.cta}
                 </button>
@@ -287,7 +287,7 @@ function QuickSetup() {
 function StartBuilding() {
   return (
     <section className={"max-w-7xl mx-auto px-6 py-16"}>
-      <div className={"text-4xl font-extrabold mb-10 [html[data-theme='dark']_&]:text-white"}>Start Building</div>
+      <div className={"text-4xl font-extrabold mb-10 [html[data-theme='dark']_&]:text-white"} style={{ fontFamily: "'Funnel Display', sans-serif" }}>Start Building</div>
       <div className={"grid grid-cols-3 gap-6 max-[900px]:grid-cols-1 pt-5"}>
         {buildingCards.map((card) => (
           <div
@@ -309,11 +309,11 @@ function StartBuilding() {
             </p>
             <div className={"mt-2"}>
               <Link to={card.link}>
-                <button 
-              className={"inline-block bg-[#FECB17] text-[#000] font-bold border-none text-sm px-6 py-3 rounded-full " +
-                  "hover:bg-[#e6bc17] !no-underline transition-colors duration-150"}>
-                Get Started
-              </button>
+                <button
+                  className={"inline-block bg-[#FECB17] text-[#000] font-bold border-none text-sm px-6 py-3 rounded-full " +
+                    "hover:bg-[#e6bc17] !no-underline transition-colors duration-150"}>
+                  Get Started
+                </button>
               </Link>
             </div>
           </div>
@@ -328,7 +328,7 @@ function Newsletter() {
   return (
     <section className="w-full min-h-[208px] bg-[rgba(254,203,23,1)] flex items-center px-[100px] py-[50px] max-[1100px]:px-10 max-[860px]:px-6 max-[860px]:py-10">
       <div className="flex items-center justify-between gap-[71px] w-full max-[860px]:flex-col max-[860px]:items-start max-[860px]:gap-6">
-        <span className="text-[#030E24] font-extrabold text-[clamp(1.75rem,2.4vw,2.5rem)] whitespace-nowrap leading-[1.1] tracking-tight shrink-0">
+        <span className="text-[#030E24] font-extrabold text-[clamp(1.75rem,2.4vw,2.5rem)] whitespace-nowrap leading-[1.1] tracking-tight shrink-0" style={{ fontFamily: "'Funnel Display', sans-serif" }}>
           Sign Up for Newsletter
         </span>
         <div className="flex items-center gap-10 flex-1 justify-end max-[860px]:w-full max-[860px]:flex-col max-[860px]:items-stretch max-[860px]:gap-5">

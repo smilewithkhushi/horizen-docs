@@ -4,7 +4,7 @@ description: "ZEN is the coordination, value-accrual, and governance token of th
 sidebar_position: 2
 ---
 
-ZEN is the coordination, value-accrual, and governance token of the Horizen ecosystem. It is a standard ERC-20 token that lives on Base and bridges to Horizen Chain via LayerZero's OFT (Omnichain Fungible Token) framework. Note: ZEN is not used to pay gas fees.
+ZEN is the coordination, value-routing, and governance token of the Horizen ecosystem. It is a standard ERC-20 token that lives on Base and bridges to Horizen Chain via LayerZero's OFT (Omnichain Fungible Token) framework. Note: ZEN is not used to pay gas fees.
 
 <div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
   <img src="/img/horizen-chain/zen-token.png" alt="ZEN Token" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
