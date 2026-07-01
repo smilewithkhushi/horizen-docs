@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
+/* Tailwind v4 — skip preflight to avoid conflicts with Docusaurus/Infima */
+@import "tailwindcss/theme" layer(base);
+@import "tailwindcss/utilities" layer(utilities);
+
+/* Match Docusaurus dark mode selector */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to

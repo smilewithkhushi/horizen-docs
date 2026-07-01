@@ -27,6 +27,7 @@ const config: Config = {
   },
 
   plugins: [
+    path.resolve(__dirname, 'plugins/tailwind-plugin.js'),
     path.resolve(__dirname, 'plugins/llms-per-page/index.ts'),
     [
       '@easyops-cn/docusaurus-search-local',

@@ -83,25 +83,26 @@
   width: 36px;
   height: 36px;
   border: none;
-  border-radius: 8px;
+  border-radius: 20px;
   color: #030E24 !important;
   text-decoration: none !important;
-  background: transparent;
+  background: #FECB17;
   cursor: pointer;
   transition: background 0.15s ease;
   padding: 0;
 }
 
 .iconLink:hover {
-  background: rgba(0, 0, 0, 0.06);
+  background: #e6b800;
 }
 
 [data-theme='dark'] .iconLink {
-  color: #ffffff !important;
+  color: #030E24 !important;
+  background: #FECB17;
 }
 
 [data-theme='dark'] .iconLink:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: #e6b800;
 }
 
 /* Search bar container */
@@ -115,8 +116,9 @@
 .iconGroup {
   display: flex;
   align-items: center;
-  gap: 0.1rem;
+  gap: 0.4rem;
   margin-left: 0.5rem;
+
 }
 
 /* Hamburger (mobile only) */
@@ -211,21 +213,21 @@
   opacity: 1;
   color: #111 !important;
   font-weight: 700;
-  background: #FCD11A;
+  background: #FECB17;
   border-radius: 6px;
 }
 
 .navItemWrap :global(.navbar__link--active:hover) {
-  background: #f5c800;
+  background: #e6b800;
 }
 
 [data-theme='dark'] .navItemWrap :global(.navbar__link--active) {
   color: #111 !important;
-  background: #FCD11A;
+  background: #FECB17;
 }
 
 [data-theme='dark'] .navItemWrap :global(.navbar__link--active:hover) {
-  background: #f5c800;
+  background: #e6b800;
 }
 
 /* ── Mobile full-screen overlay ────────────────────────────────────────── */

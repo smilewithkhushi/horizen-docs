@@ -18,12 +18,14 @@
 }
 
 .brLine {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  top: 10;
+  left: 10;
+  margin-top: 6rem;
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, #F4F4F4, rgba(169, 176, 189, 1));
+  background: rgba(169, 176, 189, 1);
+  z-index: 10;
 }
 
 :global([data-theme='dark']) .brLine {
@@ -91,7 +93,7 @@
 .heroContent {
   flex: 1;
   min-width: 0;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .heroTitle {
@@ -205,7 +207,7 @@
 .whatIsSection {
   position: relative;
   width: 100%;
-  max-width: 1920px;
+  max-width: full;
   margin: 0 auto;
   padding: 6rem 96px;
   z-index: 10;
@@ -345,7 +347,7 @@
 /* ─── Choose Your Path ───────────────────────────────────────────────────── */
 .personaSection {
   width: 100%;
-  max-width: 1920px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 6rem 96px;
   background: #F4F4F4;
@@ -748,6 +750,13 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
+.heroCtaGroup {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+}
+
 .buildBtn {
   display: inline-flex;
   align-items: center;
@@ -801,122 +810,3 @@
   }
 }
 
-/* ─── Newsletter ─────────────────────────────────────────────────────────── */
-.newsletterSection {
-  width: 100%;
-  max-width: 1932px;
-  min-height: 208px;
-  margin: 0 auto;
-  padding: 50px 100px;
-  background: rgba(254, 203, 23, 1);
-  display: flex;
-  align-items: center;
-}
-
-.newsletterInner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 71px;
-  width: 100%;
-  margin: 0;
-}
-
-.newsletterLabel {
-  font-size: clamp(1.75rem, 2.4vw, 2.5rem);
-  font-weight: 800;
-  color: #030E24;
-  white-space: nowrap;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  align-self: center;
-}
-
-.newsletterForm {
-  display: flex;
-  align-items: center;
-  gap: 5rem;
-  flex: 1;
-  justify-content: flex-end;
-}
-
-.newsletterInput {
-  padding: 0.5rem 0;
-  border-radius: 0;
-  border: none;
-  border-bottom: 1.5px solid #030E24;
-  outline: none;
-  font-size: 1rem;
-  font-family: inherit;
-  background: transparent;
-  color: #030E24;
-  width: 240px;
-  box-shadow: none;
-}
-
-.newsletterInput::placeholder {
-  color: #030E24;
-  opacity: 0.85;
-  font-weight: 500;
-}
-
-.newsletterInput:focus {
-  border-bottom-color: #030E24;
-  border-bottom-width: 2px;
-}
-
-.newsletterBtn {
-  padding: 1rem 2.5rem;
-  border-radius: 60px;
-  border: none;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: inherit;
-  background: #ffffff;
-  color: #030E24;
-  cursor: pointer;
-  transition: background 0.15s ease, box-shadow 0.15s ease;
-  white-space: nowrap;
-  min-width: 160px;
-}
-
-.newsletterBtn:hover {
-  background: #f7f8fa;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-}
-
-@media (max-width: 1100px) {
-  .newsletterSection {
-    padding: 50px 2.5rem;
-  }
-  .newsletterInner {
-    gap: 2rem;
-  }
-  .newsletterInput {
-    width: 180px;
-  }
-}
-
-@media (max-width: 860px) {
-  .newsletterSection {
-    padding: 2.5rem 1.5rem;
-    min-height: 0;
-  }
-  .newsletterInner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-  .newsletterForm {
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1.25rem;
-  }
-  .newsletterInput {
-    width: 100%;
-  }
-  .newsletterBtn {
-    width: 100%;
-  }
-}
