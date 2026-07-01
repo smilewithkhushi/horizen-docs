@@ -144,7 +144,6 @@ export default function Footer(): React.ReactElement {
 
       <div className={styles.bottomBar}>
         <span>© {year} Horizen. All rights reserved.</span>
-        <span className={styles.bottomSep}>|</span>
         <a
           href="https://horizen.io/terms-of-use"
           target="_blank"

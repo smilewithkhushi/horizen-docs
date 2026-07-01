@@ -6,17 +6,23 @@ import styles from './index.module.css';
 
 /* ─── Hero ──────────────────────────────────────────────────────────────── */
 function Hero() {
+  const features = ['Compliant', 'Verifiable', 'Opt-in Privacy'];
+
   return (
+
     <section className={styles.hero}>
-      <video
-        className={styles.heroVideo}
-        autoPlay
-        muted
-        loop
-        playsInline
-        src="/img/ascii-liquid.webm"
+      <img
+        className={`${styles.heroBackdrop} ${styles.heroBackdropLight}`}
+        src="/img/hero-pattern.svg"
+        alt=""
+        aria-hidden="true"
       />
-      {/* <div className={styles.heroOverlay} /> */}
+      <img
+        className={`${styles.heroBackdrop} ${styles.heroBackdropDark}`}
+        src="/img/dark-hero-pattern.svg"
+        alt=""
+        aria-hidden="true"
+      />
       <div className={styles.heroInner}>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
@@ -29,31 +35,13 @@ function Hero() {
             Build with the tools you already use, and add confidentiality where your app needs it.
           </p>
         </div>
-        <div className={styles.heroGraphic} aria-hidden="true">
-          <div className={styles.heroRing} style={{ '--size': '320px' } as React.CSSProperties} />
-          <div className={styles.heroRing} style={{ '--size': '240px' } as React.CSSProperties} />
-          <div className={styles.heroRing} style={{ '--size': '160px' } as React.CSSProperties} />
-          <div className={styles.heroRingCore} />
-          <img
-            src="/img/Logos/SVG/Horizen2.0-logo_icon-white.svg"
-            className={styles.heroRingIcon}
-            alt=""
-          />
-        </div>
+       
       </div>
-      
-     
-    </section>
-  );
-}
-
-/* ─── What is Horizen ───────────────────────────────────────────────────── */
-const features = ['Compliant', 'Verifiable', 'Opt-in Privacy'];
-
-function WhatIsHorizen() {
-  return (
-    <section className={styles.whatIsSection}>
-      <div className={styles.whatIsInner}>
+      {/*  */}
+      <br  className={styles.brLine}/>
+      {/* what is horizen */}
+      <div className={styles.whatIsSection}>
+  <div className={styles.whatIsInner}>
         <div className={styles.whatIsCol}>
           <h2 className={styles.whatIsHeading}>What is Horizen?</h2>
         </div>
@@ -73,9 +61,15 @@ function WhatIsHorizen() {
           </p>
         </div>
       </div>
+      </div>
+     
     </section>
   );
 }
+
+/* ─── What is Horizen ───────────────────────────────────────────────────── */
+
+
 
 /* ─── L3 Banner ─────────────────────────────────────────────────────────── */
 function L3Banner() {
@@ -173,8 +167,9 @@ function QuickSetup() {
 
   return (
     <section className={styles.quickSetupSection}>
-      <h2 className={styles.sectionHeading}>Quick Setup</h2>
-      <div className={styles.quickSetupList}>
+      <div className={styles.quickSetupGrid}>
+        <h2 className={`${styles.sectionHeading} ${styles.quickSetupHeading}`}>Quick Setup</h2>
+        <div className={styles.quickSetupList}>
           {quickSetupItems.map((item, i) => (
             <Link
               key={i}
@@ -186,13 +181,15 @@ function QuickSetup() {
               <span className={styles.quickSetupNum}>0{i + 1}</span>
               <span className={styles.quickSetupLabel}>{item.label}</span>
               <span className={`${styles.quickSetupIndicator} ${active === i ? styles.quickSetupIndicatorActive : ''}`} aria-hidden="true">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                  <polyline points="9 18 15 12 9 6" />
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="8 7 17 7 17 16" />
                 </svg>
               </span>
             </Link>
           ))}
         </div>
+      </div>
     </section>
   );
 }
@@ -271,7 +268,7 @@ export default function Home() {
       <main>
         <Hero />
         <div className={styles.heroSpacer} />
-        <WhatIsHorizen />
+        {/* <WhatIsHorizen /> */}
         <L3Banner />
         <PersonaCards />
         <QuickSetup />

@@ -1,7 +1,7 @@
 .footer {
   background-color: #030e24;
-  border-top: 1px solid rgba(252, 209, 26, 0.15);
-  padding: 56px 48px 0;
+  border-top: 1px solid rgba(254, 203, 23, 0.15);
+  padding: 80px 96px 0;
   font-family: inherit;
 }
 
@@ -9,8 +9,9 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 2rem;
-  max-width: 1280px;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1920px;
   margin: 0 auto;
 }
 
@@ -24,31 +25,31 @@
 }
 
 .logo {
-  width: 160px;
+  width: 180px;
   height: auto;
   display: block;
 }
 
 .linksArea {
   display: flex;
-  gap: 56px;
+  gap: 72px;
   flex: 1;
-  padding-left: 48px;
+  padding-left: 72px;
 }
 
 .column {
   display: flex;
   flex-direction: column;
-  min-width: 180px;
+  min-width: 200px;
 }
 
 .columnTitle {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
-  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 28px;
 }
 
 .columnLinks {
@@ -57,7 +58,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 20px;
 }
 
 .columnLinks li {
@@ -66,23 +67,23 @@
 
 .link {
   color: #ffffff !important;
-  font-size: 0.95rem;
-  font-weight: 600;
-  line-height: 2;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
   text-decoration: none !important;
   display: block;
   transition: color 0.15s ease;
 }
 
 .link:hover {
-  color: #fcd11a !important;
+  color: #FECB17 !important;
   text-decoration: none !important;
 }
 
 .socialArea {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 12px;
   align-items: flex-start;
   flex-shrink: 0;
   padding-top: 2px;
@@ -95,7 +96,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: #fcd11a;
+  background-color: #FECB17;
   color: #030e24;
   text-decoration: none;
   transition: background-color 0.15s ease, transform 0.15s ease;
@@ -112,22 +113,22 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 28px 0;
-  margin-top: 48px;
+  padding: 40px 0 32px;
+  margin-top: 80px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.45);
-  max-width: 1280px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .bottomSep {
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .bottomLink {
-  color: #fcd11a !important;
+  color: #FECB17 !important;
   text-decoration: none;
   transition: opacity 0.15s ease;
 }
@@ -137,24 +138,55 @@
   text-decoration: none;
 }
 
+@media (max-width: 1100px) {
+  .footer {
+    padding: 56px 40px 0;
+  }
+  .linksArea {
+    gap: 40px;
+    padding-left: 40px;
+  }
+  .column {
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 900px) {
+  .inner {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .socialArea {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: flex-start;
+  }
+  .linksArea {
+    padding-left: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .footer {
     padding: 40px 24px 0;
   }
-
   .inner {
     flex-direction: column;
     gap: 40px;
   }
-
   .linksArea {
     flex-direction: column;
-    gap: 40px;
+    gap: 32px;
     padding-left: 0;
     width: 100%;
   }
-
   .socialArea {
     flex-wrap: wrap;
+  }
+  .bottomBar {
+    flex-wrap: wrap;
+    padding: 24px 0;
+    margin-top: 40px;
+    font-size: 0.8rem;
   }
 }
