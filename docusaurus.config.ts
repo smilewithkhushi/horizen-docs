@@ -132,8 +132,8 @@ const config: Config = {
           label: "Migration",
         },
         {
-          type: "docSidebar",
-          sidebarId: "governanceSidebar",
+          type: "doc",
+          docId: "governance/overview/about",
           position: "left",
           label: "Governance",
         },

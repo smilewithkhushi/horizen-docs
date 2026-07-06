@@ -55,7 +55,7 @@ function Hero() {
       />
 
       {/* hero content */}
-      <div className="relative z-10 px-24 pt-[150px] pb-24 max-[900px]:px-8 max-[900px]:pt-24 max-[600px]:px-5 max-[600px]:pt-20 max-[600px]:pb-16">
+      <div className="relative z-10 px-24 pt-37.5 pb-24 max-[900px]:px-8 max-[900px]:pt-24 max-[600px]:px-5 max-[600px]:pt-20 max-[600px]:pb-16">
         <div className="flex items-center justify-between gap-32 max-[900px]:flex-col max-[900px]:items-start max-[900px]:gap-10">
           <div className="flex-1 min-w-0 max-w-4xl">
             <div className="text-[clamp(2.4rem,5.5vw,4rem)] font-extrabold leading-[1.1] mb-6 text-[#030E24] tracking-tight [html[data-theme='dark']_&]:text-white" style={{ fontFamily: "'Funnel Display', sans-serif" }}>
@@ -63,7 +63,7 @@ function Hero() {
               for privacy-first <br />
               onchain app developers.
             </div>
-            <div className="text-base leading-[1.7] text-[rgba(3,14,36,0.7)] m-0 max-w-[520px] [html[data-theme='dark']_&]:text-white/75">
+            <div className="text-base leading-[1.7] text-[rgba(3,14,36,0.7)] m-0 max-w-130 [html[data-theme='dark']_&]:text-white/75">
               Horizen is an EVM-native L3 on Base designed for private onchain finance and compliance-forward blockchain app development.
             </div>
             <div className="flex gap-4 flex-wrap mt-7">
@@ -71,7 +71,7 @@ function Hero() {
                 to={buildingCards[0].link}
               >
                 <button
-                  className="inline-flex border-none items-center justify-center h-12 px-8 rounded-[60px] text-[0.95rem] font-bold bg-[#FECB17] !text-[#030E24] no-underline! transition-colors duration-150 hover:bg-[#f5c800]"
+                  className="inline-flex border-none items-center justify-center h-12 px-8 rounded-[60px] text-[0.95rem] font-bold bg-[#FECB17] text-[#030E24]! no-underline! transition-colors duration-150 hover:bg-[#f5c800]"
                 >
                   Get Started
                 </button>
@@ -80,7 +80,7 @@ function Hero() {
                 to={buildingCards[1].link}
               >
                 <button
-                  className="inline-flex items-center border-none justify-center h-12 px-8 rounded-[60px] text-[0.95rem] font-bold bg-[#FECB17] !text-[#030E24] no-underline! transition-colors duration-150 hover:bg-[#f5c800]"
+                  className="inline-flex items-center border-none justify-center h-12 px-8 rounded-[60px] text-[0.95rem] font-bold bg-[#FECB17] text-[#030E24]! no-underline! transition-colors duration-150 hover:bg-[#f5c800]"
                 >
                   Learn More
                 </button>
@@ -91,25 +91,17 @@ function Hero() {
         </div>
       </div>
 
-      {/* divider — full width */}
-      <div
-        className={[
-          "w-full h-px",
-          "bg-[rgba(169,176,189,1)]",
-          "[html[data-theme='dark']_&]:bg-[linear-gradient(90deg,rgba(255,255,255,0.05),rgba(255,255,255,0.15))]",
-        ].join(' ')}
-      />
-
       {/* What is Horizen */}
       <div className="px-24 py-24 max-[1100px]:px-10 max-[900px]:px-5 max-[900px]:py-14">
         <div className="grid grid-cols-3 items-start gap-6 w-full max-[900px]:grid-cols-1 max-[900px]:gap-7">
-          <div className="min-w-0">
-            <div className="text-[clamp(1.8rem,2.4vw,2.25rem)] font-extrabold text-[#030E24] m-0 leading-[1.15] tracking-tight [html[data-theme='dark']_&]:text-white" style={{ fontFamily: "'Funnel Display', sans-serif" }}>
+          <div className="min-w-0 max-[900px]:text-center">
+            <div className="text-[clamp(2rem,4vw,3rem)] font-extrabold text-[#030E24] m-0 leading-[1.15] tracking-tight [html[data-theme='dark']_&]:text-white" style={{ fontFamily: "'Funnel Display', sans-serif" }}>
               What is Horizen?
             </div>
           </div>
-          <div>
-            <div className="flex flex-wrap flex-1  gap-4">
+          <div className="max-[900px]:flex max-[900px]:flex-col max-[900px]:items-center max-[900px]:text-center">
+            <p className="text-base font-semibold text-[#030E24] mb-3 [html[data-theme='dark']_&]:text-white">It adds what Base doesn't have</p>
+            <div className="flex flex-wrap flex-1  gap-4 max-[900px]:justify-center">
               {features.map((f) => (
                 <div
                   key={f}
@@ -124,10 +116,10 @@ function Hero() {
               ))}
             </div>
           </div>
-          <div className="min-w-0">
+          <div className="min-w-0 max-[900px]:text-center">
             <p className="text-base leading-[1.8] text-[rgba(3,14,36,0.75)] m-0 [html[data-theme='dark']_&]:text-white/65">
               Horizen adds what other EVM chains lack – a tight focus and supportive tooling for private onchain finance and regulatory-compliant blockchain application development, while retaining what other privacy blockchain projects left behind – familiar EVM architecture, composability, and developer ergonomics.
-              <strong>No new language, no obscure tech stack.</strong>
+              <strong> No new language, no obscure tech stack.</strong>
             </p>
           </div>
         </div>
@@ -206,7 +198,7 @@ const personas = [
 function PersonaCards() {
   return (
     <section className="w-full px-24 py-24 bg-[#F4F4F4] [html[data-theme='dark']_&]:bg-[#030E24] max-[1100px]:px-10 max-[900px]:px-5 max-[900px]:py-14">
-      <div className="text-4xl font-extrabold mb-10 text-[#030E24] [html[data-theme='dark']_&]:text-white" style={{ fontFamily: "'Funnel Display', sans-serif" }}>Choose Your Path</div>
+      <div className="text-[clamp(2rem,4vw,3rem)] font-extrabold mb-10 text-[#030E24] [html[data-theme='dark']_&]:text-white" style={{ fontFamily: "'Funnel Display', sans-serif" }}>Choose Your Path</div>
       <div className="grid grid-cols-3 gap-6 max-[900px]:grid-cols-1">
         {personas.map((p) => (
           <div
@@ -257,7 +249,7 @@ function QuickSetup() {
 
   return (
     <section className={styles.quickSetupSection}>
-      <div className={styles.quickSetupGrid}>
+      <div className={`${styles.quickSetupGrid} grid grid-cols-[minmax(260px,1fr)_2fr] items-start gap-16 max-[900px]:grid-cols-1 max-[900px]:gap-8`}>
         <h2 className={`${styles.sectionHeading} ${styles.quickSetupHeading}`}>Quick Setup</h2>
         <div className={styles.quickSetupList}>
           {quickSetupItems.map((item, i) => (
@@ -286,8 +278,8 @@ function QuickSetup() {
 
 function StartBuilding() {
   return (
-    <section className={"max-w-7xl mx-auto px-6 py-16"}>
-      <div className={"text-4xl font-extrabold mb-10 [html[data-theme='dark']_&]:text-white"} style={{ fontFamily: "'Funnel Display', sans-serif" }}>Start Building</div>
+    <section className={"w-full px-24 py-24 max-[1100px]:px-10 max-[900px]:px-5 max-[900px]:py-14"}>
+      <div className={"text-[clamp(2rem,4vw,3rem)] font-extrabold mb-10 text-[#030E24] [html[data-theme='dark']_&]:text-white"} style={{ fontFamily: "'Funnel Display', sans-serif" }}>Start Building</div>
       <div className={"grid grid-cols-3 gap-6 max-[900px]:grid-cols-1 pt-5"}>
         {buildingCards.map((card) => (
           <div
@@ -310,8 +302,8 @@ function StartBuilding() {
             <div className={"mt-2"}>
               <Link to={card.link}>
                 <button
-                  className={"inline-block bg-[#FECB17] text-[#000] font-bold border-none text-sm px-6 py-3 rounded-full " +
-                    "hover:bg-[#e6bc17] !no-underline transition-colors duration-150"}>
+                  className={"inline-block bg-[#FECB17] text-black font-bold border-none text-sm px-6 py-3 rounded-full " +
+                    "hover:bg-[#e6bc17] no-underline! transition-colors duration-150"}>
                   Get Started
                 </button>
               </Link>
@@ -326,8 +318,8 @@ function StartBuilding() {
 /* ─── Newsletter ────────────────────────────────────────────────────────── */
 function Newsletter() {
   return (
-    <section className="w-full min-h-[208px] bg-[rgba(254,203,23,1)] flex items-center px-[100px] py-[50px] max-[1100px]:px-10 max-[860px]:px-6 max-[860px]:py-10">
-      <div className="flex items-center justify-between gap-[71px] w-full max-[860px]:flex-col max-[860px]:items-start max-[860px]:gap-6">
+    <section className="w-full min-h-52 bg-[rgba(254,203,23,1)] flex items-center px-25 py-12.5 max-[1100px]:px-10 max-[860px]:px-6 max-[860px]:py-10">
+      <div className="flex items-center justify-between gap-17.75 w-full max-[860px]:flex-col max-[860px]:items-start max-[860px]:gap-6">
         <span className="text-[#030E24] font-extrabold text-[clamp(1.75rem,2.4vw,2.5rem)] whitespace-nowrap leading-[1.1] tracking-tight shrink-0" style={{ fontFamily: "'Funnel Display', sans-serif" }}>
           Sign Up for Newsletter
         </span>
@@ -344,7 +336,7 @@ function Newsletter() {
             className="bg-transparent border-0 border-b border-[#030E24] text-[#030E24] placeholder:text-[#030E24] placeholder:font-medium text-base outline-none w-60 py-2 rounded-none shadow-none focus:border-b-2 max-[860px]:w-full"
             aria-label="Email address"
           />
-          <button type="button" className="bg-white text-[#030E24] font-bold text-base px-10 py-4 rounded-full whitespace-nowrap min-w-[160px] cursor-pointer hover:bg-gray-50 border-none hover:shadow-md transition-all max-[860px]:w-full">
+          <button type="button" className="bg-white text-[#030E24] font-bold text-base px-10 py-4 rounded-full whitespace-nowrap min-w-40 cursor-pointer hover:bg-gray-50 border-none hover:shadow-md transition-all max-[860px]:w-full">
             Subscribe
           </button>
         </div>

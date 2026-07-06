@@ -2,10 +2,10 @@ import React from "react";
 import Link from "@docusaurus/Link";
 
 const HORIZEN_LINKS = [
-  { label: "Protocol Whitepaper", href: "https://horizen.io/whitepaper" },
-  { label: "MiCAR Whitepaper", href: "https://horizen.io/micar" },
-  { label: "Governance", href: "https://horizen.io/governance" },
-  { label: "ZEN Migration Hub", href: "https://horizen.io/zen-migration" },
+  { label: "Protocol Whitepaper", href: "https://downloads.horizen.io/file/web-assets/Horizen+Whitepaper+v1.0.0.pdf" },
+  { label: "MiCAR Whitepaper", href: "https://horizen.micarwhitepapers.eu/" },
+  { label: "Governance", href: "/governance/overview/about" },
+  { label: "ZEN Migration Hub", href: "https://www.horizen.io/horizen-upgrade" },
 ];
 
 const DOCS_LINKS = [
@@ -138,7 +138,8 @@ export default function Footer(): React.ReactElement {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={s.label}
-              className="flex items-center justify-center w-11 h-11 rounded-full overflow-hidden bg-[#FECB17] text-[#030e24] no-underline shrink-0 transition-[background-color,transform] duration-150 hover:bg-[#e6bc17] hover:-translate-y-px"
+              className="flex items-center justify-center w-11 h-11 rounded-full overflow-hidden bg-[#FECB17] no-underline shrink-0 transition-transform duration-150 hover:-translate-y-px"
+              style={{ color: '#000000' }}
             >
               {s.icon}
             </a>

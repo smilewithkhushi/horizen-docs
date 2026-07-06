@@ -13,7 +13,7 @@
   font-weight: 500;
   color: var(--ifm-font-color-base);
   background: #ffffff;
-  border: 1px solid var(--horizen-accent-light);
+  border: 1px solid #000000;
   border-radius: var(--ifm-global-radius);
   cursor: pointer;
   white-space: nowrap;
@@ -23,7 +23,7 @@
 
 [data-theme='dark'] .trigger {
   background: rgba(255, 255, 255, 0.07);
-  border-color: var(--sunrise-yellow);
+  border-color: #000000;
 }
 
 .trigger:hover {

@@ -10,7 +10,7 @@ Unlike chains that require learning a new language or committing to a fixed priv
 
 Horizen Chain is built on top the Ethereum stack, inheriting Base's security, composability, and liquidity, while making confidential execution possible through a variety of privacy primitives and tools including [**Vela**](https://vela.horizenlabs.io/), the trusted execution environment (TEE) product from Horizen Labs, and [**zkVerify**](https://zkverify.io), the zero-knowledge proof verification and attestation protocol also by Horizen Labs.
 
-The result is a chain where:
+## The result is a chain where:
 
 - Contracts can execute with confidentiality as outputs are cryptographically sealed and attested by app-level privacy integrations
 - Compliance and auditability are programmable at the application level (developers implement approaches such as viewing keys or verifiable audit logs)
