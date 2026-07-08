@@ -20,7 +20,7 @@ Stork operates as a **pull oracle**. Prices are not continuously pushed on-chain
 
 
 <div style={{padding: '24px', borderRadius: '8px', display: 'flex', justifyContent: 'center'}}>
-  <img src="/img/tutorials/StorkModel.png" alt="Stork Working on Horizen" width="85%" />
+  <img src="/tutorials/StorkModel.png" alt="Stork Working on Horizen" width="85%" />
 </div>
 
 
@@ -125,7 +125,7 @@ import { ethers } from "ethers";
 const RPC_URL   = "https://horizen-testnet.rpc.caldera.xyz/http";
 const PRIVATE_KEY = process.env.PRIVATE_KEY!;
 const STORK_API_KEY = process.env.STORK_API_KEY!;
-const STORK_CONTRACT = "0x<STORK_CONTRACT_ADDRESS>"; // Horizen Stork contract
+const STORK_CONTRACT = "0xacC0a0cF13571d30B4b8637996F5D6D774d4fd62"; // Horizen Stork contract
 const ASSET       = "BTCUSD";
 
 // ── Minimal ABI ─────────────────────────────────────────────────────────────
@@ -281,7 +281,7 @@ contract PriceGatedVault {
 
 ```bash
 forge create src/PriceGatedVault.sol:PriceGatedVault \
-  --constructor-args <STORK_CONTRACT_ADDRESS> \
+  --constructor-args 0xacC0a0cF13571d30B4b8637996F5D6D774d4fd62 \
   --rpc-url https://horizen-testnet.rpc.caldera.xyz/http \
   --private-key $PRIVATE_KEY
 ```

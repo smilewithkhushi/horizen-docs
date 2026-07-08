@@ -25,5 +25,5 @@ The Horizen Testnet runs on Base Sepolia and is the recommended environment for 
 4. Click Save - Horizen Testnet is now available in your wallet
 
 <div style={{background: '#000', padding: '24px', borderRadius: '8px', display: 'flex', justifyContent: 'center'}}>
-  <img src="/img/horizen-chain/testnet-network.gif" alt="Adding Horizen Testnet to MetaMask" width="280" />
+  <img src="/horizen-chain/testnet-network.gif" alt="Adding Horizen Testnet to MetaMask" width="280" />
 </div>

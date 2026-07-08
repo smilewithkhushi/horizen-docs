@@ -7,19 +7,19 @@ import styles from './styles.module.css';
 type CopyState = 'idle' | 'copied' | 'error';
 
 function ClaudeIcon(): ReactNode {
-  return <img className={styles.brandIcon} src="/img/icons/claude-color.svg" alt="" aria-hidden="true" />;
+  return <img className={styles.brandIcon} src="/icons/claude-color.svg" alt="" aria-hidden="true" />;
 }
 
 function ChatGPTIcon(): ReactNode {
-  return <img className={styles.brandIcon} src="/img/icons/chatgpt-icon.svg" alt="" aria-hidden="true" />;
+  return <img className={styles.brandIcon} src="/icons/chatgpt-icon.svg" alt="" aria-hidden="true" />;
 }
 
 function PerplexityIcon(): ReactNode {
-  return <img className={styles.brandIcon} src="/img/icons/perplexity-ai-icon.svg" alt="" aria-hidden="true" />;
+  return <img className={styles.brandIcon} src="/icons/perplexity-ai-icon.svg" alt="" aria-hidden="true" />;
 }
 
 function GeminiIcon(): ReactNode {
-  return <img className={styles.brandIcon} src="/img/icons/google-gemini-icon.svg" alt="" aria-hidden="true" />;
+  return <img className={styles.brandIcon} src="/icons/google-gemini-icon.svg" alt="" aria-hidden="true" />;
 }
 
 function ClipboardIcon(): ReactNode {

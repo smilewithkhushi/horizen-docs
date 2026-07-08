@@ -17,6 +17,6 @@ Horizen Chain is an OP Stack rollup that settles directly onto Base, which in tu
 
 **Vela - Confidential Coprocessor**: An emerging confidential coprocessor by Horizen Labs that sits alongside Horizen Chain. Applications offload sensitive computation to TEE enclaves, receive cryptographically attested results back, and anchor those results on-chain.
 
-<img src="/img/horizen-chain/l3-architecture.png" alt="L3 Architecture" style={{width: '520px', display: 'block', margin: '0 auto'}} />
+<img src="/horizen-chain/l3-architecture.png" alt="L3 Architecture" style={{width: '520px', display: 'block', margin: '0 auto'}} />
 
 

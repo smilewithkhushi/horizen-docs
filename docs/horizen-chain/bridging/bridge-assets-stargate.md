@@ -24,7 +24,7 @@ ZEN on Horizen and Base share the same OFT contract address (`0x57da2D504bf8b83E
 :::
 
 <div style={{textAlign: 'center', margin: '24px 0'}}>
-  <img src="/img/horizen-chain/stargate-bridge.png" alt="Stargate bridge UI showing supported tokens on Horizen" style={{width: '100%', maxWidth: '720px', borderRadius: '8px', border: '1px solid #e5e7eb'}} />
+  <img src="/horizen-chain/stargate-bridge.png" alt="Stargate bridge UI showing supported tokens on Horizen" style={{width: '100%', maxWidth: '720px', borderRadius: '8px', border: '1px solid #e5e7eb'}} />
 </div>
 
 
