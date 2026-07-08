@@ -10,7 +10,7 @@ Horizen gives you two complementary confidentiality primitives that operate at d
 ## Vela - Confidential Execution
 
 <!-- <div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
-  <img src="/img/vela/vela-hl-banner.png" alt="Vela" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
+  <img src="/vela/vela-hl-banner.png" alt="Vela" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div> -->
 
 [Vela](https://vela.horizenlabs.io/) is a TEE-based confidential execution solution by Horizen Labs. Application logic runs inside TEE hardware enclaves where data is encrypted in memory, inaccessible to any external observer including the host machine and cloud provider. Every computation produces a cryptographic attestation proving the code ran correctly inside a genuine enclave, without revealing the underlying data or intermediate state.
@@ -25,7 +25,7 @@ Horizen gives you two complementary confidentiality primitives that operate at d
 ## zkVerify - On-Chain ZK Proof Verification
 
 <div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
-  <img src="/img/tutorials/zkverify.png" alt="zkVerify" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
+  <img src="/tutorials/zkverify.png" alt="zkVerify" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
 zkVerify is a purpose-built L1 for verifying ZK proofs — a separate protocol that integrates with Horizen and any other EVM-compatible chain. Applications generate proofs off-chain using a ZK proving system, submit them to zkVerify, and receive on-chain verification results consumable by Horizen contracts, without deploying a custom verifier contract or paying native chain gas costs for proof verification.
