@@ -59,3 +59,27 @@
 - [Oracles (Stork)](https://docs.horizen.io/horizen-chain/integrations/stork-oracle): Pull oracle for sub-second price feeds — fetch signed data off-chain via REST API, push on-chain via `updateTemporalNumericValuesV1` · Contract: 0xacC0a0cF13571d30B4b8637996F5D6D774d4fd62 (mainnet + testnet) · ETH_USD feed ID: 0x7404e3d104ea7841c3d9e6fd20adfe99b4ad586bc08d8f3bd3afef894cf184de
 - [Multisig (Den)](https://docs.horizen.io/horizen-chain/integrations/multisig): Safe-compatible multisig wallets via Den · https://safe.horizen.io/welcome
 - [Compliance Gating (PureFi)](https://docs.horizen.io/horizen-chain/integrations/purefi): AML/compliance gating — off-chain issuer check with synchronous on-chain enforcement · SDK: `@purefi/sdk-solidity-v5@5.2.0` · Verifier proxy: 0x681Edd4906e2a0a277E2A6c394A4595f83e1329c · Verifier impl: 0x61C468B554B6F0b0842242F7Df079bb392EE0555 · Chain ID: 26514
+
+## Tutorials — Horizen Chain
+
+- [Deploy an ERC-20 Token](https://docs.horizen.io/tutorials/horizen-chain/deploy-erc20): End-to-end ERC-20 deployment with Foundry and Hardhat — capped, burnable token with owner-controlled mint, plus contract verification on the Horizen explorer
+- [Deploy an NFT Collection](https://docs.horizen.io/tutorials/horizen-chain/deploy-nft-collection): Deploy an ERC-721 NFT collection on Horizen with metadata and minting using Foundry or Hardhat
+- [Build a Price-Triggered ETH Escrow](https://docs.horizen.io/tutorials/horizen-chain/price-triggered-escrow): Stork-powered escrow contract that releases ETH when ETH/USD crosses a threshold — full Solidity contract plus Next.js frontend integration
+- [Bridge Assets from Base to Horizen](https://docs.horizen.io/tutorials/horizen-chain/bridge-assets): Mainnet programmatic bridging — ZEN via Stargate LayerZero OFT (ZEN ERC-20 on Base: 0xf43eB8De897Fbc7F2502483B2Bef7Bb9EA179229 · OFT Adapter: 0x57da2D504bf8b83Ef304759d9f2648522D7a9280 · Horizen EID: 30399 · Base EID: 30184) and ETH via native OP Stack bridge (L1StandardBridge on Base: 0xf4a6cc4171fda694439f856d912777aa6ab05369 · 7-day withdrawal challenge period) · UI: stargate.finance / hub.horizen.io · cast + Viem examples
+
+## Tutorials — Integrations
+
+- [Connect a Price Feed with Stork Oracle](https://docs.horizen.io/tutorials/integrations/connect-stork-oracle): Full integration walkthrough — fetch signed price payload from Stork REST API, push on-chain to `updateTemporalNumericValuesV1`, read via `getTemporalNumericValueV1` · Stork contract: 0xacC0a0cF13571d30B4b8637996F5D6D774d4fd62
+- [Index Your Contract with Goldsky](https://docs.horizen.io/tutorials/integrations/index-with-goldsky): Index Horizen contract events using Goldsky subgraphs (The Graph-compatible) — subgraph.yaml, schema, mappings, deploy
+- [Add Compliance Gating with PureFi](https://docs.horizen.io/tutorials/integrations/integrate-purefi): Step-by-step PureFi AML verification integration into Solidity contracts — `@purefi/sdk-solidity-v5`, on-chain verifier, off-chain issuer check pattern
+- [Set Up a Multisig on Horizen](https://docs.horizen.io/tutorials/integrations/setup-multisig): Create and manage a Safe-compatible multisig on Horizen using Den · https://safe.horizen.io
+
+## Governance
+
+- [About Horizen DAO](https://docs.horizen.io/governance/overview/about): Overview of Horizen DAO, its decentralized governance framework, guiding values, and constitution
+- [Proposal Categories](https://docs.horizen.io/governance/proposal-categories): Types and categories of governance proposals — what can be proposed and how
+- [Voting Process](https://docs.horizen.io/governance/voting-process/voting-process): How voting works — quorum requirements, ZenIP approval process, timeline
+- [Quick Voting Guide](https://docs.horizen.io/governance/voting-process/quick-voting-guide): Step-by-step guide to casting a vote on a Horizen governance proposal
+- [Foundational Documents](https://docs.horizen.io/governance/reference/foundational-docs): Foundation Bylaws, Memorandum of Association, Articles of Association (PDFs)
+- [Submit a Vote](https://docs.horizen.io/governance/reference/submit-vote): How to submit a formal governance vote
+- [Join the Discussion](https://docs.horizen.io/governance/reference/join-discussion): Community discussion channels for governance proposals

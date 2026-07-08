@@ -80,13 +80,13 @@ export default function Footer(): React.ReactElement {
   return (
     <footer className="bg-[#030e24] border-t border-[rgba(254,203,23,0.15)] overflow-hidden">
       {/* Main content row */}
-      <div className="flex flex-wrap items-start justify-between gap-x-8 gap-y-10 w-full px-24 pt-20 pb-16 max-[1100px]:px-10 max-[768px]:px-6 max-[768px]:pt-12 max-[768px]:pb-10">
+      <div className="flex flex-nowrap items-start justify-between gap-x-8 w-full px-24 pt-20 pb-16 max-[1100px]:px-10 max-[768px]:flex-wrap max-[768px]:gap-y-10 max-[768px]:px-6 max-[768px]:pt-12 max-[768px]:pb-10">
 
         {/* Logo */}
         <div className="shrink-0 pt-1 max-[768px]:w-full max-[768px]:mb-2">
           <Link to="https://horizen.io" className="inline-block">
             <img
-              src="/img/Logos/SVG/Horizen2.0-logo_primary-white.svg"
+              src="/logos/svg/Horizen2.0-logo_primary-white.svg"
               alt="Horizen"
               className="w-[180px] h-auto block"
             />
@@ -96,7 +96,7 @@ export default function Footer(): React.ReactElement {
         {/* Link columns
             desktop : middle, natural order
             mobile  : order-2 → stacks after logo, each col full width */}
-        <div className="flex gap-16 max-[1100px]:gap-10
+        <div className="flex gap-16 min-w-0 shrink max-[1100px]:gap-10
           max-[768px]:order-2 max-[768px]:w-full max-[768px]:flex-col max-[768px]:gap-10">
           <div className="flex flex-col w-[180px] max-[1100px]:w-[150px] max-[768px]:w-full">
             <div className={colTitleClass}>Horizen</div>

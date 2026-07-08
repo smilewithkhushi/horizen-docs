@@ -5,7 +5,7 @@ sidebar_position: 1
 ---
 
 <div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
-  <img src="/img/tutorials/stork-banner.png" alt="Stork Oracle" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
+  <img src="/tutorials/stork-banner.png" alt="Stork Oracle" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
 Stork is the primary oracle integration for Horizen Chain. It is a **pull oracle** that delivers price data and other off-chain data feeds at sub-second latency, designed for use cases like perpetuals, lending protocols, and any application that requires fast, verifiable market data.
@@ -15,7 +15,7 @@ Unlike push oracles (which maintain feeds on-chain at all times), Stork operates
 ## How Stork Works on Horizen
 
 <div style={{ padding: '12px', borderRadius: '8px', display: 'flex', justifyContent: 'center'}}>
-  <img src="/img/horizen-chain/StorkOnHorizen.png" alt="Diagram showing how Stork pull oracle works on Horizen: off-chain aggregator signs price data, app fetches it via REST API, pushes it on-chain to the Stork contract, then reads the verified price" width="520" />
+  <img src="/horizen-chain/StorkOnHorizen.png" alt="Diagram showing how Stork pull oracle works on Horizen: off-chain aggregator signs price data, app fetches it via REST API, pushes it on-chain to the Stork contract, then reads the verified price" width="520" />
 </div>
 
 
@@ -115,7 +115,7 @@ contract PriceConsumer {
 
     // ETHUSD feed ID (verify from Stork Asset Registry)
     bytes32 public constant ETH_USD_ID =
-        0x7404e3d104ea7841c3d9e6fd20adfe99b4ad586bc08d8f3bd3afef894cf184de;
+        0x59102b37de83bdda9f38ac8254e596f0d9ac61d2035c07936675e87342817160;
 
     // Stork contract on Horizen mainnet: 0xacC0a0cF13571d30B4b8637996F5D6D774d4fd62
     constructor(address _stork) {

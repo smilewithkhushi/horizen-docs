@@ -3,7 +3,13 @@ title: Index Your Contract with Goldsky
 description: "Index your Horizen smart contract events and data using Goldsky subgraphs."
 ---
 
-[Goldsky](https://goldsky.com) is a high-performance blockchain data indexing platform. It lets you extract on-chain events from your Horizen smart contracts, transform them into queryable entities, and serve them over a GraphQL API — all without running your own infrastructure.
+[Goldsky](https://goldsky.com) is a high-performance blockchain data indexing platform. It lets you extract on-chain events from your Horizen smart contracts, transform them into queryable entities, and serve them over a GraphQL API without running your own infrastructure.
+
+
+<div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
+  <img src="/tutorials/goldsky-banner.png" alt="Goldsky" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
+</div> 
+
 
 This tutorial walks through two paths:
 
@@ -13,14 +19,13 @@ This tutorial walks through two paths:
 By the end you'll have a live GraphQL endpoint indexing your Horizen contract's events.
 
 
-
 ## Prerequisites
 
 - A deployed contract on Horizen (mainnet or testnet). You'll need the contract address and ABI
 - [Node.js](https://nodejs.org) ≥ 18
 - A [Goldsky account](https://app.goldsky.com) (free tier available)
 
-<br/>
+ 
 
 ## Step 1: Install the Goldsky CLI
 
@@ -50,7 +55,7 @@ goldsky login
 
 When prompted, paste the API key from your [Goldsky Project Settings](https://app.goldsky.com) page.
 
-<br/>
+ 
 
 ## Path A — Instant Subgraph (Low-Code)
 
@@ -269,7 +274,7 @@ goldsky subgraph deploy my-token/1.0.0 --path .
 
 Goldsky reads your local `subgraph.yaml` and deploys to their managed infrastructure. You'll get a GraphQL endpoint on success.
 
-<br/>
+ 
 
 ## Querying Your Subgraph
 
@@ -330,7 +335,7 @@ async function getRecentTransfers() {
 }
 ```
 
-<br/>
+ 
 
 ## Managing Subgraphs
 
