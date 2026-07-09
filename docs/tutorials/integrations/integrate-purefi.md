@@ -5,7 +5,11 @@ description: "Step-by-step tutorial for integrating PureFi AML verification into
 
 # Add Compliance Gating with PureFi
 
-PureFi lets you gate any smart contract action — a mint, swap, deposit, or access grant — behind an off-chain AML check. The check happens outside the EVM; the result is delivered as a signed payload your contract verifies on-chain before allowing execution to continue.
+PureFi lets you gate any smart contract action (such as a mint, swap, deposit, or access grant) behind an off-chain AML check. The check happens outside the EVM; the result is delivered as a signed payload your contract verifies on-chain before allowing execution to continue.
+
+<div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
+  <img src="/tutorials/purefi-banner.png" alt="PureFi" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
+</div>
 
 This tutorial walks through the full integration end-to-end:
 

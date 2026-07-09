@@ -115,7 +115,7 @@ contract PriceConsumer {
 
     // ETHUSD feed ID (verify from Stork Asset Registry)
     bytes32 public constant ETH_USD_ID =
-        0x7404e3d104ea7841c3d9e6fd20adfe99b4ad586bc08d8f3bd3afef894cf184de;
+        0x59102b37de83bdda9f38ac8254e596f0d9ac61d2035c07936675e87342817160;
 
     // Stork contract on Horizen mainnet: 0xacC0a0cF13571d30B4b8637996F5D6D774d4fd62
     constructor(address _stork) {
