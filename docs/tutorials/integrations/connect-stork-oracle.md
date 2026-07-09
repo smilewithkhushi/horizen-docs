@@ -7,6 +7,10 @@ description: "Integrate Stork price oracle feeds into your Horizen smart contrac
 
 Stork is a pull-based oracle protocol designed for ultra-low latency. Unlike push oracles that maintain a continuously updated on-chain price, Stork lets your contract or off-chain application fetch a price on demand, then verify it trustlessly on-chain using a signed payload.
 
+<div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
+  <img src="/tutorials/stork-banner.png" alt="Stork Oracle" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
+</div>
+
 This tutorial covers the full data flow:
 
 1. Fetch a signed price update from the Stork REST API

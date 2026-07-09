@@ -226,6 +226,10 @@ cast balance $YOUR_ADDRESS --rpc-url https://horizen.calderachain.xyz/http
 
 Withdrawals are subject to a 7-day challenge period before they can be finalized on Base. The bridge hub at [hub.horizen.io](https://hub.horizen.io/) handles the prove and finalize steps for you, and for most workflows that is the right tool. Budget for the challenge period in anything user-facing you build on top of this: it is a property of the rollup's security model, not a UI limitation.
 
+:::note Challenge period
+7 days is the standard OP Stack default. Caldera can configure this differently per deployment. Verify the current value with the Horizen team or check the `FINALIZATION_PERIOD_SECONDS` setting on the L2OutputOracle contract before publishing a hard deadline to users.
+:::
+
 ## Troubleshooting
 
 | Symptom | Cause | Fix |

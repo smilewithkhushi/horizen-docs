@@ -86,7 +86,7 @@ export default function Footer(): React.ReactElement {
         <div className="shrink-0 pt-1 max-[768px]:w-full max-[768px]:mb-2">
           <Link to="https://horizen.io" className="inline-block">
             <img
-              src="/Logos/SVG/Horizen2.0-logo_primary-white.svg"
+              src="/logos/svg/Horizen2.0-logo_primary-white.svg"
               alt="Horizen"
               className="w-[180px] h-auto block"
             />

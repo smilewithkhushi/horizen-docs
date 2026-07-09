@@ -16,7 +16,7 @@ const algoliaConfig = process.env.ALGOLIA_APP_ID && process.env.ALGOLIA_API_KEY 
 const config: Config = {
   title: "Horizen Documentation",
   tagline: "Build Private. Build Compliant. Build on Horizen.",
-  favicon: "Logos/PNG/Horizen2.0-logo_icon-on-yellow.png",
+  favicon: "logos/png/Horizen2.0-logo_icon-on-yellow.png",
 
   url: "https://docs.horizen.io",
   baseUrl: "/",
@@ -85,7 +85,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: "Logos/PNG/Horizen2.0-logo_primary-dark.png",
+    image: "logos/png/Horizen2.0-logo_primary-dark.png",
     metadata: [
       {
         name: 'description',
@@ -99,8 +99,8 @@ const config: Config = {
     navbar: {
       logo: {
         alt: "Horizen",
-        src: "Logos/SVG/Horizen2.0-logo_primary-dark.svg",
-        srcDark: "Logos/SVG/Horizen2.0-logo_primary-white.svg",
+        src: "logos/svg/Horizen2.0-logo_primary-dark.svg",
+        srcDark: "logos/svg/Horizen2.0-logo_primary-white.svg",
         href: "/",
       },
       items: [
