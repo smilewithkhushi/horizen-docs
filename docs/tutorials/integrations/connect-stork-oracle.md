@@ -7,6 +7,10 @@ description: "Integrate Stork price oracle feeds into your Horizen smart contrac
 
 Stork is a pull-based oracle protocol designed for ultra-low latency. Unlike push oracles that maintain a continuously updated on-chain price, Stork lets your contract or off-chain application fetch a price on demand, then verify it trustlessly on-chain using a signed payload.
 
+<div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
+  <img src="/tutorials/stork-banner.png" alt="Stork Oracle" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
+</div>
+
 This tutorial covers the full data flow:
 
 1. Fetch a signed price update from the Stork REST API
@@ -20,7 +24,7 @@ Stork operates as a **pull oracle**. Prices are not continuously pushed on-chain
 
 
 <div style={{padding: '24px', borderRadius: '8px', display: 'flex', justifyContent: 'center'}}>
-  <img src="/img/tutorials/StorkModel.png" alt="Stork Working on Horizen" width="85%" />
+  <img src="/tutorials/StorkModel.png" alt="Stork Working on Horizen" width="85%" />
 </div>
 
 
@@ -125,7 +129,7 @@ import { ethers } from "ethers";
 const RPC_URL   = "https://horizen-testnet.rpc.caldera.xyz/http";
 const PRIVATE_KEY = process.env.PRIVATE_KEY!;
 const STORK_API_KEY = process.env.STORK_API_KEY!;
-const STORK_CONTRACT = "0x<STORK_CONTRACT_ADDRESS>"; // Horizen Stork contract
+const STORK_CONTRACT = "0xacC0a0cF13571d30B4b8637996F5D6D774d4fd62"; // Horizen Stork contract
 const ASSET       = "BTCUSD";
 
 // ── Minimal ABI ─────────────────────────────────────────────────────────────
@@ -281,7 +285,7 @@ contract PriceGatedVault {
 
 ```bash
 forge create src/PriceGatedVault.sol:PriceGatedVault \
-  --constructor-args <STORK_CONTRACT_ADDRESS> \
+  --constructor-args 0xacC0a0cF13571d30B4b8637996F5D6D774d4fd62 \
   --rpc-url https://horizen-testnet.rpc.caldera.xyz/http \
   --private-key $PRIVATE_KEY
 ```

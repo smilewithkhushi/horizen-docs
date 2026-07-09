@@ -11,7 +11,7 @@ On Horizen, multisig is provided through **[Den](https://onchainden.com/)** - a 
 ## What You're Setting Up
 
 <div style={{padding: '24px', borderRadius: '8px', display: 'flex', justifyContent: 'center'}}>
-  <img src="/img/tutorials/DenSetup.png" alt="Setting up Den Multisig" width="85%" />
+  <img src="/tutorials/DenSetup.png" alt="Setting up Den Multisig" width="85%" />
 </div>
 
 A Safe wallet is a smart contract, not an EOA. It lives on-chain at a deterministic address, holds assets, and executes transactions only when the required number of signers have approved.

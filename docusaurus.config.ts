@@ -16,10 +16,12 @@ const algoliaConfig = process.env.ALGOLIA_APP_ID && process.env.ALGOLIA_API_KEY 
 const config: Config = {
   title: "Horizen Documentation",
   tagline: "Build Private. Build Compliant. Build on Horizen.",
-  favicon: "img/Logos/PNG/Horizen2.0-logo_icon-on-yellow.png",
+  favicon: "logos/png/Horizen2.0-logo_icon-on-yellow.png",
 
   url: "https://docs.horizen.io",
   baseUrl: "/",
+
+  staticDirectories: ['public'],
 
   i18n: {
     defaultLocale: "en",
@@ -27,6 +29,7 @@ const config: Config = {
   },
 
   plugins: [
+    path.resolve(__dirname, 'plugins/tailwind-plugin.js'),
     path.resolve(__dirname, 'plugins/llms-per-page/index.ts'),
     [
       '@easyops-cn/docusaurus-search-local',
@@ -44,7 +47,7 @@ const config: Config = {
         generateLLMsFullTxt: true,
         docsDir: 'docs',
         title: 'Horizen Documentation',
-        description: 'Developer documentation for Horizen — an EVM-identical L3 on Base (Ethereum L2) using the OP Stack. Horizen adds compliant, verifiable privacy via VELA, a confidential execution coprocessor powered by Trusted Execution Environments (TEEs). Deploy standard Solidity contracts with Foundry or Hardhat (same tooling as Base/Ethereum), or build privacy-preserving apps with VELA. Mainnet chain ID: 26514. Testnet chain ID: 2651420. ZEN is the native governance token.',
+        description: 'Developer documentation for Horizen — an EVM-identical L3 on Base (Ethereum L2) using the OP Stack. Horizen adds compliant, verifiable privacy via VELA, a confidential execution coprocessor powered by Trusted Execution Environments (TEEs). Deploy standard Solidity contracts with Foundry or Hardhat (same tooling as Base/Ethereum), or build privacy-preserving apps with VELA. Mainnet chain ID: 26514, RPC https://horizen.calderachain.xyz/http. Testnet chain ID: 2651420, RPC https://horizen-testnet.rpc.caldera.xyz/http. ZEN is the native governance token (Base ERC-20: 0xf43eB8De897Fbc7F2502483B2Bef7Bb9EA179229). Tutorials cover: ERC-20 and NFT deployment, price-triggered escrow with Stork oracle, bridging assets via Stargate LayerZero OFT (ZEN OFT Adapter on Base 0x57da2D504bf8b83Ef304759d9f2648522D7a9280, Horizen EID 30399) and native OP Stack bridge (L1StandardBridge on Base 0xf4a6cc4171fda694439f856d912777aa6ab05369), Goldsky subgraph indexing, PureFi compliance gating, and Safe multisig setup. Governance: Horizen DAO with ZenIP proposal and voting process.',
       },
     ],
   ],
@@ -82,7 +85,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: "img/Logos/PNG/Horizen2.0-logo_primary-dark.png",
+    image: "logos/png/Horizen2.0-logo_primary-dark.png",
     metadata: [
       {
         name: 'description',
@@ -96,8 +99,8 @@ const config: Config = {
     navbar: {
       logo: {
         alt: "Horizen",
-        src: "img/Logos/SVG/Horizen2.0-logo_primary-dark.svg",
-        srcDark: "img/Logos/SVG/Horizen2.0-logo_primary-dark.svg",
+        src: "logos/svg/Horizen2.0-logo_primary-dark.svg",
+        srcDark: "logos/svg/Horizen2.0-logo_primary-white.svg",
         href: "/",
       },
       items: [
@@ -131,8 +134,8 @@ const config: Config = {
           label: "Migration",
         },
         {
-          type: "docSidebar",
-          sidebarId: "governanceSidebar",
+          type: "doc",
+          docId: "governance/overview/about",
           position: "left",
           label: "Governance",
         },

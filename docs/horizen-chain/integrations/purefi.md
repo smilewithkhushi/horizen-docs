@@ -5,7 +5,7 @@ sidebar_position: 4
 ---
 
 <div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
-  <img src="/img/tutorials/purefi-banner.png" alt="PureFi" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
+  <img src="/tutorials/purefi-banner.png" alt="PureFi" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
 PureFi is a compliance layer that combines off-chain AML checking with on-chain verification gating. Rather than running AML logic inside your contract, PureFi's off-chain issuer validates a signed request and returns a cryptographic payload — your contract then calls the PureFi Verifier with that payload, which either reverts (compliance check failed) or returns cleanly so your business logic can proceed.
@@ -150,7 +150,7 @@ PureFi's Playground lets you manually run the complete flow — construct a payl
 Set the package type, rule ID, `from` (your test wallet), and `to` (your deployed contract address) to generate the payload for the issuer.
 
 <div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
-  <img src="/img/purefi/payload-constructor.png" alt="PureFi Payload Constructor" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
+  <img src="/purefi/payload-constructor.png" alt="PureFi Payload Constructor" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
 ### Signature Process
@@ -158,7 +158,7 @@ Set the package type, rule ID, `from` (your test wallet), and `to` (your deploye
 Connect your browser wallet. The chain ID must match the target network. After confirming, the wallet produces the EIP-712 signature included in the next step.
 
 <div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
-  <img src="/img/purefi/signature-process.png" alt="PureFi Signature Process" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
+  <img src="/purefi/signature-process.png" alt="PureFi Signature Process" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
 ### Verification Process
@@ -166,7 +166,7 @@ Connect your browser wallet. The chain ID must match the target network. After c
 Select the issuer environment and submit. A successful response returns the `_purefidata` string you will use on-chain.
 
 <div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
-  <img src="/img/purefi/verification-process.png" alt="PureFi Verification Process" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
+  <img src="/purefi/verification-process.png" alt="PureFi Verification Process" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
 ### Transaction Builder
@@ -174,7 +174,7 @@ Select the issuer environment and submit. A successful response returns the `_pu
 Paste your contract address, ABI, and select the method that accepts `_purefidata`. Fill in the returned `_purefidata` as the parameter and submit the transaction.
 
 <div style={{display: 'flex', justifyContent: 'center', margin: '24px 0'}}>
-  <img src="/img/purefi/transaction-builder.png" alt="PureFi Transaction Builder" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
+  <img src="/purefi/transaction-builder.png" alt="PureFi Transaction Builder" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
 </div>
 
 ## Horizen Mainnet Deployment
