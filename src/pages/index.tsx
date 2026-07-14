@@ -153,7 +153,7 @@ const personas = [
     link: '/horizen-chain/deploy-contracts/using-foundry',
     cta: 'Deploy a Contract',
     icon: (
-      <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="58" height="58" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="70" height="70" rx="14" fill="#1038BB" />
         <path d="M29.1667 32.0834L26.25 35L29.1667 37.9167" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
         <path d="M40.8335 32.0834L43.7502 35L40.8335 37.9167" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -169,7 +169,7 @@ const personas = [
     link: '/horizen-chain/privacy-tools',
     cta: 'Explore Privacy Tools',
     icon: (
-      <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="48" height="48" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="70" height="70" rx="14" fill="#1038BB" />
         <path d="M32.7981 20.752L25.5211 23.4937C23.844 24.1208 22.4731 26.1041 22.4731 27.8833V38.7187C22.4731 40.4395 23.6106 42.6999 24.9961 43.7354L31.2669 48.4166C33.3231 49.9624 36.7065 49.9624 38.7627 48.4166L45.0336 43.7354C46.419 42.6999 47.5565 40.4395 47.5565 38.7187V27.8833C47.5565 26.0895 46.1856 24.1062 44.5086 23.4791L37.2315 20.752C35.9919 20.2999 34.0086 20.2999 32.7981 20.752Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
         <path d="M30.6978 34.8104L33.0457 37.1583L39.3165 30.8875" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -183,7 +183,7 @@ const personas = [
     link: '/horizen-chain/compliance',
     cta: 'Explore Compliance Patterns',
     icon: (
-      <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="48" height="48" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="70" height="70" rx="14" fill="#1038BB" />
         <path d="M31.0771 38.9375L33.2646 41.125L39.098 35.2916" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
         <path d="M33.4832 20.4166H32.0832C30.6248 20.4166 29.1665 20.4166 29.1665 23.3333C29.1665 26.25 30.6248 26.25 32.0832 26.25H37.9165C40.8332 26.25 40.8332 24.7916 40.8332 23.3333C40.8332 20.4166 39.3748 20.4166 37.9165 20.4166" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -209,12 +209,12 @@ function PersonaCards() {
               "[html[data-theme='dark']_&]:bg-[#0d1b2e] [html[data-theme='dark']_&]:border-[#1e2d42]"
             }
           >
-            <div className="w-14 h-14 shrink-0">{p.icon}</div>
+            <div className="w-12 h-12 shrink-0 mb-3">{p.icon}</div>
             <div className="text-xl font-bold text-[#030E24] [html[data-theme='dark']_&]:text-white">{p.title}</div>
-            <div className="text-sm leading-relaxed text-[#374151] [html[data-theme='dark']_&]:text-[#a8b8cc] flex-1">
+            <div className="text-sm leading-relaxed text-[#374151] [html[data-theme='dark']_&]:text-[#a8b8cc] flex-1 -mt-2">
               {p.description}
             </div>
-            <div className="mt-2">
+            <div className="mt-0">
               <Link
                 to={p.link}
 
@@ -290,7 +290,7 @@ function StartBuilding() {
             }
             key={card.title}
           >
-            <span className={"text-xs font-semibold tracking-widest uppercase text-[#6b7280] [html[data-theme='dark']_&]:text-[#8b9ab0]"}>
+            <span className={"text-xs font-semibold tracking-widest uppercase text-[#6b7280] [html[data-theme='dark']_&]:text-[#8b9ab0] mb-2"}>
               #{card.tag}
             </span>
             <h3 className={"text-xl font-bold leading-snug m-0 [html[data-theme='dark']_&]:text-white"}>
@@ -299,7 +299,7 @@ function StartBuilding() {
             <p className={"text-sm leading-relaxed text-[#374151] [html[data-theme='dark']_&]:text-[#a8b8cc] m-0 flex-1"}>
               {card.description}
             </p>
-            <div className={"mt-2"}>
+            <div className={"mt-0"}>
               <Link to={card.link}>
                 <button
                   className={"inline-block bg-[#FECB17] text-black font-bold border-none text-sm px-6 py-3 rounded-full " +
