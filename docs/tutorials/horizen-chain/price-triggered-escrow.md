@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Build a Price-Triggered ETH Escrow
 
-Horizen is an OP Stack L3 with a near-vanilla EVM - any Solidity pattern that works on Ethereum mainnet works here. This tutorial builds **TriggerVault**: an escrow contract that locks ETH and releases it to a recipient when ETH/USD crosses a price threshold, using the Stork pull oracle for on-chain price data.
+This tutorial builds an escrow contract that locks ETH and releases it to a recipient when ETH/USD crosses a price threshold, using the Stork pull oracle for on-chain price data.
 
 You'll write the contract, test it against a mock oracle, deploy it to testnet or mainnet, and build a server-side-safe Next.js frontend with Wagmi.
 
@@ -19,8 +19,8 @@ Two concepts govern this dApp's design.
 
 **Fee model.** Horizen L3 has two fee components:
 
-- **L2 execution fee** — gas used × base fee
-- **L1 data fee** — calldata batch cost, appended automatically by the OP Stack
+- **L2 execution fee** - gas used × base fee
+- **L1 data fee** - calldata batch cost, appended automatically by the OP Stack
 
 The Stork oracle itself also charges a small per-update fee (`singleUpdateFeeInWei`, query `getUpdateFeeV1` at runtime). On testnet this is 1 wei. Your `triggerCheck` call must forward at least that amount via `msg.value`.
 
@@ -40,7 +40,7 @@ For RPC endpoints, chain IDs, explorer, and faucet:
 
 ## Step 1: Define the Stork Interface
 
-Stork's on-chain contract is deployed at `0xacC0a0cF13571d30B4b8637996F5D6D774d4fd62` on both Horizen testnet and mainnet. Define its interface inline — no package required.
+Stork's on-chain contract is deployed at `0xacC0a0cF13571d30B4b8637996F5D6D774d4fd62` on both Horizen testnet and mainnet.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -77,7 +77,7 @@ interface IStork {
 
 Key facts about the Stork data model:
 
-- `quantizedValue` is `int192` scaled to 18 decimals — $3,500 is `3500e18`.
+- `quantizedValue` is `int192` scaled to 18 decimals. Example: $3,500 is `3500e18`.
 - `timestampNs` is a nanosecond Unix timestamp (`uint64`). It's a 19-digit integer that **exceeds float64 precision**. See [Step 5](#step-5-server-side-price-proxy) for why this matters in JavaScript.
 - The ETH/USD asset ID on all networks: `0x59102b37de83bdda9f38ac8254e596f0d9ac61d2035c07936675e87342817160`
 
@@ -212,8 +212,8 @@ contract TriggerVault {
 
 Design decisions worth noting:
 
-- `triggerCheck` is **permissionless** — any account can call it. ETH always goes to `e.recipient`, not to the caller, so there's no griefing risk from third-party triggering.
-- `msg.value` is forwarded directly to `updateTemporalNumericValuesV1`. Do not hardcode 0 — the Stork fee is a runtime value and may change.
+- `triggerCheck` is **permissionless** so any account can call it. ETH always goes to `e.recipient`, not to the caller, so there's no griefing risk from third-party triggering.
+- `msg.value` is forwarded directly to `updateTemporalNumericValuesV1`. Do not hardcode 0 because the Stork fee is a runtime value and may change.
 - ETH transfer uses a low-level `call` rather than `transfer` to avoid gas-limit issues with contract recipients.
 
 
@@ -318,7 +318,7 @@ Run the suite:
 forge test -vvv
 ```
 
-Don't deploy until all tests pass. Gas costs ETH on testnet; a broken oracle integration costs more.
+Don't deploy until all tests pass. Gas costs ETH on testnet but a broken oracle integration costs more.
 
 
 
@@ -376,7 +376,7 @@ forge script script/Deploy.s.sol:DeployScript \
   --private-key $PRIVATE_KEY
 ```
 
-Save the printed address — you'll set it as `NEXT_PUBLIC_CONTRACT_ADDRESS` in your frontend.
+Save the printed address. You'll set it as `NEXT_PUBLIC_CONTRACT_ADDRESS` in your frontend.
 
 
 
@@ -441,7 +441,7 @@ export async function GET() {
 }
 ```
 
-The precision requirement is non-negotiable: `timestampNs` and `quantizedValue` must survive JSON serialisation as strings and be converted to `BigInt` on the frontend. Passing rounded integers into `updateTemporalNumericValuesV1` causes `InvalidSignature` — the oracle hashes the exact values before recovering the publisher's signing address.
+The precision requirement is non-negotiable: `timestampNs` and `quantizedValue` must survive JSON serialisation as strings and be converted to `BigInt` on the frontend. Passing rounded integers into `updateTemporalNumericValuesV1` causes `InvalidSignature`. The oracle hashes these exact values before recovering the publisher's signing address.
 
 <div style={{padding: '24px 0', display: 'flex', justifyContent: 'center'}}>
   <img src="/tutorials/price_fetch_sequence.png" alt="Price fetch sequence: frontend requests /api/stork-price → Next.js server fetches Stork REST API → returns updateData with string-preserved BigInt fields" style={{maxWidth: '100%', width: '720px', borderRadius: '8px'}} />
@@ -575,13 +575,13 @@ async function handleTrigger(escrowId: bigint) {
 
 Three things to get right in the trigger call:
 
-- **`value: storkFee`** — must forward at least `getUpdateFeeV1()` wei to the Stork oracle. The snippet above queries it at runtime before the call; passing 0 reverts with `InsufficientFee (0x025dbdd4)`.
-- **BigInt conversion** — `timestampNs` and `quantizedValue` come back from the API route as strings. Convert them with `BigInt()` before passing to viem; viem encodes them as `uint64` and `int192` respectively.
-- **`simulateContract` before `writeContractAsync`** — catches `ConditionNotMet` and oracle errors before the wallet confirmation dialog, giving the user a readable error instead of a failed transaction.
+- **`value: storkFee`** - must forward at least `getUpdateFeeV1()` wei to the Stork oracle. The snippet above queries it at runtime before the call; passing 0 reverts with `InsufficientFee (0x025dbdd4)`.
+- **BigInt conversion** - `timestampNs` and `quantizedValue` come back from the API route as strings. Convert them with `BigInt()` before passing to viem; viem encodes them as `uint64` and `int192` respectively.
+- **`simulateContract` before `writeContractAsync`** - catches `ConditionNotMet` and oracle errors before the wallet confirmation dialog, giving the user a readable error instead of a failed transaction.
 
 ### ABI reference
 
-Create `src/lib/abi.ts`. The struct components for `updateData` must match the Solidity interface defined in Step 1 exactly — `triggerCheck` and `getUpdateFeeV1` both take the same `TemporalNumericValueInput[]`.
+Create `src/lib/abi.ts`. The struct components for `updateData` must match the Solidity interface defined in Step 1 exactly as `triggerCheck` and `getUpdateFeeV1` both take the same `TemporalNumericValueInput[]`.
 
 ```typescript
 // src/lib/abi.ts
