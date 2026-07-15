@@ -107,7 +107,7 @@ function Hero() {
                   key={f}
                   className={[
                     "inline-flex items-center px-6 py-3 rounded-[10px] text-[1rem] font-extrabold leading-none",
-                    "bg-[#FFF5CE] border-2 border-[#FECB17] text-[#FECB17]",
+                    "bg-[#FECB17] border-2 border-[#FECB17] text-[#030E24]",
                     "[html[data-theme='dark']_&]:bg-[#FFF5CE4D] [html[data-theme='dark']_&]:text-[#FECB17] [html[data-theme='dark']_&]:border-[#FECB17]",
                   ].join(' ')}
                 >
