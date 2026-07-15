@@ -40,16 +40,21 @@
 
 .heroBackdrop {
   position: absolute;
-  top: 50%;
+  top: 40%;
   right: 0;
   transform: translateY(-50%);
-  height: 100%;
+  height: 95%;
   width: auto;
   max-width: none;
   object-fit: contain;
   object-position: right center;
   pointer-events: none;
   z-index: -1;
+}
+
+/* blue glow on the light-mode backdrop */
+:global(:not([data-theme='dark'])) .heroBackdrop:first-of-type {
+  filter: drop-shadow(0 0 40px rgba(16, 56, 187, 0.6)) drop-shadow(0 0 100px rgba(16, 56, 187, 0.35)) drop-shadow(0 0 180px rgba(16, 56, 187, 0.2));
 }
 
 /* Theme-swapped assets: show the matching one, hide the other */
