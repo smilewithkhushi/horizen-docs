@@ -8,12 +8,18 @@ Horizen is an EVM-identical L3 on Base (Ethereum L2) using the OP Stack. It adds
 - `/llms-full.txt` — complete documentation in markdown (~300KB, for full-context retrieval)
 - `/llms-ctx.txt` — minimal curated quick-reference for coding assistants
 
+## Per-Page Markdown
+
+Every documentation page has a raw markdown endpoint at the same URL path with `.md` appended:
+- HTML page: `https://docs.horizen.io/horizen-chain/network/mainnet`
+- Raw markdown: `https://docs.horizen.io/horizen-chain/network/mainnet.md`
+
 ## Developer Quickstart
 
 - Deploy standard Solidity contracts using Foundry or Hardhat (same tooling as Base/Ethereum)
 - Mainnet chain ID: 26514 | Testnet chain ID: 2651420
 - Native governance token: ZEN
-- RPC and contract addresses: see `/docs/network-details`
+- RPC and contract addresses: see `/horizen-chain/api-reference/contract-addresses`
 
 ## Documentation Sections
 
