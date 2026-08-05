@@ -142,7 +142,7 @@ contract PriceConsumer {
 }
 ```
 
-For view functions where you want to implement custom staleness logic, use `getTemporalNumericValueUnsafeV1` instead — it returns the stored value without reverting on staleness, allowing you to implement your own freshness checks.
+If your contract needs a **tighter** freshness window than the chain default (e.g. reject prices older than 60 seconds), call `getTemporalNumericValueV1` as normal and add your own `require` check on `timestampNs`. If you need a **looser** or fully custom freshness policy, use `getTemporalNumericValueUnsafeV1` instead — it returns the stored value without reverting on staleness.
 
 
 
