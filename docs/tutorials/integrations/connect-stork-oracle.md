@@ -68,7 +68,7 @@ The response contains the latest signed price with its encoded asset ID:
           "signature": {
             "r": "0x...",
             "s": "0x...",
-            "v": 28
+            "v": "28"
           },
           "timestamp": 1718000000000000000,
           "msg_hash": "0x..."
