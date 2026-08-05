@@ -77,9 +77,9 @@
 ## Governance
 
 - [About Horizen DAO](https://docs.horizen.io/governance/overview/about): Overview of Horizen DAO, its decentralized governance framework, guiding values, and constitution
-- [Proposal Categories](https://docs.horizen.io/governance/proposal-categories): Types and categories of governance proposals — what can be proposed and how
-- [Voting Process](https://docs.horizen.io/governance/voting-process/voting-process): How voting works — quorum requirements, ZenIP approval process, timeline
-- [Quick Voting Guide](https://docs.horizen.io/governance/voting-process/quick-voting-guide): Step-by-step guide to casting a vote on a Horizen governance proposal
-- [Foundational Documents](https://docs.horizen.io/governance/reference/foundational-docs): Foundation Bylaws, Memorandum of Association, Articles of Association (PDFs)
-- [Submit a Vote](https://docs.horizen.io/governance/reference/submit-vote): How to submit a formal governance vote
-- [Join the Discussion](https://docs.horizen.io/governance/reference/join-discussion): Community discussion channels for governance proposals
+- [Proposal Categories](https://docs.horizen.io/governance/proposal_categories): Types and categories of governance proposals — what can be proposed and how
+- [Voting Process](https://docs.horizen.io/governance/voting_process/voting_process): How voting works — quorum requirements, ZenIP approval process, timeline
+- [Quick Voting Guide](https://docs.horizen.io/governance/voting_process/quick_voting_guide): Step-by-step guide to casting a vote on a Horizen governance proposal
+- [Foundational Documents](https://docs.horizen.io/governance/reference/foundational_docs): Foundation Bylaws, Memorandum of Association, Articles of Association (PDFs)
+- [Submit a Vote](https://docs.horizen.io/governance/reference/submit_vote): How to submit a formal governance vote
+- [Join the Discussion](https://docs.horizen.io/governance/reference/join_discussion): Community discussion channels for governance proposals
