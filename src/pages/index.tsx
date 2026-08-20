@@ -316,84 +316,84 @@ function StartBuilding() {
 }
 
 /* ─── Newsletter ────────────────────────────────────────────────────────── */
-function Newsletter() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [errorMsg, setErrorMsg] = useState('');
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setStatus('loading');
-    setErrorMsg('');
-    try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, name }),
-      });
-      if (res.ok) {
-        setStatus('success');
-        setName('');
-        setEmail('');
-      } else {
-        const data = await res.json() as { error?: string };
-        setErrorMsg(data.error || 'Something went wrong. Please try again.');
-        setStatus('error');
-      }
-    } catch {
-      setErrorMsg('Something went wrong. Please try again.');
-      setStatus('error');
-    }
-  }
-
-  return (
-    <section className="w-full min-h-52 bg-[rgba(254,203,23,1)] flex items-center px-25 py-12.5 max-[1100px]:px-10 max-[860px]:px-6 max-[860px]:py-10">
-      <div className="flex items-center justify-between gap-17.75 w-full max-[860px]:flex-col max-[860px]:items-start max-[860px]:gap-6">
-        <span className="text-[#030E24] font-extrabold text-[clamp(1.75rem,2.4vw,2.5rem)] whitespace-nowrap leading-[1.1] tracking-tight shrink-0" style={{ fontFamily: "'Funnel Display', sans-serif" }}>
-          Sign Up for Newsletter
-        </span>
-        {status === 'success' ? (
-          <div className="flex-1 flex justify-end max-[860px]:justify-start">
-            <p className="text-[#030E24] font-semibold text-lg m-0">You're subscribed! Check your inbox.</p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="flex items-center gap-10 flex-1 justify-end max-[860px]:w-full max-[860px]:flex-col max-[860px]:items-stretch max-[860px]:gap-5">
-            <input
-              type="text"
-              placeholder="Name"
-              value={name}
-              onChange={e => setName(e.target.value)}
-              className="bg-transparent border-0 border-b border-[#030E24] text-[#030E24] placeholder:text-[#030E24] placeholder:font-medium text-base outline-none w-60 py-2 rounded-none shadow-none focus:border-b-2 max-[860px]:w-full"
-              aria-label="Name"
-            />
-            <input
-              type="email"
-              placeholder="Email Address"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              required
-              className="bg-transparent border-0 border-b border-[#030E24] text-[#030E24] placeholder:text-[#030E24] placeholder:font-medium text-base outline-none w-60 py-2 rounded-none shadow-none focus:border-b-2 max-[860px]:w-full"
-              aria-label="Email address"
-            />
-            <div className="flex flex-col items-end gap-1 max-[860px]:items-stretch">
-              {status === 'error' && (
-                <p className="text-red-700 text-xs m-0 text-right max-[860px]:text-left">{errorMsg}</p>
-              )}
-              <button
-                type="submit"
-                disabled={status === 'loading'}
-                className="bg-white text-[#030E24] font-bold text-base px-10 py-4 rounded-full whitespace-nowrap min-w-40 cursor-pointer hover:bg-gray-50 border-none hover:shadow-md transition-all max-[860px]:w-full disabled:opacity-60"
-              >
-                {status === 'loading' ? 'Subscribing…' : 'Subscribe'}
-              </button>
-            </div>
-          </form>
-        )}
-      </div>
-    </section>
-  );
-}
+// function Newsletter() {
+//   const [name, setName] = useState('');
+//   const [email, setEmail] = useState('');
+//   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+//   const [errorMsg, setErrorMsg] = useState('');
+//
+//   async function handleSubmit(e: React.FormEvent) {
+//     e.preventDefault();
+//     setStatus('loading');
+//     setErrorMsg('');
+//     try {
+//       const res = await fetch('/api/subscribe', {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify({ email, name }),
+//       });
+//       if (res.ok) {
+//         setStatus('success');
+//         setName('');
+//         setEmail('');
+//       } else {
+//         const data = await res.json() as { error?: string };
+//         setErrorMsg(data.error || 'Something went wrong. Please try again.');
+//         setStatus('error');
+//       }
+//     } catch {
+//       setErrorMsg('Something went wrong. Please try again.');
+//       setStatus('error');
+//     }
+//   }
+//
+//   return (
+//     <section className="w-full min-h-52 bg-[rgba(254,203,23,1)] flex items-center px-25 py-12.5 max-[1100px]:px-10 max-[860px]:px-6 max-[860px]:py-10">
+//       <div className="flex items-center justify-between gap-17.75 w-full max-[860px]:flex-col max-[860px]:items-start max-[860px]:gap-6">
+//         <span className="text-[#030E24] font-extrabold text-[clamp(1.75rem,2.4vw,2.5rem)] whitespace-nowrap leading-[1.1] tracking-tight shrink-0" style={{ fontFamily: "'Funnel Display', sans-serif" }}>
+//           Sign Up for Newsletter
+//         </span>
+//         {status === 'success' ? (
+//           <div className="flex-1 flex justify-end max-[860px]:justify-start">
+//             <p className="text-[#030E24] font-semibold text-lg m-0">You're subscribed! Check your inbox.</p>
+//           </div>
+//         ) : (
+//           <form onSubmit={handleSubmit} className="flex items-center gap-10 flex-1 justify-end max-[860px]:w-full max-[860px]:flex-col max-[860px]:items-stretch max-[860px]:gap-5">
+//             <input
+//               type="text"
+//               placeholder="Name"
+//               value={name}
+//               onChange={e => setName(e.target.value)}
+//               className="bg-transparent border-0 border-b border-[#030E24] text-[#030E24] placeholder:text-[#030E24] placeholder:font-medium text-base outline-none w-60 py-2 rounded-none shadow-none focus:border-b-2 max-[860px]:w-full"
+//               aria-label="Name"
+//             />
+//             <input
+//               type="email"
+//               placeholder="Email Address"
+//               value={email}
+//               onChange={e => setEmail(e.target.value)}
+//               required
+//               className="bg-transparent border-0 border-b border-[#030E24] text-[#030E24] placeholder:text-[#030E24] placeholder:font-medium text-base outline-none w-60 py-2 rounded-none shadow-none focus:border-b-2 max-[860px]:w-full"
+//               aria-label="Email address"
+//             />
+//             <div className="flex flex-col items-end gap-1 max-[860px]:items-stretch">
+//               {status === 'error' && (
+//                 <p className="text-red-700 text-xs m-0 text-right max-[860px]:text-left">{errorMsg}</p>
+//               )}
+//               <button
+//                 type="submit"
+//                 disabled={status === 'loading'}
+//                 className="bg-white text-[#030E24] font-bold text-base px-10 py-4 rounded-full whitespace-nowrap min-w-40 cursor-pointer hover:bg-gray-50 border-none hover:shadow-md transition-all max-[860px]:w-full disabled:opacity-60"
+//               >
+//                 {status === 'loading' ? 'Subscribing…' : 'Subscribe'}
+//               </button>
+//             </div>
+//           </form>
+//         )}
+//       </div>
+//     </section>
+//   );
+// }
 
 /* ─── Page ──────────────────────────────────────────────────────────────── */
 export default function Home() {
@@ -408,7 +408,7 @@ export default function Home() {
         <PersonaCards />
         <QuickSetup />
         <StartBuilding />
-        <Newsletter />
+        {/* <Newsletter /> */}
       </main>
     </Layout>
   );
