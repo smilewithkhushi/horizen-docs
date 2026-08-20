@@ -30,7 +30,6 @@
     "@docusaurus/tsconfig": "^3.10.1",
     "@docusaurus/types": "^3.10.1",
     "@tailwindcss/postcss": "^4.3.2",
-    "@vercel/node": "^5.9.5",
     "autoprefixer": "^10.5.2",
     "postcss": "^8.5.16",
     "tailwindcss": "^4.3.2",
