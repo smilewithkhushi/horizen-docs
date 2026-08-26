@@ -2,7 +2,6 @@
 title: What is Vela?
 description: "Vela is Horizen Labs' TEE-based confidential execution solution: run application logic inside TEE hardware enclaves where data is encrypted in memory, outputs are cryptographically attested, and compliance is verifiable without exposing raw data. Chain-agnostic, integrates with EVM contracts."
 sidebar_position: 1
-slug: /vela/introduction
 ---
 
 # What is Vela?
