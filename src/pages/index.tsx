@@ -15,7 +15,7 @@ const buildingCards = [
   {
     tag: 'Vela',
     title: 'Your First Confidential App',
-    description: 'Deploy a private transfer app inside a hardware-attested TEE. Vela runs your WASM logic in an AWS Nitro Enclave — balances, transfers, and history stay encrypted on-chain.',
+    description: 'Deploy a private transfer app inside a hardware-attested TEE. Vela runs your WASM logic in an AWS Nitro Enclave while balances, transfers, and history stay encrypted on-chain.',
     link: '/vela/getting-started/first-confidential-app',
   },
   {
