@@ -13,13 +13,34 @@ npm run start
 
 ## Environment Variables
 
-Create a `.env` file at the root with:
+Create a `.env` file at the root with your Algolia credentials (used by Docusaurus at build time):
 
 ```
 ALGOLIA_APP_ID=
 ALGOLIA_API_KEY=
 ALGOLIA_INDEX_NAME=
 ```
+
+### Testing Cloudflare Pages Functions locally
+
+The newsletter subscription endpoint (`/api/subscribe`) runs as a Cloudflare Pages Function and requires separate tooling to test locally — Docusaurus's dev server does not execute these functions.
+
+1. Copy the example vars file and fill in your values:
+
+```bash
+cp .dev.vars.example .dev.vars
+```
+
+`.dev.vars` is gitignored and never committed. Get the real values from the Cloudflare Pages dashboard under **Settings → Environment Variables**.
+
+2. Build the site and start Wrangler's local Pages dev server:
+
+```bash
+npm run build
+npx wrangler pages dev ./build
+```
+
+The site and all API endpoints are then available at `http://localhost:8788`.
 
 ## Contributing
 
