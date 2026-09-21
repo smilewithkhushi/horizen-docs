@@ -7,7 +7,7 @@ description: "How voting works, quorum requirements, and ZenIP approval process.
 
 Once an ZenIP has been approved for voting, it will proceed to a live Snapshot vote. As a $ZEN tokenholder, you can participate in this Snapshot voting.
 
-The two categories of ZenIPs/EONIPs have different requirements for vote quorums and majorities:
+The two categories of ZenIPs have different requirements for vote quorums and majorities:
 
 - [Technical ZenIP](https://snapshot.org/#/horizenfoundationtechnical.eth/create)
 
