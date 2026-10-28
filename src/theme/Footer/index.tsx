@@ -9,15 +9,13 @@ const HORIZEN_LINKS = [
 ];
 
 const DOCS_LINKS = [
-  { label: "Horizen Chain", to: "/horizen-chain/overview/what-is-horizen" },
   { label: "Vela", to: "/vela/introduction" },
-  { label: "Tutorials", to: "/tutorials/horizen-chain/deploy-erc20" },
   { label: "Migration", to: "/migration/overview" },
+  { label: "Governance", to: "/governance/overview/about" },
 ];
 
 const ECOSYSTEM_LINKS = [
   { label: "Apps & Partners", href: "https://horizen.io/ecosystem" },
-  { label: "Builder Ecosystem Fund", href: "https://horizen.io/builder-fund/" },
 ];
 
 const SOCIAL_LINKS = [
