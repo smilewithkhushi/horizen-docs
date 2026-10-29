@@ -2,7 +2,6 @@ import React from "react";
 import Link from "@docusaurus/Link";
 
 const HORIZEN_LINKS = [
-  { label: "Protocol Whitepaper", href: "https://downloads.horizen.io/file/web-assets/Horizen+Whitepaper+v1.0.0.pdf" },
   { label: "MiCAR Whitepaper", href: "https://horizen.micarwhitepapers.eu/" },
   { label: "Governance", href: "/governance/overview/about" },
   { label: "ZEN Migration Hub", href: "https://www.horizen.io/horizen-upgrade" },
